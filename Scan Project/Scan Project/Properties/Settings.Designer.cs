@@ -22,5 +22,17 @@ namespace Scan_Project.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
+        public int projectID {
+            get {
+                return ((int)(this["projectID"]));
+            }
+            set {
+                this["projectID"] = value;
+            }
+        }
     }
 }
