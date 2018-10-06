@@ -19,7 +19,7 @@ namespace Scan_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //LoginForm lf = new LoginForm();
+            //LoginForm lf = new LoginForm();eeee
             //if (lf.ShowDialog() != DialogResult.OK)
             //    Application.ExitThread();
 
