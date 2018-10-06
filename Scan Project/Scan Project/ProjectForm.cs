@@ -40,7 +40,7 @@ namespace Scan_Project
                 projectList.Items.Add(radListDataItem);
             }
             if (projectList.Items.Count > 0)
-                projectList.SelectedIndex = 0;
+                projectList.SelectedValue = Properties.Settings.Default.projectID;
             else
                 btnOK.Enabled = false;
         }

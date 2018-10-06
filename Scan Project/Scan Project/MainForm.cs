@@ -29,5 +29,12 @@ namespace Scan_Project
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
         }
+
+        private void btnOpenProjectForm_Click(object sender, EventArgs e)
+        {
+            ProjectForm pf = new ProjectForm();
+            pf.ShowDialog();
+            lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
+        }
     }
 }
