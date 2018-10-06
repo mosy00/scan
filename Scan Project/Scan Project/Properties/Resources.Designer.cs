@@ -113,6 +113,16 @@ namespace Scan_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap list_interface_symbol {
+            get {
+                object obj = ResourceManager.GetObject("list-interface-symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tabs {
             get {
                 object obj = ResourceManager.GetObject("tabs", resourceCulture);

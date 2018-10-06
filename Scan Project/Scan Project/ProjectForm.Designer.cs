@@ -32,21 +32,21 @@
             this.btnOK = new Telerik.WinControls.UI.RadButton();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
-            this.txtNewProject = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.btnCreate = new Telerik.WinControls.UI.RadButton();
             this.projectList = new Telerik.WinControls.UI.RadDropDownList();
+            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.btnCreate = new Telerik.WinControls.UI.RadButton();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+            this.txtNewProject = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnOK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projectList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNewProject)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCreate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNewProject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +92,18 @@
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // projectList
+            // 
+            this.projectList.Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projectList.Location = new System.Drawing.Point(20, 42);
+            this.projectList.Name = "projectList";
+            this.projectList.Size = new System.Drawing.Size(181, 32);
+            this.projectList.TabIndex = 3;
+            this.projectList.ThemeName = "TelerikMetro";
+            ((Telerik.WinControls.UI.RadDropDownListElement)(this.projectList.GetChildAt(0))).RightToLeft = true;
+            ((Telerik.WinControls.UI.RadDropDownListElement)(this.projectList.GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ((Telerik.WinControls.UI.RadTextBoxItem)(this.projectList.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -112,25 +124,6 @@
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 11F);
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtNewProject
-            // 
-            this.txtNewProject.Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewProject.Location = new System.Drawing.Point(20, 40);
-            this.txtNewProject.Name = "txtNewProject";
-            this.txtNewProject.Size = new System.Drawing.Size(181, 32);
-            this.txtNewProject.TabIndex = 0;
-            this.txtNewProject.ThemeName = "TelerikMetro";
-            // 
-            // radLabel3
-            // 
-            this.radLabel3.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel3.Location = new System.Drawing.Point(207, 43);
-            this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(61, 25);
-            this.radLabel3.TabIndex = 4;
-            this.radLabel3.Text = "نام پروژه: ";
-            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            // 
             // btnCreate
             // 
             this.btnCreate.Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,17 +135,24 @@
             this.btnCreate.ThemeName = "TelerikMetro";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // projectList
+            // radLabel3
             // 
-            this.projectList.Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projectList.Location = new System.Drawing.Point(20, 42);
-            this.projectList.Name = "projectList";
-            this.projectList.Size = new System.Drawing.Size(181, 32);
-            this.projectList.TabIndex = 3;
-            this.projectList.ThemeName = "TelerikMetro";
-            ((Telerik.WinControls.UI.RadDropDownListElement)(this.projectList.GetChildAt(0))).RightToLeft = true;
-            ((Telerik.WinControls.UI.RadDropDownListElement)(this.projectList.GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ((Telerik.WinControls.UI.RadTextBoxItem)(this.projectList.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Location = new System.Drawing.Point(207, 43);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.Size = new System.Drawing.Size(61, 25);
+            this.radLabel3.TabIndex = 4;
+            this.radLabel3.Text = "نام پروژه: ";
+            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtNewProject
+            // 
+            this.txtNewProject.Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewProject.Location = new System.Drawing.Point(20, 40);
+            this.txtNewProject.Name = "txtNewProject";
+            this.txtNewProject.Size = new System.Drawing.Size(181, 32);
+            this.txtNewProject.TabIndex = 0;
+            this.txtNewProject.ThemeName = "TelerikMetro";
             // 
             // ProjectForm
             // 
@@ -161,6 +161,7 @@
             this.ClientSize = new System.Drawing.Size(332, 291);
             this.Controls.Add(this.radGroupBox2);
             this.Controls.Add(this.radGroupBox1);
+            this.Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "ProjectForm";
@@ -169,8 +170,9 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ProjectForm";
+            this.Text = "فرم پروژه‌ها";
             this.ThemeName = "TelerikMetro";
             this.Load += new System.EventHandler(this.ProjectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnOK)).EndInit();
@@ -178,13 +180,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projectList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNewProject)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCreate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNewProject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

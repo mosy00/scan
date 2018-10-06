@@ -119,5 +119,58 @@ namespace Scan_Project
             return dt.Rows.Count > 0 ? true : false;
         }
 
+        /// <summary>
+        /// اضافه کردن شاخص‌ها به دیتابیس
+        /// </summary>
+        /// <param name="item1">شاخص اول</param>
+        /// <param name="item2">شاخص دوم</param>
+        /// <param name="item3">شاخص سوم</param>
+        public void InsertItems(string item1, string item2, string item3)
+        {
+            InsertOneItem(Properties.Settings.Default.projectID + "-1", item1);
+            InsertOneItem(Properties.Settings.Default.projectID + "-2", item2);
+            InsertOneItem(Properties.Settings.Default.projectID + "-3", item3);
+        }
+
+        void InsertOneItem(string itemCode, string itemName)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = string.Format("insert into Items (itemCode, itemName) values ('{0}', '{1}')",
+                                                                itemCode, itemName);
+            cmd.Connection = cn;
+
+            try
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable GetItems()
+        {
+            DataTable dt = new DataTable();
+
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = string.Format("select * from Items where itemCode like '{0}-%'", Properties.Settings.Default.projectID);
+            cmd.Connection = cn;
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            try
+            {
+                cn.Open();
+                da.Fill(dt);
+                cn.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
+        }
+
     }
 }

@@ -15,5 +15,43 @@ namespace Scan_Project
         {
             InitializeComponent();
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            dbConnections db = new dbConnections();
+            try
+            {
+                db.InsertItems(txtItem1.Text, txtItem2.Text, txtItem3.Text);
+
+                RadMessageBox.ThemeName = "TelerikMetro";
+                RadMessageBox.Show(null, "شاخص‌های جدید با موفقیت اضافه شدند.", "ثبت موفق", MessageBoxButtons.OK,
+                    RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                DialogResult = DialogResult.OK;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void ItemsForm_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                //گرفتن جدول کل پروژه ها
+                dbConnections db = new dbConnections();
+                dt = db.GetItems();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            txtItem1.Text = dt.Rows[0][2].ToString();
+            txtItem2.Text = dt.Rows[1][2].ToString();
+            txtItem3.Text = dt.Rows[2][2].ToString();
+        }
     }
 }

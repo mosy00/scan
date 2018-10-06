@@ -47,6 +47,15 @@ namespace Scan_Project
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if (projectList.SelectedItem == null)
+            {
+                DialogResult = DialogResult.None;
+                RadMessageBox.ThemeName = "TelerikMetro";
+                RadMessageBox.Show(null, "لطفا یک پروژه انتخاب کنید.", "اخطار", MessageBoxButtons.OK,
+                    RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                return;
+            }
+
             //متغییر آی دی پروژه را با توجه به پروژه جدید عوض میکند
             //از این 
             //projectID
