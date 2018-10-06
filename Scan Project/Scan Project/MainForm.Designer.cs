@@ -35,9 +35,12 @@
             this.radPageViewPage2 = new Telerik.WinControls.UI.RadPageViewPage();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.radMenuButtonItem1 = new Telerik.WinControls.UI.RadMenuButtonItem();
+            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.lblProjectName = new Telerik.WinControls.UI.RadLabelElement();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,10 +120,27 @@
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radMenuButtonItem1.GetChildAt(2).GetChildAt(2))).BottomWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radMenuButtonItem1.GetChildAt(2).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
+            // radStatusStrip1
+            // 
+            resources.ApplyResources(this.radStatusStrip1, "radStatusStrip1");
+            this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.lblProjectName});
+            this.radStatusStrip1.Name = "radStatusStrip1";
+            this.radStatusStrip1.ThemeName = "TelerikMetro";
+            // 
+            // lblProjectName
+            // 
+            resources.ApplyResources(this.lblProjectName, "lblProjectName");
+            this.lblProjectName.Name = "lblProjectName";
+            this.radStatusStrip1.SetSpring(this.lblProjectName, false);
+            this.lblProjectName.TextWrap = true;
+            this.lblProjectName.UseCompatibleTextRendering = false;
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radMenu1);
             this.Controls.Add(this.radPageView1);
             this.Name = "MainForm";
@@ -134,6 +154,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).EndInit();
             this.radPageView1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,5 +169,7 @@
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage2;
         private Telerik.WinControls.UI.RadMenu radMenu1;
         private Telerik.WinControls.UI.RadMenuButtonItem radMenuButtonItem1;
+        private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
+        private Telerik.WinControls.UI.RadLabelElement lblProjectName;
     }
 }

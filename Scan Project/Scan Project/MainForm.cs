@@ -27,6 +27,7 @@ namespace Scan_Project
             if (pf.ShowDialog() != DialogResult.OK)
                 Application.ExitThread();
 
+            lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
         }
     }
 }

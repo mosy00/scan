@@ -34,5 +34,17 @@ namespace Scan_Project.Properties {
                 this["projectID"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string projectName {
+            get {
+                return ((string)(this["projectName"]));
+            }
+            set {
+                this["projectName"] = value;
+            }
+        }
     }
 }

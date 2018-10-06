@@ -129,7 +129,7 @@
     <value>5, 46</value>
   </data>
   <data name="radPageViewPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>934, 448</value>
+    <value>934, 409</value>
   </data>
   <data name="radPageViewPage1.Text" xml:space="preserve">
     <value> صفحه اصلی</value>
@@ -150,7 +150,7 @@
     <value>5, 46</value>
   </data>
   <data name="radPageViewPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>899, 447</value>
+    <value>934, 409</value>
   </data>
   <data name="radPageViewPage2.Text" xml:space="preserve">
     <value> ثبت اسناد</value>
@@ -177,7 +177,7 @@
     <value>Yes</value>
   </data>
   <data name="radPageView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>944, 499</value>
+    <value>944, 460</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="radPageView1.TabIndex" type="System.Int32, mscorlib">
@@ -193,7 +193,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radPageView1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="radMenuButtonItem1.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -319,6 +319,69 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radMenu1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radStatusStrip1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="lblProjectName.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblProjectName.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblProjectName.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblProjectName.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblProjectName.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="lblProjectName.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjectName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblProjectName.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblProjectName.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblProjectName.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjectName.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lblProjectName.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="radStatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 512</value>
+  </data>
+  <data name="radStatusStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="radStatusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>944, 30</value>
+  </data>
+  <data name="radStatusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;radStatusStrip1.Name" xml:space="preserve">
+    <value>radStatusStrip1</value>
+  </data>
+  <data name="&gt;&gt;radStatusStrip1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadStatusStrip, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radStatusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radStatusStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -359,6 +422,12 @@
   </data>
   <data name="&gt;&gt;radMenuButtonItem1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblProjectName.Name" xml:space="preserve">
+    <value>lblProjectName</value>
+  </data>
+  <data name="&gt;&gt;lblProjectName.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
