@@ -76,7 +76,8 @@ namespace Scan_Project
         public void InsertProjects(string projectName)
         {
             OleDbCommand cmd = new OleDbCommand();
-            cmd.CommandText = string.Format("insert into Projects (projectName, projectStartDate) values ('{0}', '{1}')", projectName, System.DateTime.Now);
+            cmd.CommandText = string.Format("insert into Projects (projectName, projectStartDate) values ('{0}', '{1}')",
+                                                                    projectName, System.DateTime.Now);
             cmd.Connection = cn;
 
             try
@@ -190,5 +191,53 @@ namespace Scan_Project
             }
         }
 
+        public DataTable GetDocs()
+        {
+            DataTable dt = new DataTable();
+
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = string.Format("select * from Documents where projectID = {0}" +
+                "", Properties.Settings.Default.projectID);
+            cmd.Connection = cn;
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            try
+            {
+                cn.Open();
+                da.Fill(dt);
+                cn.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
+        }
+
+        /// <summary>
+        /// اضافه کردن یک سند به دیتابیس
+        /// </summary>
+        /// <param name="item1">شاخص اول</param>
+        /// <param name="item2">شاخص دوم</param>
+        /// <param name="item3">شاخص سوم</param>
+        /// <param name="imageSrc">آدرس تصویر سند نسبت به محل اجرای پروژه.</param>
+        public void InsertDocs(string item1, string item2, string item3, string imageSrc)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = 
+                string.Format("insert into Documents (item1, item2, item3, projectID, imageSrc, docSubmitDate)" +
+                " values ('{0}', '{1}', '{2}', {3}, '{4}', '{5}')",
+                item1, item2, item3, Properties.Settings.Default.projectID, imageSrc, System.DateTime.Now);
+            cmd.Connection = cn;
+            try
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
