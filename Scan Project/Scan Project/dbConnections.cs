@@ -172,5 +172,23 @@ namespace Scan_Project
             return dt;
         }
 
+        public void InsertNewUser(string userName, string password, bool isAdmin)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = string.Format("insert into Users (userName, userPassword, userIsAdmin, userIsActive) values ('{0}', '{1}', {2}, true)",
+                                                                userName, MD5(password), isAdmin);
+            cmd.Connection = cn;
+            try
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
