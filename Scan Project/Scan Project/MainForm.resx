@@ -235,7 +235,7 @@
     <value>Horizontal</value>
   </data>
   <data name="radStatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 504</value>
+    <value>0, 498</value>
   </data>
   <data name="radStatusStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
@@ -396,6 +396,9 @@
   <data name="btnOpenProjectForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="btnOpenProjectForm.ButtonElement.ToolTipText" xml:space="preserve">
+    <value>فرم پروژه‌ها</value>
+  </data>
   <data name="btnOpenProjectForm.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -495,6 +498,9 @@
   <data name="btnOpenItemForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="btnOpenItemForm.ButtonElement.ToolTipText" xml:space="preserve">
+    <value>فرم شاخص‌ها</value>
+  </data>
   <data name="btnOpenItemForm.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -558,6 +564,99 @@
   <data name="btnOpenItemForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
+  <data name="btnOpenUserForm.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="btnOpenUserForm.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnOpenUserForm.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenUserForm.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="btnOpenUserForm.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenUserForm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 10, 0</value>
+  </data>
+  <data name="btnOpenUserForm.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenUserForm.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenUserForm.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenUserForm.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnOpenUserForm.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
   <data name="radMenu1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -592,7 +691,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>944, 534</value>
+    <value>944, 528</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 11.25pt</value>
@@ -637,6 +736,12 @@
     <value>btnOpenItemForm</value>
   </data>
   <data name="&gt;&gt;btnOpenItemForm.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnOpenUserForm.Name" xml:space="preserve">
+    <value>btnOpenUserForm</value>
+  </data>
+  <data name="&gt;&gt;btnOpenUserForm.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -43,5 +43,11 @@ namespace Scan_Project
             itemsForm.ShowDialog();
 
         }
+
+        private void btnOpenUserForm_Click(object sender, EventArgs e)
+        {
+            UserForm uf = new UserForm();
+            uf.ShowDialog();
+        }
     }
 }
