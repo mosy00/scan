@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using Telerik.WinControls.UI;
 
 namespace Scan_Project
 {
@@ -15,6 +16,28 @@ namespace Scan_Project
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// درست کردن ستون های جدول اضافه کردن مدرک
+        /// </summary>
+        void InitializeAddDocsGrid()
+        {
+            dbConnections db = new dbConnections();
+            DataTable itemNames;
+            itemNames = db.GetItems();
+
+            GridViewImageColumn imageColumn = new GridViewImageColumn();
+            imageColumn.Name = "imageSrc";
+            imageColumn.Width = 150;
+            imageColumn.HeaderText = "تصویر سند";
+            imageColumn.ImageLayout = ImageLayout.Zoom;
+            gvAddDocs.Columns.Insert(0, imageColumn);
+
+            gvAddDocs.Columns.Add("item1", itemNames.Rows[0][2].ToString());
+            gvAddDocs.Columns.Add("item2", itemNames.Rows[1][2].ToString());
+            gvAddDocs.Columns.Add("item3", itemNames.Rows[2][2].ToString());
+            gvAddDocs.Columns.Add("docSubmitDate", "تاریخ بارگذاری سند");
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -28,6 +51,8 @@ namespace Scan_Project
                 Application.ExitThread();
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
+
+            
         }
 
         private void btnOpenProjectForm_Click(object sender, EventArgs e)

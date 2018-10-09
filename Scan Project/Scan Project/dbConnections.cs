@@ -191,7 +191,12 @@ namespace Scan_Project
             }
         }
 
-        public DataTable GetDocs()
+        /// <summary>
+        /// متدی برای گرفتن جدول اسناد از دیتابیس
+        /// </summary>
+        /// <param name="itemNames">این جدول شامل مشخصات شاخص‌های مرتبط با پروژه است.</param>
+        /// <returns>جدول اسناد</returns>
+        public DataTable GetDocs(out DataTable itemNames)
         {
             DataTable dt = new DataTable();
 
@@ -204,12 +209,15 @@ namespace Scan_Project
             {
                 cn.Open();
                 da.Fill(dt);
+
+                itemNames = GetItems();
                 cn.Close();
             }
             catch (System.Exception ex)
             {
                 throw ex;
             }
+
             return dt;
         }
 
