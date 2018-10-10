@@ -129,7 +129,7 @@
     <value>5, 46</value>
   </data>
   <data name="homePage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>934, 409</value>
+    <value>982, 450</value>
   </data>
   <data name="homePage.Text" xml:space="preserve">
     <value> صفحه اصلی</value>
@@ -146,13 +146,470 @@
   <data name="&gt;&gt;homePage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="gvAddDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="btnEditDoc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 11.249999pt</value>
   </data>
-  <data name="gvAddDocs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>482, 395</value>
+  <data name="btnEditDoc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 463</value>
+  </data>
+  <data name="btnEditDoc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 30</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnEditDoc.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnEditDoc.Text" xml:space="preserve">
+    <value>ثبت تغییرات</value>
+  </data>
+  <data name="&gt;&gt;btnEditDoc.Name" xml:space="preserve">
+    <value>btnEditDoc</value>
+  </data>
+  <data name="&gt;&gt;btnEditDoc.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnEditDoc.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnEditDoc.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnSubmitDoc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 11.249999pt</value>
+  </data>
+  <data name="btnSubmitDoc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 463</value>
+  </data>
+  <data name="btnSubmitDoc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 30</value>
+  </data>
+  <data name="btnSubmitDoc.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnSubmitDoc.Text" xml:space="preserve">
+    <value>ایجاد سند</value>
+  </data>
+  <data name="&gt;&gt;btnSubmitDoc.Name" xml:space="preserve">
+    <value>btnSubmitDoc</value>
+  </data>
+  <data name="&gt;&gt;btnSubmitDoc.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnSubmitDoc.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnSubmitDoc.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAddNewDoc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 11.249999pt</value>
+  </data>
+  <data name="btnAddNewDoc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 463</value>
+  </data>
+  <data name="btnAddNewDoc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 30</value>
+  </data>
+  <data name="btnAddNewDoc.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnAddNewDoc.Text" xml:space="preserve">
+    <value>سند جدید</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewDoc.Name" xml:space="preserve">
+    <value>btnAddNewDoc</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewDoc.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewDoc.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewDoc.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="docPicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 287</value>
+  </data>
+  <data name="docPicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 160</value>
+  </data>
+  <data name="docPicture.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;docPicture.Name" xml:space="preserve">
+    <value>docPicture</value>
+  </data>
+  <data name="&gt;&gt;docPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;docPicture.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;docPicture.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="radLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 242</value>
+  </data>
+  <data name="radLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 24</value>
+  </data>
+  <data name="radLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="radLabel5.Text" xml:space="preserve">
+    <value>تصویر سند</value>
+  </data>
+  <data name="radLabel5.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel5.Name" xml:space="preserve">
+    <value>radLabel5</value>
+  </data>
+  <data name="&gt;&gt;radLabel5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel5.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;radLabel5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtAddDocSrc.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAddDocSrc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="txtAddDocSrc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 242</value>
+  </data>
+  <data name="txtAddDocSrc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 29</value>
+  </data>
+  <data name="txtAddDocSrc.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtAddDocSrc.Name" xml:space="preserve">
+    <value>txtAddDocSrc</value>
+  </data>
+  <data name="&gt;&gt;txtAddDocSrc.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtAddDocSrc.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtAddDocSrc.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <assembly alias="Telerik.WinControls" name="Telerik.WinControls, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  <data name="btnBrowseFile.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="btnBrowseFile.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnBrowseFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="btnBrowseFile.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnBrowseFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 242</value>
+  </data>
+  <data name="btnBrowseFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 29</value>
+  </data>
+  <data name="btnBrowseFile.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnBrowseFile.Name" xml:space="preserve">
+    <value>btnBrowseFile</value>
+  </data>
+  <data name="&gt;&gt;btnBrowseFile.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnBrowseFile.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnBrowseFile.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="resource.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="radLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 89</value>
+  </data>
+  <data name="radLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 24</value>
+  </data>
+  <data name="radLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="radLabel1.Text" xml:space="preserve">
+    <value>شاخص دوم</value>
+  </data>
+  <data name="radLabel1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.Name" xml:space="preserve">
+    <value>radLabel1</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;radLabel1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="radLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="radLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 140</value>
+  </data>
+  <data name="radLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 24</value>
+  </data>
+  <data name="radLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="radLabel2.Text" xml:space="preserve">
+    <value>شاخص سوم</value>
+  </data>
+  <data name="radLabel2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.Name" xml:space="preserve">
+    <value>radLabel2</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="radLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="radLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 191</value>
+  </data>
+  <data name="radLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 24</value>
+  </data>
+  <data name="radLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="radLabel3.Text" xml:space="preserve">
+    <value>تاریخ ثبت سند</value>
+  </data>
+  <data name="radLabel3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.Name" xml:space="preserve">
+    <value>radLabel3</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="radLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="radLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 38</value>
+  </data>
+  <data name="radLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 24</value>
+  </data>
+  <data name="radLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="radLabel4.Text" xml:space="preserve">
+    <value>شاخص اول</value>
+  </data>
+  <data name="radLabel4.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel4.Name" xml:space="preserve">
+    <value>radLabel4</value>
+  </data>
+  <data name="&gt;&gt;radLabel4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel4.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;radLabel4.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtAddItem2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAddItem2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="txtAddItem2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 89</value>
+  </data>
+  <data name="txtAddItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 29</value>
+  </data>
+  <data name="txtAddItem2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem2.Name" xml:space="preserve">
+    <value>txtAddItem2</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem2.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtAddDocSubmitDate.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAddDocSubmitDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="txtAddDocSubmitDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 191</value>
+  </data>
+  <data name="txtAddDocSubmitDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 29</value>
+  </data>
+  <data name="txtAddDocSubmitDate.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtAddDocSubmitDate.Name" xml:space="preserve">
+    <value>txtAddDocSubmitDate</value>
+  </data>
+  <data name="&gt;&gt;txtAddDocSubmitDate.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtAddDocSubmitDate.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtAddDocSubmitDate.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txtAddItem3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAddItem3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="txtAddItem3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 140</value>
+  </data>
+  <data name="txtAddItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 29</value>
+  </data>
+  <data name="txtAddItem3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem3.Name" xml:space="preserve">
+    <value>txtAddItem3</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem3.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem3.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtAddItem1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAddItem1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="txtAddItem1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 38</value>
+  </data>
+  <data name="txtAddItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 29</value>
+  </data>
+  <data name="txtAddItem1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem1.Name" xml:space="preserve">
+    <value>txtAddItem1</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem1.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;txtAddItem1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="radGroupBox1.HeaderText" xml:space="preserve">
+    <value>مشخصات سند</value>
+  </data>
+  <data name="radGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 3</value>
+  </data>
+  <data name="radGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>330, 504</value>
+  </data>
+  <data name="radGroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radGroupBox1.Text" xml:space="preserve">
+    <value>مشخصات سند</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox1.Name" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox1.Parent" xml:space="preserve">
+    <value>addDocsPage</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.Text1" xml:space="preserve">
+    <value>مشخصات سند</value>
+  </data>
+  <data name="resource.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="gvAddDocs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 3</value>
+  </data>
+  <data name="gvAddDocs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>732, 504</value>
+  </data>
   <data name="gvAddDocs.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -166,13 +623,13 @@
     <value>addDocsPage</value>
   </data>
   <data name="&gt;&gt;gvAddDocs.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="addDocsPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 46</value>
   </data>
   <data name="addDocsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>934, 409</value>
+    <value>1082, 524</value>
   </data>
   <data name="addDocsPage.Text" xml:space="preserve">
     <value> ثبت اسناد</value>
@@ -199,7 +656,7 @@
     <value>Yes</value>
   </data>
   <data name="radPageView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>944, 460</value>
+    <value>1092, 575</value>
   </data>
   <data name="radPageView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -256,13 +713,13 @@
     <value>Horizontal</value>
   </data>
   <data name="radStatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 496</value>
+    <value>0, 605</value>
   </data>
   <data name="radStatusStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
   <data name="radStatusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>944, 30</value>
+    <value>1092, 30</value>
   </data>
   <data name="radStatusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -685,7 +1142,7 @@
     <value>2, 2, 0, 0</value>
   </data>
   <data name="radMenu1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>944, 40</value>
+    <value>1092, 44</value>
   </data>
   <data name="radMenu1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -712,7 +1169,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>944, 526</value>
+    <value>1092, 635</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 11.25pt</value>
