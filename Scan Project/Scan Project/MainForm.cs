@@ -39,8 +39,16 @@ namespace Scan_Project
             gvAddDocs.Columns.Add("item2", itemNames.Rows[1][2].ToString());
             gvAddDocs.Columns.Add("item3", itemNames.Rows[2][2].ToString());
             gvAddDocs.Columns.Add("docSubmitDate", "تاریخ بارگذاری سند");
+            gvAddDocs.Columns.Add("docSrc", "آدرس فایل سند");
 
             gvAddDocs.Columns[1].Width = gvAddDocs.Columns[2].Width = gvAddDocs.Columns[3].Width = gvAddDocs.Columns[4].Width = 120;
+        }
+
+        void CleanNewDocPage()
+        {
+            txtAddDocSrc.Text = txtAddDocSubmitDate.Text = txtAddItem1.Text = txtAddItem2.Text = txtAddItem3.Text = string.Empty;
+            openFileDialog1.Reset();
+            docPicture.Image = null;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -55,7 +63,12 @@ namespace Scan_Project
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
 
-            
+            dbConnections db = new dbConnections();
+            DataTable itemNames;
+            itemNames = db.GetItems();
+            lblItem1.Text = itemNames.Rows[0][2].ToString();
+            lblItem2.Text = itemNames.Rows[1][2].ToString();
+            lblItem3.Text = itemNames.Rows[2][2].ToString();
         }
 
         private void btnOpenProjectForm_Click(object sender, EventArgs e)
@@ -80,9 +93,8 @@ namespace Scan_Project
 
         private void btnAddNewDoc_Click(object sender, EventArgs e)
         {
-            txtAddItem1.Enabled = txtAddItem2.Enabled = txtAddItem3.Enabled = btnSubmitDocs.Enabled = btnEditDoc.Enabled =
-                txtAddDocSrc.Enabled = txtAddDocSubmitDate.Enabled = btnBrowseFile.Enabled = true;
-            btnAddNewDoc.Enabled = false;
+            CleanNewDocPage();
+            gvAddDocs.CurrentRow = null;
         }
 
         private void btnBrowseFile_Click(object sender, EventArgs e)
@@ -96,20 +108,47 @@ namespace Scan_Project
 
         private void btnEditDoc_Click(object sender, EventArgs e)
         {
-            if (gvAddDocs.Rows.Count == 0)
-                InitializeAddDocsGrid();
+            if (gvAddDocs.CurrentRow != null)
+            {
+                gvAddDocs.CurrentRow.Cells[0].Value = Image.FromFile(openFileDialog1.FileName);
+                gvAddDocs.CurrentRow.Cells[1].Value = txtAddItem1.Text;
+                gvAddDocs.CurrentRow.Cells[2].Value = txtAddItem2.Text;
+                gvAddDocs.CurrentRow.Cells[3].Value = txtAddItem3.Text;
+                gvAddDocs.CurrentRow.Cells[4].Value = txtAddDocSubmitDate.Text;
+                gvAddDocs.CurrentRow.Cells[5].Value = openFileDialog1.FileName;
+            }
+            else
+            {
+                if (gvAddDocs.Rows.Count == 0)
+                    InitializeAddDocsGrid();
 
-            gvAddDocs.Rows.Add(Image.FromFile(openFileDialog1.FileName),
-                txtAddItem1.Text, txtAddItem2.Text, txtAddItem3.Text, txtAddDocSubmitDate.Text);
-            gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
+                gvAddDocs.Rows.Add(Image.FromFile(openFileDialog1.FileName),
+                                    txtAddItem1.Text, txtAddItem2.Text, txtAddItem3.Text, txtAddDocSubmitDate.Text, openFileDialog1.FileName);
+
+                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
+
+                btnAddNewDoc.Enabled = true;
+                btnSubmitDocs.Enabled = true;
+            }            
         }
 
         private void gvAddDocs_CurrentRowChanged(object sender, CurrentRowChangedEventArgs e)
         {
-            txtAddItem1.Text = e.CurrentRow.Cells[1].Value.ToString();
-            txtAddItem2.Text = e.CurrentRow.Cells[2].Value.ToString();
-            txtAddItem3.Text = e.CurrentRow.Cells[3].Value.ToString();
-            txtAddDocSubmitDate.Text = e.CurrentRow.Cells[4].Value.ToString();
+            if (e.CurrentRow != null)
+            {
+                txtAddItem1.Text = e.CurrentRow.Cells[1].Value.ToString();
+                txtAddItem2.Text = e.CurrentRow.Cells[2].Value.ToString();
+                txtAddItem3.Text = e.CurrentRow.Cells[3].Value.ToString();
+                txtAddDocSubmitDate.Text = e.CurrentRow.Cells[4].Value.ToString();
+                txtAddDocSrc.Text = openFileDialog1.FileName = e.CurrentRow.Cells[5].Value.ToString();
+
+                docPicture.ImageLocation = openFileDialog1.FileName;
+            }
+        }
+
+        private void btnSubmitDocs_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

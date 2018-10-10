@@ -42,10 +42,10 @@
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.txtAddDocSrc = new Telerik.WinControls.UI.RadTextBox();
             this.btnBrowseFile = new Telerik.WinControls.UI.RadButton();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.lblItem2 = new Telerik.WinControls.UI.RadLabel();
+            this.lblItem3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
+            this.lblItem1 = new Telerik.WinControls.UI.RadLabel();
             this.txtAddItem2 = new Telerik.WinControls.UI.RadTextBox();
             this.txtAddDocSubmitDate = new Telerik.WinControls.UI.RadTextBox();
             this.txtAddItem3 = new Telerik.WinControls.UI.RadTextBox();
@@ -71,10 +71,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddDocSrc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowseFile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddDocSubmitDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem3)).BeginInit();
@@ -124,10 +124,10 @@
             this.radGroupBox1.Controls.Add(this.radLabel5);
             this.radGroupBox1.Controls.Add(this.txtAddDocSrc);
             this.radGroupBox1.Controls.Add(this.btnBrowseFile);
-            this.radGroupBox1.Controls.Add(this.radLabel1);
-            this.radGroupBox1.Controls.Add(this.radLabel2);
+            this.radGroupBox1.Controls.Add(this.lblItem2);
+            this.radGroupBox1.Controls.Add(this.lblItem3);
             this.radGroupBox1.Controls.Add(this.radLabel3);
-            this.radGroupBox1.Controls.Add(this.radLabel4);
+            this.radGroupBox1.Controls.Add(this.lblItem1);
             this.radGroupBox1.Controls.Add(this.txtAddItem2);
             this.radGroupBox1.Controls.Add(this.txtAddDocSubmitDate);
             this.radGroupBox1.Controls.Add(this.txtAddItem3);
@@ -152,6 +152,7 @@
             resources.ApplyResources(this.btnSubmitDocs, "btnSubmitDocs");
             this.btnSubmitDocs.Name = "btnSubmitDocs";
             this.btnSubmitDocs.ThemeName = "TelerikMetro";
+            this.btnSubmitDocs.Click += new System.EventHandler(this.btnSubmitDocs_Click);
             // 
             // btnAddNewDoc
             // 
@@ -196,25 +197,25 @@
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnBrowseFile.GetChildAt(0).GetChildAt(2))).BottomWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnBrowseFile.GetChildAt(0).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
-            // radLabel1
+            // lblItem2
             // 
-            resources.ApplyResources(this.radLabel1, "radLabel1");
-            this.radLabel1.Name = "radLabel1";
+            resources.ApplyResources(this.lblItem2, "lblItem2");
+            this.lblItem2.Name = "lblItem2";
             // 
-            // radLabel2
+            // lblItem3
             // 
-            resources.ApplyResources(this.radLabel2, "radLabel2");
-            this.radLabel2.Name = "radLabel2";
+            resources.ApplyResources(this.lblItem3, "lblItem3");
+            this.lblItem3.Name = "lblItem3";
             // 
             // radLabel3
             // 
             resources.ApplyResources(this.radLabel3, "radLabel3");
             this.radLabel3.Name = "radLabel3";
             // 
-            // radLabel4
+            // lblItem1
             // 
-            resources.ApplyResources(this.radLabel4, "radLabel4");
-            this.radLabel4.Name = "radLabel4";
+            resources.ApplyResources(this.lblItem1, "lblItem1");
+            this.lblItem1.Name = "lblItem1";
             // 
             // txtAddItem2
             // 
@@ -448,10 +449,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddDocSrc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowseFile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddDocSubmitDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem3)).EndInit();
@@ -482,9 +483,9 @@
         private Telerik.WinControls.UI.RadGridView gvAddDocs;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadLabel radLabel3;
-        private Telerik.WinControls.UI.RadLabel radLabel4;
-        private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.UI.RadLabel radLabel2;
+        private Telerik.WinControls.UI.RadLabel lblItem1;
+        private Telerik.WinControls.UI.RadLabel lblItem2;
+        private Telerik.WinControls.UI.RadLabel lblItem3;
         private Telerik.WinControls.UI.RadTextBox txtAddItem2;
         private Telerik.WinControls.UI.RadTextBox txtAddDocSubmitDate;
         private Telerik.WinControls.UI.RadTextBox txtAddItem3;
