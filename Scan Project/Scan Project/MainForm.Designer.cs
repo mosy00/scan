@@ -60,6 +60,8 @@
             this.btnOpenUserForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenChangePasswordForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.uname = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.addDocsPage.SuspendLayout();
@@ -84,6 +86,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            this.radMenu1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -274,6 +279,8 @@
             // 
             // radMenu1
             // 
+            this.radMenu1.Controls.Add(this.uname);
+            this.radMenu1.Controls.Add(this.radLabel6);
             this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuButtonItem1,
             this.btnOpenProjectForm,
@@ -476,6 +483,18 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
+            // radLabel6
+            // 
+            resources.ApplyResources(this.radLabel6, "radLabel6");
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.ThemeName = "TelerikMetro";
+            // 
+            // uname
+            // 
+            resources.ApplyResources(this.uname, "uname");
+            this.uname.Name = "uname";
+            this.uname.ThemeName = "TelerikMetro";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -516,6 +535,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
+            this.radMenu1.ResumeLayout(false);
+            this.radMenu1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -554,5 +577,7 @@
         private System.Windows.Forms.PictureBox docPicture;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Telerik.WinControls.UI.RadMenuButtonItem btnOpenChangePasswordForm;
+        private Telerik.WinControls.UI.RadLabel uname;
+        private Telerik.WinControls.UI.RadLabel radLabel6;
     }
 }

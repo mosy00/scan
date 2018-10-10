@@ -247,5 +247,35 @@ namespace Scan_Project
                 throw ex;
             }
         }
+
+        public bool ChangePassword(string oldPass, string newPass)
+        {
+            string userName = Properties.Settings.Default.userName;
+
+            if (CheckUser(userName, oldPass))
+            {
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.CommandText = cmd.CommandText = $"update Users set userPassword='{MD5(newPass)}' where userName='{userName}'";
+
+                cmd.Connection = cn;
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    cn.Close();
+                    return true;
+                }
+                catch (System.Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
     }
 }

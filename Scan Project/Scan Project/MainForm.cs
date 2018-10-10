@@ -45,17 +45,17 @@ namespace Scan_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //LoginForm lf = new LoginForm();
-            //if (lf.ShowDialog() != DialogResult.OK)
-            //    Application.ExitThread();
+            LoginForm lf = new LoginForm();
+            if (lf.ShowDialog() != DialogResult.OK)
+                Application.ExitThread();
 
             ProjectForm pf = new ProjectForm();
             if (pf.ShowDialog() != DialogResult.OK)
                 Application.ExitThread();
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
-
             
+            uname.Text = Properties.Settings.Default.userName;
         }
 
         private void btnOpenProjectForm_Click(object sender, EventArgs e)
@@ -114,7 +114,8 @@ namespace Scan_Project
 
         private void btnOpenChangePasswordForm_Click(object sender, EventArgs e)
         {
-
+            ChangePass cp = new ChangePass();
+            cp.ShowDialog();
         }
     }
 }

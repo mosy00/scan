@@ -38,6 +38,7 @@ namespace Scan_Project
             }
             else
             {
+                Properties.Settings.Default.userName = txtUserName.Text;
                 DialogResult = DialogResult.OK;
             }
         }
