@@ -111,5 +111,10 @@ namespace Scan_Project
             txtAddItem3.Text = e.CurrentRow.Cells[3].Value.ToString();
             txtAddDocSubmitDate.Text = e.CurrentRow.Cells[4].Value.ToString();
         }
+
+        private void btnOpenChangePasswordForm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

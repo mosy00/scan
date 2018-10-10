@@ -58,6 +58,7 @@
             this.btnOpenProjectForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenItemForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenUserForm = new Telerik.WinControls.UI.RadMenuButtonItem();
+            this.btnOpenChangePasswordForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
@@ -93,7 +94,7 @@
             this.radPageView1.Controls.Add(this.addDocsPage);
             this.radPageView1.DefaultPage = this.homePage;
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.addDocsPage;
+            this.radPageView1.SelectedPage = this.homePage;
             this.radPageView1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near;
@@ -277,7 +278,8 @@
             this.radMenuButtonItem1,
             this.btnOpenProjectForm,
             this.btnOpenItemForm,
-            this.btnOpenUserForm});
+            this.btnOpenUserForm,
+            this.btnOpenChangePasswordForm});
             resources.ApplyResources(this.radMenu1, "radMenu1");
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.ThemeName = "TelerikMetro";
@@ -299,7 +301,6 @@
             this.radMenuButtonItem1.ButtonElement.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("radMenuButtonItem1.ButtonElement.Padding")));
             this.radMenuButtonItem1.ButtonElement.RightToLeft = ((bool)(resources.GetObject("radMenuButtonItem1.ButtonElement.RightToLeft")));
             this.radMenuButtonItem1.ButtonElement.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("radMenuButtonItem1.ButtonElement.TextOrientation")));
-            this.radMenuButtonItem1.ButtonElement.ToolTipText = resources.GetString("radMenuButtonItem1.ButtonElement.ToolTipText");
             this.radMenuButtonItem1.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
             this.radMenuButtonItem1.FocusBorderColor = System.Drawing.Color.Transparent;
             this.radMenuButtonItem1.Font = new System.Drawing.Font("IRANSans", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,12 +313,17 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.radMenuButtonItem1.GetChildAt(2))).ImageKey = resources.GetString("radMenuButtonItem1.ButtonElement.ImageKey1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.radMenuButtonItem1.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("radMenuButtonItem1.ButtonElement.TextOrientation1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.radMenuButtonItem1.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("radMenuButtonItem1.ButtonElement.FlipText1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.radMenuButtonItem1.GetChildAt(2))).ToolTipText = resources.GetString("radMenuButtonItem1.ButtonElement.ToolTipText1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.radMenuButtonItem1.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("radMenuButtonItem1.ButtonElement.Padding1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.radMenuButtonItem1.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("radMenuButtonItem1.ButtonElement.Margin1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.radMenuButtonItem1.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("radMenuButtonItem1.ButtonElement.Alignment1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.radMenuButtonItem1.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("radMenuButtonItem1.ButtonElement.RightToLeft1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.radMenuButtonItem1.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("radMenuButtonItem1.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radMenuButtonItem1.GetChildAt(2).GetChildAt(2))).Width = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radMenuButtonItem1.GetChildAt(2).GetChildAt(2))).LeftWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radMenuButtonItem1.GetChildAt(2).GetChildAt(2))).TopWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radMenuButtonItem1.GetChildAt(2).GetChildAt(2))).RightWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radMenuButtonItem1.GetChildAt(2).GetChildAt(2))).BottomWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radMenuButtonItem1.GetChildAt(2).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
             // btnOpenProjectForm
             // 
@@ -335,7 +341,6 @@
             this.btnOpenProjectForm.ButtonElement.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenProjectForm.ButtonElement.Padding")));
             this.btnOpenProjectForm.ButtonElement.RightToLeft = ((bool)(resources.GetObject("btnOpenProjectForm.ButtonElement.RightToLeft")));
             this.btnOpenProjectForm.ButtonElement.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenProjectForm.ButtonElement.TextOrientation")));
-            this.btnOpenProjectForm.ButtonElement.ToolTipText = resources.GetString("btnOpenProjectForm.ButtonElement.ToolTipText");
             this.btnOpenProjectForm.Image = global::Scan_Project.Properties.Resources.tabs;
             this.btnOpenProjectForm.Name = "btnOpenProjectForm";
             this.btnOpenProjectForm.Click += new System.EventHandler(this.btnOpenProjectForm_Click);
@@ -344,12 +349,17 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenProjectForm.ButtonElement.ImageKey1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenProjectForm.ButtonElement.TextOrientation1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenProjectForm.ButtonElement.FlipText1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenProjectForm.ButtonElement.ToolTipText1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenProjectForm.ButtonElement.Padding1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenProjectForm.ButtonElement.Margin1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenProjectForm.ButtonElement.Alignment1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenProjectForm.ButtonElement.RightToLeft1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenProjectForm.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenProjectForm.GetChildAt(2).GetChildAt(2))).Width = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenProjectForm.GetChildAt(2).GetChildAt(2))).LeftWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenProjectForm.GetChildAt(2).GetChildAt(2))).TopWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenProjectForm.GetChildAt(2).GetChildAt(2))).RightWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenProjectForm.GetChildAt(2).GetChildAt(2))).BottomWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenProjectForm.GetChildAt(2).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
             // btnOpenItemForm
             // 
@@ -367,7 +377,6 @@
             this.btnOpenItemForm.ButtonElement.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenItemForm.ButtonElement.Padding")));
             this.btnOpenItemForm.ButtonElement.RightToLeft = ((bool)(resources.GetObject("btnOpenItemForm.ButtonElement.RightToLeft")));
             this.btnOpenItemForm.ButtonElement.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenItemForm.ButtonElement.TextOrientation")));
-            this.btnOpenItemForm.ButtonElement.ToolTipText = resources.GetString("btnOpenItemForm.ButtonElement.ToolTipText");
             this.btnOpenItemForm.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
             this.btnOpenItemForm.Image = global::Scan_Project.Properties.Resources.list_interface_symbol;
             this.btnOpenItemForm.Name = "btnOpenItemForm";
@@ -377,12 +386,17 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenItemForm.ButtonElement.ImageKey1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenItemForm.ButtonElement.TextOrientation1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenItemForm.ButtonElement.FlipText1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenItemForm.ButtonElement.ToolTipText1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenItemForm.ButtonElement.Padding1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenItemForm.ButtonElement.Margin1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenItemForm.ButtonElement.Alignment1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenItemForm.ButtonElement.RightToLeft1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenItemForm.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenItemForm.GetChildAt(2).GetChildAt(2))).Width = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenItemForm.GetChildAt(2).GetChildAt(2))).LeftWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenItemForm.GetChildAt(2).GetChildAt(2))).TopWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenItemForm.GetChildAt(2).GetChildAt(2))).RightWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenItemForm.GetChildAt(2).GetChildAt(2))).BottomWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenItemForm.GetChildAt(2).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
             // btnOpenUserForm
             // 
@@ -414,6 +428,48 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenUserForm.ButtonElement.Alignment1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenUserForm.ButtonElement.RightToLeft1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenUserForm.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenUserForm.GetChildAt(2).GetChildAt(2))).Width = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenUserForm.GetChildAt(2).GetChildAt(2))).LeftWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenUserForm.GetChildAt(2).GetChildAt(2))).TopWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenUserForm.GetChildAt(2).GetChildAt(2))).RightWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenUserForm.GetChildAt(2).GetChildAt(2))).BottomWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenUserForm.GetChildAt(2).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
+            // 
+            // btnOpenChangePasswordForm
+            // 
+            resources.ApplyResources(this.btnOpenChangePasswordForm, "btnOpenChangePasswordForm");
+            // 
+            // 
+            // 
+            this.btnOpenChangePasswordForm.ButtonElement.Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.Alignment")));
+            this.btnOpenChangePasswordForm.ButtonElement.AngleTransform = ((float)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.AngleTransform")));
+            this.btnOpenChangePasswordForm.ButtonElement.FlipText = ((bool)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.FlipText")));
+            this.btnOpenChangePasswordForm.ButtonElement.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.Image")));
+            this.btnOpenChangePasswordForm.ButtonElement.ImageIndex = ((int)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.ImageIndex")));
+            this.btnOpenChangePasswordForm.ButtonElement.ImageKey = resources.GetString("btnOpenChangePasswordForm.ButtonElement.ImageKey");
+            this.btnOpenChangePasswordForm.ButtonElement.Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.Margin")));
+            this.btnOpenChangePasswordForm.ButtonElement.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.Padding")));
+            this.btnOpenChangePasswordForm.ButtonElement.RightToLeft = ((bool)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.RightToLeft")));
+            this.btnOpenChangePasswordForm.ButtonElement.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.TextOrientation")));
+            this.btnOpenChangePasswordForm.Image = global::Scan_Project.Properties.Resources.password;
+            this.btnOpenChangePasswordForm.Name = "btnOpenChangePasswordForm";
+            this.btnOpenChangePasswordForm.Click += new System.EventHandler(this.btnOpenChangePasswordForm_Click);
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.Image1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.ImageIndex1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenChangePasswordForm.ButtonElement.ImageKey1");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.TextOrientation1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.FlipText1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.Padding1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.Margin1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.Alignment1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.RightToLeft1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenChangePasswordForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenChangePasswordForm.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenChangePasswordForm.GetChildAt(2).GetChildAt(2))).Width = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenChangePasswordForm.GetChildAt(2).GetChildAt(2))).LeftWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenChangePasswordForm.GetChildAt(2).GetChildAt(2))).TopWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenChangePasswordForm.GetChildAt(2).GetChildAt(2))).RightWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenChangePasswordForm.GetChildAt(2).GetChildAt(2))).BottomWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenChangePasswordForm.GetChildAt(2).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
             // openFileDialog1
             // 
@@ -497,5 +553,6 @@
         private Telerik.WinControls.UI.RadButton btnAddNewDoc;
         private System.Windows.Forms.PictureBox docPicture;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Telerik.WinControls.UI.RadMenuButtonItem btnOpenChangePasswordForm;
     }
 }

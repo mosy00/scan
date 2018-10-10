@@ -234,6 +234,9 @@
   <data name="&gt;&gt;btnAddNewDoc.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="docPicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="docPicture.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 287</value>
   </data>
@@ -722,7 +725,7 @@
     <value>Horizontal</value>
   </data>
   <data name="radStatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 601</value>
+    <value>0, 587</value>
   </data>
   <data name="radStatusStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
@@ -751,8 +754,12 @@
   <data name="radMenuButtonItem1.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="radMenuButtonItem1.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="radMenuButtonItem1.ButtonElement.Alignment" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
   </data>
   <data name="radMenuButtonItem1.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -764,9 +771,9 @@
     <value />
   </data>
   <data name="radMenuButtonItem1.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
+    <value>0</value>
   </data>
-  <data name="radMenuButtonItem1.ButtonElement.ImageKey" xml:space="preserve">
+  <data name="radMenuButtonItem1.ButtonElement.ImageKey" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="radMenuButtonItem1.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -780,9 +787,6 @@
   </data>
   <data name="radMenuButtonItem1.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.ToolTipText" xml:space="preserve">
-    <value>تنظیمات</value>
   </data>
   <data name="radMenuButtonItem1.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -811,16 +815,13 @@
   <data name="radMenuButtonItem1.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="radMenuButtonItem1.ToolTipText" xml:space="preserve">
-    <value>تنظیمات</value>
-  </data>
   <data name="radMenuButtonItem1.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="radMenuButtonItem1.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
-    <value>-1</value>
+    <value>0</value>
   </data>
-  <data name="radMenuButtonItem1.ButtonElement.ImageKey1" xml:space="preserve">
+  <data name="radMenuButtonItem1.ButtonElement.ImageKey1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="radMenuButtonItem1.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
@@ -829,17 +830,18 @@
   <data name="radMenuButtonItem1.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="radMenuButtonItem1.ButtonElement.ToolTipText1" xml:space="preserve">
-    <value>تنظیمات</value>
-  </data>
   <data name="radMenuButtonItem1.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="radMenuButtonItem1.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="radMenuButtonItem1.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="radMenuButtonItem1.ButtonElement.Alignment1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
   </data>
   <data name="radMenuButtonItem1.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -853,8 +855,12 @@
   <data name="btnOpenProjectForm.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="btnOpenProjectForm.ButtonElement.Alignment" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
   </data>
   <data name="btnOpenProjectForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -866,9 +872,9 @@
     <value />
   </data>
   <data name="btnOpenProjectForm.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
+    <value>0</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.ImageKey" xml:space="preserve">
+  <data name="btnOpenProjectForm.ButtonElement.ImageKey" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="btnOpenProjectForm.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -882,9 +888,6 @@
   </data>
   <data name="btnOpenProjectForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="btnOpenProjectForm.ButtonElement.ToolTipText" xml:space="preserve">
-    <value>فرم پروژه‌ها</value>
   </data>
   <data name="btnOpenProjectForm.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -913,16 +916,13 @@
   <data name="btnOpenProjectForm.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="btnOpenProjectForm.ToolTipText" xml:space="preserve">
-    <value>فرم پروژه‌ها</value>
-  </data>
   <data name="btnOpenProjectForm.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="btnOpenProjectForm.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
-    <value>-1</value>
+    <value>0</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.ImageKey1" xml:space="preserve">
+  <data name="btnOpenProjectForm.ButtonElement.ImageKey1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="btnOpenProjectForm.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
@@ -931,17 +931,18 @@
   <data name="btnOpenProjectForm.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.ToolTipText1" xml:space="preserve">
-    <value>فرم پروژه‌ها</value>
-  </data>
   <data name="btnOpenProjectForm.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btnOpenProjectForm.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="btnOpenProjectForm.ButtonElement.Alignment1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
   </data>
   <data name="btnOpenProjectForm.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -955,8 +956,12 @@
   <data name="btnOpenItemForm.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="btnOpenItemForm.ButtonElement.Alignment" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
   </data>
   <data name="btnOpenItemForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -968,9 +973,9 @@
     <value />
   </data>
   <data name="btnOpenItemForm.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
+    <value>0</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.ImageKey" xml:space="preserve">
+  <data name="btnOpenItemForm.ButtonElement.ImageKey" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="btnOpenItemForm.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -984,9 +989,6 @@
   </data>
   <data name="btnOpenItemForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="btnOpenItemForm.ButtonElement.ToolTipText" xml:space="preserve">
-    <value>فرم شاخص‌ها</value>
   </data>
   <data name="btnOpenItemForm.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1015,16 +1017,13 @@
   <data name="btnOpenItemForm.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="btnOpenItemForm.ToolTipText" xml:space="preserve">
-    <value>فرم شاخص‌ها</value>
-  </data>
   <data name="btnOpenItemForm.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="btnOpenItemForm.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
-    <value>-1</value>
+    <value>0</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.ImageKey1" xml:space="preserve">
+  <data name="btnOpenItemForm.ButtonElement.ImageKey1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="btnOpenItemForm.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
@@ -1033,17 +1032,18 @@
   <data name="btnOpenItemForm.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.ToolTipText1" xml:space="preserve">
-    <value>فرم شاخص‌ها</value>
-  </data>
   <data name="btnOpenItemForm.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btnOpenItemForm.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="btnOpenItemForm.ButtonElement.Alignment1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
   </data>
   <data name="btnOpenItemForm.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1057,8 +1057,12 @@
   <data name="btnOpenUserForm.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="btnOpenUserForm.ButtonElement.Alignment" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
   </data>
   <data name="btnOpenUserForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -1070,9 +1074,9 @@
     <value />
   </data>
   <data name="btnOpenUserForm.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
+    <value>0</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.ImageKey" xml:space="preserve">
+  <data name="btnOpenUserForm.ButtonElement.ImageKey" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="btnOpenUserForm.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -1118,9 +1122,9 @@
     <value />
   </data>
   <data name="btnOpenUserForm.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
-    <value>-1</value>
+    <value>0</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.ImageKey1" xml:space="preserve">
+  <data name="btnOpenUserForm.ButtonElement.ImageKey1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="btnOpenUserForm.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
@@ -1135,13 +1139,110 @@
   <data name="btnOpenUserForm.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="btnOpenUserForm.ButtonElement.Alignment1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
   </data>
   <data name="btnOpenUserForm.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="btnOpenUserForm.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenChangePasswordForm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 10, 0</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenChangePasswordForm.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.ImageKey1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOpenChangePasswordForm.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="radMenu1.Location" type="System.Drawing.Point, System.Drawing">
@@ -1151,7 +1252,7 @@
     <value>2, 2, 0, 0</value>
   </data>
   <data name="radMenu1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1092, 44</value>
+    <value>1092, 40</value>
   </data>
   <data name="radMenu1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1184,7 +1285,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1092, 631</value>
+    <value>1092, 617</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 11.25pt</value>
@@ -1235,6 +1336,12 @@
     <value>btnOpenUserForm</value>
   </data>
   <data name="&gt;&gt;btnOpenUserForm.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnOpenChangePasswordForm.Name" xml:space="preserve">
+    <value>btnOpenChangePasswordForm</value>
+  </data>
+  <data name="&gt;&gt;btnOpenChangePasswordForm.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
