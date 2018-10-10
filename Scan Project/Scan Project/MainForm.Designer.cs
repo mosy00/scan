@@ -35,6 +35,11 @@
             this.homePage = new Telerik.WinControls.UI.RadPageViewPage();
             this.addDocsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.btnEditDoc = new Telerik.WinControls.UI.RadButton();
+            this.btnSubmitDocs = new Telerik.WinControls.UI.RadButton();
+            this.btnAddNewDoc = new Telerik.WinControls.UI.RadButton();
+            this.docPicture = new System.Windows.Forms.PictureBox();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.txtAddDocSrc = new Telerik.WinControls.UI.RadTextBox();
             this.btnBrowseFile = new Telerik.WinControls.UI.RadButton();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -53,16 +58,17 @@
             this.btnOpenProjectForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenItemForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenUserForm = new Telerik.WinControls.UI.RadMenuButtonItem();
-            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.docPicture = new System.Windows.Forms.PictureBox();
-            this.btnAddNewDoc = new Telerik.WinControls.UI.RadButton();
-            this.btnSubmitDoc = new Telerik.WinControls.UI.RadButton();
-            this.btnEditDoc = new Telerik.WinControls.UI.RadButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.addDocsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditDoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSubmitDocs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddNewDoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddDocSrc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowseFile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
@@ -77,11 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddNewDoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSubmitDoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +118,7 @@
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Controls.Add(this.btnEditDoc);
-            this.radGroupBox1.Controls.Add(this.btnSubmitDoc);
+            this.radGroupBox1.Controls.Add(this.btnSubmitDocs);
             this.radGroupBox1.Controls.Add(this.btnAddNewDoc);
             this.radGroupBox1.Controls.Add(this.docPicture);
             this.radGroupBox1.Controls.Add(this.radLabel5);
@@ -139,6 +140,37 @@
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment")));
             // 
+            // btnEditDoc
+            // 
+            resources.ApplyResources(this.btnEditDoc, "btnEditDoc");
+            this.btnEditDoc.Name = "btnEditDoc";
+            this.btnEditDoc.ThemeName = "TelerikMetro";
+            this.btnEditDoc.Click += new System.EventHandler(this.btnEditDoc_Click);
+            // 
+            // btnSubmitDocs
+            // 
+            resources.ApplyResources(this.btnSubmitDocs, "btnSubmitDocs");
+            this.btnSubmitDocs.Name = "btnSubmitDocs";
+            this.btnSubmitDocs.ThemeName = "TelerikMetro";
+            // 
+            // btnAddNewDoc
+            // 
+            resources.ApplyResources(this.btnAddNewDoc, "btnAddNewDoc");
+            this.btnAddNewDoc.Name = "btnAddNewDoc";
+            this.btnAddNewDoc.ThemeName = "TelerikMetro";
+            this.btnAddNewDoc.Click += new System.EventHandler(this.btnAddNewDoc_Click);
+            // 
+            // docPicture
+            // 
+            resources.ApplyResources(this.docPicture, "docPicture");
+            this.docPicture.Name = "docPicture";
+            this.docPicture.TabStop = false;
+            // 
+            // radLabel5
+            // 
+            resources.ApplyResources(this.radLabel5, "radLabel5");
+            this.radLabel5.Name = "radLabel5";
+            // 
             // txtAddDocSrc
             // 
             resources.ApplyResources(this.txtAddDocSrc, "txtAddDocSrc");
@@ -151,6 +183,7 @@
             this.btnBrowseFile.Image = global::Scan_Project.Properties.Resources.browse_black;
             this.btnBrowseFile.Name = "btnBrowseFile";
             this.btnBrowseFile.ThemeName = "TelerikMetro";
+            this.btnBrowseFile.Click += new System.EventHandler(this.btnBrowseFile_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnBrowseFile.GetChildAt(0))).Image = global::Scan_Project.Properties.Resources.browse_black;
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnBrowseFile.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnBrowseFile.GetChildAt(0))).DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
@@ -213,9 +246,14 @@
             // 
             // 
             // 
+            this.gvAddDocs.MasterTemplate.AllowAddNewRow = false;
+            this.gvAddDocs.MasterTemplate.AllowDeleteRow = false;
+            this.gvAddDocs.MasterTemplate.AllowEditRow = false;
             this.gvAddDocs.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.gvAddDocs.Name = "gvAddDocs";
+            this.gvAddDocs.ReadOnly = true;
             this.gvAddDocs.ThemeName = "TelerikMetro";
+            this.gvAddDocs.CurrentRowChanged += new Telerik.WinControls.UI.CurrentRowChangedEventHandler(this.gvAddDocs_CurrentRowChanged);
             // 
             // radStatusStrip1
             // 
@@ -377,34 +415,10 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenUserForm.ButtonElement.RightToLeft1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenUserForm.ButtonElement.AngleTransform1")));
             // 
-            // radLabel5
+            // openFileDialog1
             // 
-            resources.ApplyResources(this.radLabel5, "radLabel5");
-            this.radLabel5.Name = "radLabel5";
-            // 
-            // docPicture
-            // 
-            resources.ApplyResources(this.docPicture, "docPicture");
-            this.docPicture.Name = "docPicture";
-            this.docPicture.TabStop = false;
-            // 
-            // btnAddNewDoc
-            // 
-            resources.ApplyResources(this.btnAddNewDoc, "btnAddNewDoc");
-            this.btnAddNewDoc.Name = "btnAddNewDoc";
-            this.btnAddNewDoc.ThemeName = "TelerikMetro";
-            // 
-            // btnSubmitDoc
-            // 
-            resources.ApplyResources(this.btnSubmitDoc, "btnSubmitDoc");
-            this.btnSubmitDoc.Name = "btnSubmitDoc";
-            this.btnSubmitDoc.ThemeName = "TelerikMetro";
-            // 
-            // btnEditDoc
-            // 
-            resources.ApplyResources(this.btnEditDoc, "btnEditDoc");
-            this.btnEditDoc.Name = "btnEditDoc";
-            this.btnEditDoc.ThemeName = "TelerikMetro";
+            this.openFileDialog1.FileName = "openFileDialog1";
+            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
             // MainForm
             // 
@@ -427,6 +441,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditDoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSubmitDocs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddNewDoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddDocSrc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowseFile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
@@ -441,11 +460,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddNewDoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSubmitDoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -479,8 +493,9 @@
         private Telerik.WinControls.UI.RadButton btnBrowseFile;
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadButton btnEditDoc;
-        private Telerik.WinControls.UI.RadButton btnSubmitDoc;
+        private Telerik.WinControls.UI.RadButton btnSubmitDocs;
         private Telerik.WinControls.UI.RadButton btnAddNewDoc;
         private System.Windows.Forms.PictureBox docPicture;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

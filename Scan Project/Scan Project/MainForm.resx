@@ -129,7 +129,7 @@
     <value>5, 46</value>
   </data>
   <data name="homePage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>982, 450</value>
+    <value>1082, 524</value>
   </data>
   <data name="homePage.Text" xml:space="preserve">
     <value> صفحه اصلی</value>
@@ -146,6 +146,10 @@
   <data name="&gt;&gt;homePage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnEditDoc.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="btnEditDoc.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 11.249999pt</value>
   </data>
@@ -155,12 +159,11 @@
   <data name="btnEditDoc.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 30</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnEditDoc.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="btnEditDoc.Text" xml:space="preserve">
-    <value>ثبت تغییرات</value>
+    <value>ایجاد سند</value>
   </data>
   <data name="&gt;&gt;btnEditDoc.Name" xml:space="preserve">
     <value>btnEditDoc</value>
@@ -174,31 +177,34 @@
   <data name="&gt;&gt;btnEditDoc.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnSubmitDoc.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnSubmitDocs.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnSubmitDocs.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 11.249999pt</value>
   </data>
-  <data name="btnSubmitDoc.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnSubmitDocs.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 463</value>
   </data>
-  <data name="btnSubmitDoc.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnSubmitDocs.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 30</value>
   </data>
-  <data name="btnSubmitDoc.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnSubmitDocs.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="btnSubmitDoc.Text" xml:space="preserve">
-    <value>ایجاد سند</value>
+  <data name="btnSubmitDocs.Text" xml:space="preserve">
+    <value>ثبت نهایی</value>
   </data>
-  <data name="&gt;&gt;btnSubmitDoc.Name" xml:space="preserve">
-    <value>btnSubmitDoc</value>
+  <data name="&gt;&gt;btnSubmitDocs.Name" xml:space="preserve">
+    <value>btnSubmitDocs</value>
   </data>
-  <data name="&gt;&gt;btnSubmitDoc.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnSubmitDocs.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;btnSubmitDoc.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnSubmitDocs.Parent" xml:space="preserve">
     <value>radGroupBox1</value>
   </data>
-  <data name="&gt;&gt;btnSubmitDoc.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnSubmitDocs.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnAddNewDoc.Font" type="System.Drawing.Font, System.Drawing">
@@ -233,6 +239,9 @@
   </data>
   <data name="docPicture.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 160</value>
+  </data>
+  <data name="docPicture.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
   <data name="docPicture.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -713,7 +722,7 @@
     <value>Horizontal</value>
   </data>
   <data name="radStatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 605</value>
+    <value>0, 601</value>
   </data>
   <data name="radStatusStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
@@ -1159,6 +1168,12 @@
   <data name="&gt;&gt;radMenu1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>168, 4</value>
+  </metadata>
+  <data name="openFileDialog1.Filter" xml:space="preserve">
+    <value>JPEG |*.jpg|PNG |*.png|Tiff|*.tiff|Tif|*.tif</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1169,7 +1184,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1092, 635</value>
+    <value>1092, 631</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 11.25pt</value>
@@ -1221,6 +1236,12 @@
   </data>
   <data name="&gt;&gt;btnOpenUserForm.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
