@@ -209,9 +209,44 @@ namespace Scan_Project
             {
                 cn.Open();
                 da.Fill(dt);
+                cn.Close();
 
                 itemNames = GetItems();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+
+            return dt;
+        }
+
+        public DataTable GetDocs(out DataTable itemNames, string item1, string item2, string item3, string docSubmitDate)
+        {
+            DataTable dt = new DataTable();
+
+            OleDbCommand cmd = new OleDbCommand();
+            string q1 = !string.IsNullOrWhiteSpace(item1) ? string.Format("item1 like '%{0}%' or", item1) : "";
+            string q2 = !string.IsNullOrWhiteSpace(item2) ? string.Format("item2 like '%{0}%' or", item2) : "";
+            string q3 = !string.IsNullOrWhiteSpace(item3) ? string.Format("item3 like '%{0}%' or", item3) : "";
+
+            string commandText = string.Format("select * from Documents where projectID = {0} and ({1} {2} {3})",
+                Properties.Settings.Default.projectID, q1, q2, q3);
+
+            commandText = commandText.Remove(commandText.LastIndexOf("or"));
+            commandText = commandText + ")";
+
+            cmd.CommandText = commandText;
+            
+            cmd.Connection = cn;
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            try
+            {
+                cn.Open();
+                da.Fill(dt);
                 cn.Close();
+
+                itemNames = GetItems();                
             }
             catch (System.Exception ex)
             {
