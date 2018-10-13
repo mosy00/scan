@@ -133,6 +133,15 @@ namespace Scan_Project
 
         private void btnEditDoc_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtAddItem1.Text) || string.IsNullOrWhiteSpace(txtAddItem2.Text) || 
+                string.IsNullOrWhiteSpace(txtAddItem3.Text) || string.IsNullOrWhiteSpace(txtAddDocSrc.Text))
+            {
+                RadMessageBox.ThemeName = "TelerikMetro";
+                RadMessageBox.Show(null, "لطفا تمامی مقادیر را وارد کنید.", "خطا", MessageBoxButtons.OK,
+                    RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                return;
+            }
+
             if (gvAddDocs.CurrentRow != null)
             {
                 gvAddDocs.CurrentRow.Cells[0].Value = Image.FromFile(openFileDialog1.FileName);
@@ -227,11 +236,15 @@ namespace Scan_Project
             RadMessageBox.ThemeName = "TelerikMetro";
             RadMessageBox.Show(null, "مدارک با موفقیت ثبت شدند.", "ثبت موفق", MessageBoxButtons.OK,
                 RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+
+            gvAddDocs.Rows.Clear();
+            CleanNewDocPage();
+            btnSubmitDocs.Enabled = false;
         }
 
         private void btnSearchDocs_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtSearchItem1.Text + txtSearchItem2.Text + txtSearchItem3.Text + txtSearchSubmitDate.Text))
+            if (string.IsNullOrWhiteSpace(txtSearchItem1.Text + txtSearchItem2.Text + txtSearchItem3.Text + txtSearchSubmitFromDate.Text))
             {
                 RadMessageBox.ThemeName = "TelerikMetro";
                 RadMessageBox.Show(null, "برای سرچ کردن باید حداقل یکی از مقادیر بالا را وارد کنید.", "خطا", MessageBoxButtons.OK,
@@ -243,7 +256,7 @@ namespace Scan_Project
             dbConnections db = new dbConnections();
 
             DataTable dt, itemNames;
-            dt = db.GetDocs(out itemNames, txtSearchItem1.Text, txtSearchItem2.Text, txtSearchItem3.Text, txtSearchSubmitDate.Text);
+            dt = db.GetDocs(out itemNames, txtSearchItem1.Text, txtSearchItem2.Text, txtSearchItem3.Text, txtSearchSubmitFromDate.Text);
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -286,5 +299,11 @@ namespace Scan_Project
                 gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 100;
             }
         }
+
+        private void txtAddDocSrc_Click(object sender, EventArgs e)
+        {
+            btnBrowseFile_Click(null, null);
+        }
+
     }
 }

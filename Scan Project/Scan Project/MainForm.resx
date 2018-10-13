@@ -129,7 +129,7 @@
     <value>5, 46</value>
   </data>
   <data name="homePage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1082, 532</value>
+    <value>1082, 529</value>
   </data>
   <data name="homePage.Text" xml:space="preserve">
     <value> صفحه اصلی</value>
@@ -622,6 +622,93 @@
   <data name="&gt;&gt;gvSearchDocs.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="radLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="radLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>236, 192</value>
+  </data>
+  <data name="radLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 24</value>
+  </data>
+  <data name="radLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="radLabel2.Text" xml:space="preserve">
+    <value>از</value>
+  </data>
+  <data name="radLabel2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.Name" xml:space="preserve">
+    <value>radLabel2</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;radLabel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="radLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 192</value>
+  </data>
+  <data name="radLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 24</value>
+  </data>
+  <data name="radLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="radLabel3.Text" xml:space="preserve">
+    <value>تا</value>
+  </data>
+  <data name="radLabel3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.Name" xml:space="preserve">
+    <value>radLabel3</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;radLabel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtSearchSubmitToDate.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtSearchSubmitToDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="txtSearchSubmitToDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 192</value>
+  </data>
+  <data name="txtSearchSubmitToDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 29</value>
+  </data>
+  <data name="txtSearchSubmitToDate.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitToDate.Name" xml:space="preserve">
+    <value>txtSearchSubmitToDate</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitToDate.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitToDate.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitToDate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="btnShowAllDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
   </data>
@@ -650,7 +737,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;btnShowAllDocs.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="btnSearchDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -680,7 +767,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;btnSearchDocs.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="radLabel1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -710,31 +797,34 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
-  <data name="txtSearchSubmitDate.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txtSearchSubmitFromDate.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtSearchSubmitFromDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
   </data>
-  <data name="txtSearchSubmitDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 192</value>
+  <data name="txtSearchSubmitFromDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 192</value>
   </data>
-  <data name="txtSearchSubmitDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 29</value>
+  <data name="txtSearchSubmitFromDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 29</value>
   </data>
-  <data name="txtSearchSubmitDate.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtSearchSubmitFromDate.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;txtSearchSubmitDate.Name" xml:space="preserve">
-    <value>txtSearchSubmitDate</value>
+  <data name="&gt;&gt;txtSearchSubmitFromDate.Name" xml:space="preserve">
+    <value>txtSearchSubmitFromDate</value>
   </data>
-  <data name="&gt;&gt;txtSearchSubmitDate.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtSearchSubmitFromDate.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;txtSearchSubmitDate.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtSearchSubmitFromDate.Parent" xml:space="preserve">
     <value>radGroupBox2</value>
   </data>
-  <data name="&gt;&gt;txtSearchSubmitDate.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;txtSearchSubmitFromDate.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="lblSearchItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -764,7 +854,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;lblSearchItem2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="lblSearchItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -794,7 +884,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;lblSearchItem3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="lblSearchItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -824,7 +914,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;lblSearchItem1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="txtSearchItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -848,7 +938,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchItem2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="txtSearchItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -872,7 +962,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchItem3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="txtSearchItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -896,7 +986,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchItem1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="radGroupBox2.HeaderText" xml:space="preserve">
     <value>جست و جوی اسناد</value>
@@ -1019,7 +1109,7 @@
     <value>Horizontal</value>
   </data>
   <data name="radStatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 605</value>
+    <value>0, 608</value>
   </data>
   <data name="radStatusStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
@@ -1040,108 +1130,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radStatusStrip1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="radMenuButtonItem1.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="radMenuButtonItem1.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.ImageKey" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.ToolTipText" xml:space="preserve">
-    <value>تنظیمات</value>
-  </data>
-  <data name="radMenuButtonItem1.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="radMenuButtonItem1.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="radMenuButtonItem1.ImageKey" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radMenuButtonItem1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 10, 0</value>
-  </data>
-  <data name="radMenuButtonItem1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="radMenuButtonItem1.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="radMenuButtonItem1.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="radMenuButtonItem1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="radMenuButtonItem1.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="radMenuButtonItem1.ToolTipText" xml:space="preserve">
-    <value>تنظیمات</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.ImageKey1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.ToolTipText1" xml:space="preserve">
-    <value>تنظیمات</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="radMenuButtonItem1.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="btnOpenProjectForm.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -1481,7 +1469,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1092, 635</value>
+    <value>1092, 638</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 11.25pt</value>
@@ -2933,12 +2921,6 @@
   </data>
   <data name="&gt;&gt;lblProjectName.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radMenuButtonItem1.Name" xml:space="preserve">
-    <value>radMenuButtonItem1</value>
-  </data>
-  <data name="&gt;&gt;radMenuButtonItem1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;btnOpenProjectForm.Name" xml:space="preserve">
     <value>btnOpenProjectForm</value>
