@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.homePage = new Telerik.WinControls.UI.RadPageViewPage();
@@ -44,13 +45,12 @@
             this.btnBrowseFile = new Telerik.WinControls.UI.RadButton();
             this.lblItem2 = new Telerik.WinControls.UI.RadLabel();
             this.lblItem3 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.lblItem1 = new Telerik.WinControls.UI.RadLabel();
             this.txtAddItem2 = new Telerik.WinControls.UI.RadTextBox();
-            this.txtAddDocSubmitDate = new Telerik.WinControls.UI.RadTextBox();
             this.txtAddItem3 = new Telerik.WinControls.UI.RadTextBox();
             this.txtAddItem1 = new Telerik.WinControls.UI.RadTextBox();
             this.gvAddDocs = new Telerik.WinControls.UI.RadGridView();
+            this.searchDocsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.lblProjectName = new Telerik.WinControls.UI.RadLabelElement();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
@@ -59,6 +59,18 @@
             this.btnOpenItemForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenUserForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.lblSearchItem2 = new Telerik.WinControls.UI.RadLabel();
+            this.lblSearchItem3 = new Telerik.WinControls.UI.RadLabel();
+            this.lblSearchItem1 = new Telerik.WinControls.UI.RadLabel();
+            this.txtSearchItem2 = new Telerik.WinControls.UI.RadTextBox();
+            this.txtSearchItem3 = new Telerik.WinControls.UI.RadTextBox();
+            this.txtSearchItem1 = new Telerik.WinControls.UI.RadTextBox();
+            this.txtSearchSubmitDate = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.btnSearchDocs = new Telerik.WinControls.UI.RadButton();
+            this.gvSearchDocs = new Telerik.WinControls.UI.RadGridView();
+            this.btnShowAllDocs = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.addDocsPage.SuspendLayout();
@@ -73,16 +85,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowseFile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddDocSubmitDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs.MasterTemplate)).BeginInit();
+            this.searchDocsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
+            this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearchDocs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowAllDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,9 +116,10 @@
             resources.ApplyResources(this.radPageView1, "radPageView1");
             this.radPageView1.Controls.Add(this.homePage);
             this.radPageView1.Controls.Add(this.addDocsPage);
+            this.radPageView1.Controls.Add(this.searchDocsPage);
             this.radPageView1.DefaultPage = this.homePage;
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.addDocsPage;
+            this.radPageView1.SelectedPage = this.searchDocsPage;
             this.radPageView1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near;
@@ -117,6 +143,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            resources.ApplyResources(this.radGroupBox1, "radGroupBox1");
             this.radGroupBox1.Controls.Add(this.btnEditDoc);
             this.radGroupBox1.Controls.Add(this.btnSubmitDocs);
             this.radGroupBox1.Controls.Add(this.btnAddNewDoc);
@@ -126,13 +153,10 @@
             this.radGroupBox1.Controls.Add(this.btnBrowseFile);
             this.radGroupBox1.Controls.Add(this.lblItem2);
             this.radGroupBox1.Controls.Add(this.lblItem3);
-            this.radGroupBox1.Controls.Add(this.radLabel3);
             this.radGroupBox1.Controls.Add(this.lblItem1);
             this.radGroupBox1.Controls.Add(this.txtAddItem2);
-            this.radGroupBox1.Controls.Add(this.txtAddDocSubmitDate);
             this.radGroupBox1.Controls.Add(this.txtAddItem3);
             this.radGroupBox1.Controls.Add(this.txtAddItem1);
-            resources.ApplyResources(this.radGroupBox1, "radGroupBox1");
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Text = resources.GetString("resource.Text1");
@@ -207,11 +231,6 @@
             resources.ApplyResources(this.lblItem3, "lblItem3");
             this.lblItem3.Name = "lblItem3";
             // 
-            // radLabel3
-            // 
-            resources.ApplyResources(this.radLabel3, "radLabel3");
-            this.radLabel3.Name = "radLabel3";
-            // 
             // lblItem1
             // 
             resources.ApplyResources(this.lblItem1, "lblItem1");
@@ -222,12 +241,6 @@
             resources.ApplyResources(this.txtAddItem2, "txtAddItem2");
             this.txtAddItem2.Name = "txtAddItem2";
             this.txtAddItem2.ThemeName = "TelerikMetro";
-            // 
-            // txtAddDocSubmitDate
-            // 
-            resources.ApplyResources(this.txtAddDocSubmitDate, "txtAddDocSubmitDate");
-            this.txtAddDocSubmitDate.Name = "txtAddDocSubmitDate";
-            this.txtAddDocSubmitDate.ThemeName = "TelerikMetro";
             // 
             // txtAddItem3
             // 
@@ -255,6 +268,15 @@
             this.gvAddDocs.ReadOnly = true;
             this.gvAddDocs.ThemeName = "TelerikMetro";
             this.gvAddDocs.CurrentRowChanged += new Telerik.WinControls.UI.CurrentRowChangedEventHandler(this.gvAddDocs_CurrentRowChanged);
+            // 
+            // searchDocsPage
+            // 
+            this.searchDocsPage.Controls.Add(this.gvSearchDocs);
+            this.searchDocsPage.Controls.Add(this.radGroupBox2);
+            this.searchDocsPage.Image = global::Scan_Project.Properties.Resources.file;
+            this.searchDocsPage.ItemSize = new System.Drawing.SizeF(128F, 40F);
+            resources.ApplyResources(this.searchDocsPage, "searchDocsPage");
+            this.searchDocsPage.Name = "searchDocsPage";
             // 
             // radStatusStrip1
             // 
@@ -421,6 +443,99 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
+            // radGroupBox2
+            // 
+            this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.btnShowAllDocs);
+            this.radGroupBox2.Controls.Add(this.btnSearchDocs);
+            this.radGroupBox2.Controls.Add(this.radLabel1);
+            this.radGroupBox2.Controls.Add(this.txtSearchSubmitDate);
+            this.radGroupBox2.Controls.Add(this.lblSearchItem2);
+            this.radGroupBox2.Controls.Add(this.lblSearchItem3);
+            this.radGroupBox2.Controls.Add(this.lblSearchItem1);
+            this.radGroupBox2.Controls.Add(this.txtSearchItem2);
+            this.radGroupBox2.Controls.Add(this.txtSearchItem3);
+            this.radGroupBox2.Controls.Add(this.txtSearchItem1);
+            resources.ApplyResources(this.radGroupBox2, "radGroupBox2");
+            this.radGroupBox2.Name = "radGroupBox2";
+            this.radGroupBox2.ThemeName = "TelerikMetro";
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Text = resources.GetString("resource.Text2");
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).LineLimit = false;
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment1")));
+            // 
+            // lblSearchItem2
+            // 
+            resources.ApplyResources(this.lblSearchItem2, "lblSearchItem2");
+            this.lblSearchItem2.Name = "lblSearchItem2";
+            // 
+            // lblSearchItem3
+            // 
+            resources.ApplyResources(this.lblSearchItem3, "lblSearchItem3");
+            this.lblSearchItem3.Name = "lblSearchItem3";
+            // 
+            // lblSearchItem1
+            // 
+            resources.ApplyResources(this.lblSearchItem1, "lblSearchItem1");
+            this.lblSearchItem1.Name = "lblSearchItem1";
+            // 
+            // txtSearchItem2
+            // 
+            resources.ApplyResources(this.txtSearchItem2, "txtSearchItem2");
+            this.txtSearchItem2.Name = "txtSearchItem2";
+            this.txtSearchItem2.ThemeName = "TelerikMetro";
+            // 
+            // txtSearchItem3
+            // 
+            resources.ApplyResources(this.txtSearchItem3, "txtSearchItem3");
+            this.txtSearchItem3.Name = "txtSearchItem3";
+            this.txtSearchItem3.ThemeName = "TelerikMetro";
+            // 
+            // txtSearchItem1
+            // 
+            resources.ApplyResources(this.txtSearchItem1, "txtSearchItem1");
+            this.txtSearchItem1.Name = "txtSearchItem1";
+            this.txtSearchItem1.ThemeName = "TelerikMetro";
+            // 
+            // txtSearchSubmitDate
+            // 
+            resources.ApplyResources(this.txtSearchSubmitDate, "txtSearchSubmitDate");
+            this.txtSearchSubmitDate.Name = "txtSearchSubmitDate";
+            this.txtSearchSubmitDate.ThemeName = "TelerikMetro";
+            // 
+            // radLabel1
+            // 
+            resources.ApplyResources(this.radLabel1, "radLabel1");
+            this.radLabel1.Name = "radLabel1";
+            // 
+            // btnSearchDocs
+            // 
+            resources.ApplyResources(this.btnSearchDocs, "btnSearchDocs");
+            this.btnSearchDocs.Name = "btnSearchDocs";
+            this.btnSearchDocs.ThemeName = "TelerikMetro";
+            this.btnSearchDocs.Click += new System.EventHandler(this.btnSearchDocs_Click);
+            // 
+            // gvSearchDocs
+            // 
+            resources.ApplyResources(this.gvSearchDocs, "gvSearchDocs");
+            // 
+            // 
+            // 
+            this.gvSearchDocs.MasterTemplate.AllowAddNewRow = false;
+            this.gvSearchDocs.MasterTemplate.AllowDeleteRow = false;
+            this.gvSearchDocs.MasterTemplate.AllowEditRow = false;
+            this.gvSearchDocs.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.gvSearchDocs.Name = "gvSearchDocs";
+            this.gvSearchDocs.ReadOnly = true;
+            this.gvSearchDocs.ThemeName = "TelerikMetro";
+            // 
+            // btnShowAllDocs
+            // 
+            resources.ApplyResources(this.btnShowAllDocs, "btnShowAllDocs");
+            this.btnShowAllDocs.Name = "btnShowAllDocs";
+            this.btnShowAllDocs.ThemeName = "TelerikMetro";
+            this.btnShowAllDocs.Click += new System.EventHandler(this.btnShowAllDocs_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -433,7 +548,6 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.ShowIcon = false;
             this.ThemeName = "TelerikMetro";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).EndInit();
@@ -451,16 +565,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowseFile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddDocSubmitDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs)).EndInit();
+            this.searchDocsPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
+            this.radGroupBox2.ResumeLayout(false);
+            this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearchDocs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowAllDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -482,12 +610,10 @@
         private Telerik.WinControls.UI.RadMenuButtonItem btnOpenUserForm;
         private Telerik.WinControls.UI.RadGridView gvAddDocs;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel lblItem1;
         private Telerik.WinControls.UI.RadLabel lblItem2;
         private Telerik.WinControls.UI.RadLabel lblItem3;
         private Telerik.WinControls.UI.RadTextBox txtAddItem2;
-        private Telerik.WinControls.UI.RadTextBox txtAddDocSubmitDate;
         private Telerik.WinControls.UI.RadTextBox txtAddItem3;
         private Telerik.WinControls.UI.RadTextBox txtAddItem1;
         private Telerik.WinControls.UI.RadTextBox txtAddDocSrc;
@@ -498,5 +624,18 @@
         private Telerik.WinControls.UI.RadButton btnAddNewDoc;
         private System.Windows.Forms.PictureBox docPicture;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Telerik.WinControls.UI.RadPageViewPage searchDocsPage;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
+        private Telerik.WinControls.UI.RadLabel radLabel1;
+        private Telerik.WinControls.UI.RadTextBox txtSearchSubmitDate;
+        private Telerik.WinControls.UI.RadLabel lblSearchItem2;
+        private Telerik.WinControls.UI.RadLabel lblSearchItem3;
+        private Telerik.WinControls.UI.RadLabel lblSearchItem1;
+        private Telerik.WinControls.UI.RadTextBox txtSearchItem2;
+        private Telerik.WinControls.UI.RadTextBox txtSearchItem3;
+        private Telerik.WinControls.UI.RadTextBox txtSearchItem1;
+        private Telerik.WinControls.UI.RadButton btnSearchDocs;
+        private Telerik.WinControls.UI.RadGridView gvSearchDocs;
+        private Telerik.WinControls.UI.RadButton btnShowAllDocs;
     }
 }
