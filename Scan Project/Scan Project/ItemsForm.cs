@@ -49,9 +49,18 @@ namespace Scan_Project
                 MessageBox.Show(ex.Message);
             }
 
-            txtItem1.Text = dt.Rows[0][2].ToString();
-            txtItem2.Text = dt.Rows[1][2].ToString();
-            txtItem3.Text = dt.Rows[2][2].ToString();
+            if (dt.Rows.Count > 0)
+            {
+                txtItem1.Text = dt.Rows[0][2].ToString();
+                txtItem2.Text = dt.Rows[1][2].ToString();
+                txtItem3.Text = dt.Rows[2][2].ToString();
+
+                txtItem1.Enabled = false;
+                txtItem2.Enabled = false;
+                txtItem3.Enabled = false;
+
+                btnOK.Enabled = false;
+            }            
         }
     }
 }

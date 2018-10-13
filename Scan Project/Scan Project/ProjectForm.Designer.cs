@@ -172,7 +172,6 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "فرم پروژه‌ها";
             this.ThemeName = "TelerikMetro";

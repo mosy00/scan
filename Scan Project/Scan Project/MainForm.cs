@@ -89,6 +89,15 @@ namespace Scan_Project
             dbConnections db = new dbConnections();
             DataTable itemNames;
             itemNames = db.GetItems();
+
+            if (itemNames.Rows.Count == 0)
+            {
+                ItemsForm itemForm = new ItemsForm();
+                if (itemForm.ShowDialog() != DialogResult.OK)
+                    Application.ExitThread();
+            }
+
+            itemNames = db.GetItems();
             lblItem1.Text = lblSearchItem1.Text = itemNames.Rows[0][2].ToString();
             lblItem2.Text = lblSearchItem2.Text = itemNames.Rows[1][2].ToString();
             lblItem3.Text = lblSearchItem3.Text = itemNames.Rows[2][2].ToString();
@@ -195,7 +204,8 @@ namespace Scan_Project
                 }                
             }
 
-            string docsPath = Application.StartupPath + "\\Files";
+            string relativePath = "\\Files\\" + Properties.Settings.Default.projectID.ToString() + "\\";
+            string docsPath = Application.StartupPath + relativePath;
             if (!System.IO.Directory.Exists(docsPath))
             {
                 System.IO.Directory.CreateDirectory(docsPath);
@@ -224,7 +234,7 @@ namespace Scan_Project
                 try
                 {
                     dbConnections db = new dbConnections();
-                    db.InsertDocs(item1, item2, item3, "\\Files\\" + newPath);
+                    db.InsertDocs(item1, item2, item3, relativePath + newPath);
                 }
                 catch (Exception ex)
                 {

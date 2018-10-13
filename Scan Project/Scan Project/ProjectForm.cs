@@ -61,11 +61,17 @@ namespace Scan_Project
             //projectID
             //در ادامه برنامه برای فهمیدن پروژه فعلی استفاده می‌شود.
             Properties.Settings.Default.projectID = Convert.ToInt32(projectList.SelectedItem.Value.ToString());
-            Properties.Settings.Default.projectName = projectList.SelectedItem.Text;
+            Properties.Settings.Default.projectName = projectList.SelectedItem.Text;            
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {            
+            if (string.IsNullOrWhiteSpace(txtNewProject.Text))
+            {
+                RadMessageBox.ThemeName = "TelerikMetro";
+                RadMessageBox.Show(null, "پروژه جدید با موفقیت اضافه شد.", "خطا", MessageBoxButtons.OK,
+                    RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+            }
             try
             {
                 //ثبت یک پروژه جدید در دیتابیس
@@ -75,6 +81,7 @@ namespace Scan_Project
                 RadMessageBox.ThemeName = "TelerikMetro";
                 RadMessageBox.Show(null, "پروژه جدید با موفقیت اضافه شد.", "ثبت موفق", MessageBoxButtons.OK,
                     RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                btnOK.Enabled = true;
             }
             catch (Exception ex)
             {
