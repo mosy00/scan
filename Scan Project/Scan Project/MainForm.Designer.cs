@@ -53,13 +53,13 @@
             this.searchDocsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.gvSearchDocs = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.txtSearchSubmitToDate = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.txtSearchSubmitFromDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.txtSearchSubmitToDate = new Telerik.WinControls.UI.RadTextBox();
             this.btnShowAllDocs = new Telerik.WinControls.UI.RadButton();
             this.btnSearchDocs = new Telerik.WinControls.UI.RadButton();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.txtSearchSubmitFromDate = new Telerik.WinControls.UI.RadTextBox();
             this.lblSearchItem2 = new Telerik.WinControls.UI.RadLabel();
             this.lblSearchItem3 = new Telerik.WinControls.UI.RadLabel();
             this.lblSearchItem1 = new Telerik.WinControls.UI.RadLabel();
@@ -73,6 +73,7 @@
             this.btnOpenItemForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenUserForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.cbIsSearchByDate = new Telerik.WinControls.UI.RadCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.addDocsPage.SuspendLayout();
@@ -98,13 +99,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitToDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitFromDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitToDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnShowAllDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitFromDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem1)).BeginInit();
@@ -113,6 +114,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbIsSearchByDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -302,13 +304,14 @@
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.cbIsSearchByDate);
+            this.radGroupBox2.Controls.Add(this.txtSearchSubmitToDate);
+            this.radGroupBox2.Controls.Add(this.txtSearchSubmitFromDate);
             this.radGroupBox2.Controls.Add(this.radLabel2);
             this.radGroupBox2.Controls.Add(this.radLabel3);
-            this.radGroupBox2.Controls.Add(this.txtSearchSubmitToDate);
             this.radGroupBox2.Controls.Add(this.btnShowAllDocs);
             this.radGroupBox2.Controls.Add(this.btnSearchDocs);
             this.radGroupBox2.Controls.Add(this.radLabel1);
-            this.radGroupBox2.Controls.Add(this.txtSearchSubmitFromDate);
             this.radGroupBox2.Controls.Add(this.lblSearchItem2);
             this.radGroupBox2.Controls.Add(this.lblSearchItem3);
             this.radGroupBox2.Controls.Add(this.lblSearchItem1);
@@ -323,6 +326,24 @@
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment1")));
             // 
+            // txtSearchSubmitToDate
+            // 
+            resources.ApplyResources(this.txtSearchSubmitToDate, "txtSearchSubmitToDate");
+            this.txtSearchSubmitToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtSearchSubmitToDate.Name = "txtSearchSubmitToDate";
+            this.txtSearchSubmitToDate.TabStop = false;
+            this.txtSearchSubmitToDate.ThemeName = "TelerikMetro";
+            this.txtSearchSubmitToDate.Value = new System.DateTime(2018, 10, 16, 0, 0, 0, 0);
+            // 
+            // txtSearchSubmitFromDate
+            // 
+            resources.ApplyResources(this.txtSearchSubmitFromDate, "txtSearchSubmitFromDate");
+            this.txtSearchSubmitFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtSearchSubmitFromDate.Name = "txtSearchSubmitFromDate";
+            this.txtSearchSubmitFromDate.TabStop = false;
+            this.txtSearchSubmitFromDate.ThemeName = "TelerikMetro";
+            this.txtSearchSubmitFromDate.Value = new System.DateTime(2018, 10, 16, 9, 35, 36, 623);
+            // 
             // radLabel2
             // 
             resources.ApplyResources(this.radLabel2, "radLabel2");
@@ -332,12 +353,6 @@
             // 
             resources.ApplyResources(this.radLabel3, "radLabel3");
             this.radLabel3.Name = "radLabel3";
-            // 
-            // txtSearchSubmitToDate
-            // 
-            resources.ApplyResources(this.txtSearchSubmitToDate, "txtSearchSubmitToDate");
-            this.txtSearchSubmitToDate.Name = "txtSearchSubmitToDate";
-            this.txtSearchSubmitToDate.ThemeName = "TelerikMetro";
             // 
             // btnShowAllDocs
             // 
@@ -357,12 +372,6 @@
             // 
             resources.ApplyResources(this.radLabel1, "radLabel1");
             this.radLabel1.Name = "radLabel1";
-            // 
-            // txtSearchSubmitFromDate
-            // 
-            resources.ApplyResources(this.txtSearchSubmitFromDate, "txtSearchSubmitFromDate");
-            this.txtSearchSubmitFromDate.Name = "txtSearchSubmitFromDate";
-            this.txtSearchSubmitFromDate.ThemeName = "TelerikMetro";
             // 
             // lblSearchItem2
             // 
@@ -542,6 +551,13 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
+            // cbIsSearchByDate
+            // 
+            resources.ApplyResources(this.cbIsSearchByDate, "cbIsSearchByDate");
+            this.cbIsSearchByDate.Name = "cbIsSearchByDate";
+            this.cbIsSearchByDate.ThemeName = "TelerikMetro";
+            this.cbIsSearchByDate.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.cbIsSearchByDate_ToggleStateChanged);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -583,13 +599,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitToDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitFromDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitToDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnShowAllDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitFromDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSearchItem1)).EndInit();
@@ -598,6 +614,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbIsSearchByDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -635,7 +652,6 @@
         private Telerik.WinControls.UI.RadPageViewPage searchDocsPage;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.UI.RadTextBox txtSearchSubmitFromDate;
         private Telerik.WinControls.UI.RadLabel lblSearchItem2;
         private Telerik.WinControls.UI.RadLabel lblSearchItem3;
         private Telerik.WinControls.UI.RadLabel lblSearchItem1;
@@ -647,6 +663,8 @@
         private Telerik.WinControls.UI.RadButton btnShowAllDocs;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel radLabel3;
-        private Telerik.WinControls.UI.RadTextBox txtSearchSubmitToDate;
+        private Telerik.WinControls.UI.RadDateTimePicker txtSearchSubmitToDate;
+        private Telerik.WinControls.UI.RadDateTimePicker txtSearchSubmitFromDate;
+        private Telerik.WinControls.UI.RadCheckBox cbIsSearchByDate;
     }
 }

@@ -46,5 +46,17 @@ namespace Scan_Project.Properties {
                 this["projectName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool userIsAdmin {
+            get {
+                return ((bool)(this["userIsAdmin"]));
+            }
+            set {
+                this["userIsAdmin"] = value;
+            }
+        }
     }
 }

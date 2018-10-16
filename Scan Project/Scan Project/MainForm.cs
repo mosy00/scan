@@ -14,6 +14,8 @@ namespace Scan_Project
 {
     public partial class MainForm : Telerik.WinControls.UI.RadForm
     {
+        System.Globalization.CultureInfo m_culture;
+
         public MainForm()
         {
             InitializeComponent();
@@ -76,15 +78,21 @@ namespace Scan_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //LoginForm lf = new LoginForm();
-            //if (lf.ShowDialog() != DialogResult.OK)
-            //    Application.ExitThread();
+            LoginForm lf = new LoginForm();
+            if (lf.ShowDialog() != DialogResult.OK)
+                Application.ExitThread();
 
             ProjectForm pf = new ProjectForm();
             if (pf.ShowDialog() != DialogResult.OK)
                 Application.ExitThread();
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
+
+            if (!Properties.Settings.Default.userIsAdmin)
+            {
+                btnOpenUserForm.Enabled = false;
+            }
+
 
             dbConnections db = new dbConnections();
             DataTable itemNames;
@@ -103,6 +111,16 @@ namespace Scan_Project
             lblItem3.Text = lblSearchItem3.Text = itemNames.Rows[2][2].ToString();
 
             InitializeSearchDocsGrid();
+
+            try
+            {
+                m_culture = FixPersianLocale.PersianCultureHelper.FixPersianCulture(null, FixPersianLocale.FixCultureOptions.foptCalendarInDateFormatInfo);
+                txtSearchSubmitFromDate.Culture = txtSearchSubmitToDate.Culture = m_culture;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnOpenProjectForm_Click(object sender, EventArgs e)
@@ -218,7 +236,7 @@ namespace Scan_Project
                 string item3 = gvAddDocs.Rows[i].Cells[3].Value.ToString();
                 string docSrcFile = gvAddDocs.Rows[i].Cells[4].Value.ToString();
 
-                string newPath = item1 + "-" + item2 + "-" + item3 + System.IO.Path.GetExtension(docSrcFile);
+                string newPath = item1 + "-" + item2 + "-" + item3 + "-" + DateTime.Now.ToFileTime() + System.IO.Path.GetExtension(docSrcFile);
                 string newFile = System.IO.Path.Combine(docsPath, newPath);
 
                 try
@@ -254,7 +272,7 @@ namespace Scan_Project
 
         private void btnSearchDocs_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtSearchItem1.Text + txtSearchItem2.Text + txtSearchItem3.Text + txtSearchSubmitFromDate.Text))
+            if (!cbIsSearchByDate.Checked && string.IsNullOrWhiteSpace(txtSearchItem1.Text + txtSearchItem2.Text + txtSearchItem3.Text))
             {
                 RadMessageBox.ThemeName = "TelerikMetro";
                 RadMessageBox.Show(null, "برای سرچ کردن باید حداقل یکی از مقادیر بالا را وارد کنید.", "خطا", MessageBoxButtons.OK,
@@ -262,11 +280,13 @@ namespace Scan_Project
                 return;
             }
             gvSearchDocs.Rows.Clear();
-
+            
             dbConnections db = new dbConnections();
 
             DataTable dt, itemNames;
-            dt = db.GetDocs(out itemNames, txtSearchItem1.Text, txtSearchItem2.Text, txtSearchItem3.Text, txtSearchSubmitFromDate.Text);
+            dt = db.GetDocs(out itemNames, txtSearchItem1.Text, txtSearchItem2.Text, txtSearchItem3.Text,
+                cbIsSearchByDate.Checked ? txtSearchSubmitFromDate.Value.ToString() : "",
+                cbIsSearchByDate.Checked ? txtSearchSubmitToDate.Value.ToString() : "");
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -315,5 +335,12 @@ namespace Scan_Project
             btnBrowseFile_Click(null, null);
         }
 
+        private void cbIsSearchByDate_ToggleStateChanged(object sender, StateChangedEventArgs args)
+        {
+            if (cbIsSearchByDate.Checked)
+                txtSearchSubmitToDate.Enabled = txtSearchSubmitFromDate.Enabled = true;
+            else
+                txtSearchSubmitToDate.Enabled = txtSearchSubmitFromDate.Enabled = false;
+        }
     }
 }

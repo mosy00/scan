@@ -98,12 +98,12 @@ namespace Scan_Project
         /// <param name="userName">نام کاربری</param>
         /// <param name="password">رمز عبور</param>
         /// <returns></returns>
-        public bool CheckUser(string userName, string password)
+        public bool CheckUser(string userName, string password, out bool isUserAdmin)
         {            
             DataTable dt = new DataTable();
 
             OleDbCommand cmd = new OleDbCommand();
-            cmd.CommandText = $"SELECT userName from Users where userName='{userName}' and userPassword='{MD5(password)}' and userIsActive=true";
+            cmd.CommandText = $"SELECT userName, userIsAdmin from Users where userName='{userName}' and userPassword='{MD5(password)}' and userIsActive=true";
             cmd.Connection = cn;
             
             try
@@ -117,6 +117,7 @@ namespace Scan_Project
             {
                 throw ex;
             }
+            isUserAdmin = dt.Rows[0][1].ToString().ToLower() == "true" ? true : false;
             return dt.Rows.Count > 0 ? true : false;
         }
 
@@ -221,7 +222,7 @@ namespace Scan_Project
             return dt;
         }
 
-        public DataTable GetDocs(out DataTable itemNames, string item1, string item2, string item3, string docSubmitDate)
+        public DataTable GetDocs(out DataTable itemNames, string item1, string item2, string item3, string fromDate, string toDate)
         {
             DataTable dt = new DataTable();
 
@@ -229,9 +230,24 @@ namespace Scan_Project
             string q1 = !string.IsNullOrWhiteSpace(item1) ? string.Format("item1 like '%{0}%' or", item1) : "";
             string q2 = !string.IsNullOrWhiteSpace(item2) ? string.Format("item2 like '%{0}%' or", item2) : "";
             string q3 = !string.IsNullOrWhiteSpace(item3) ? string.Format("item3 like '%{0}%' or", item3) : "";
+            string q4;
+            if (!string.IsNullOrWhiteSpace(fromDate))
+            {
+                if (!string.IsNullOrWhiteSpace(toDate))
+                    q4 = string.Format("docSubmitDate between #{0}# and #{1}# or", fromDate, toDate);
+                else
+                    q4 = string.Format("docSubmitDate between #{0}# and #{1}# or", fromDate, System.DateTime.Now.ToString());
+            }
+            else
+            {
+                if (!string.IsNullOrWhiteSpace(toDate))
+                    q4 = string.Format("docSubmitDate between #{0}# and #{1}# or", "10/10/1900", toDate);
+                else
+                    q4 = "";
+            }
 
-            string commandText = string.Format("select * from Documents where projectID = {0} and ({1} {2} {3})",
-                Properties.Settings.Default.projectID, q1, q2, q3);
+            string commandText = string.Format("select * from Documents where projectID = {0} and ({1} {2} {3} {4})",
+                Properties.Settings.Default.projectID, q1, q2, q3, q4);
 
             commandText = commandText.Remove(commandText.LastIndexOf("or"));
             commandText = commandText + ")";

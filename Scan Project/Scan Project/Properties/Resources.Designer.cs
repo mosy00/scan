@@ -63,6 +63,16 @@ namespace Scan_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _lock {
+            get {
+                object obj = ResourceManager.GetObject("lock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap browse_black {
             get {
                 object obj = ResourceManager.GetObject("browse-black", resourceCulture);
@@ -136,6 +146,16 @@ namespace Scan_Project.Properties {
         internal static System.Drawing.Bitmap list_interface_symbol {
             get {
                 object obj = ResourceManager.GetObject("list-interface-symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap man_user {
+            get {
+                object obj = ResourceManager.GetObject("man-user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -129,7 +129,7 @@
     <value>5, 46</value>
   </data>
   <data name="homePage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1082, 529</value>
+    <value>1082, 505</value>
   </data>
   <data name="homePage.Text" xml:space="preserve">
     <value> صفحه اصلی</value>
@@ -156,7 +156,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnEditDoc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 460</value>
+    <value>113, 461</value>
   </data>
   <data name="btnEditDoc.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 30</value>
@@ -190,7 +190,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnSubmitDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 460</value>
+    <value>18, 461</value>
   </data>
   <data name="btnSubmitDocs.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 30</value>
@@ -220,7 +220,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnAddNewDoc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 460</value>
+    <value>208, 461</value>
   </data>
   <data name="btnAddNewDoc.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 30</value>
@@ -527,7 +527,7 @@
     <value>719, 3</value>
   </data>
   <data name="radGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 501</value>
+    <value>360, 502</value>
   </data>
   <data name="radGroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -557,10 +557,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="gvAddDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 3</value>
+    <value>0, 3</value>
   </data>
   <data name="gvAddDocs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>706, 501</value>
+    <value>713, 502</value>
   </data>
   <data name="gvAddDocs.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -581,7 +581,7 @@
     <value>5, 46</value>
   </data>
   <data name="addDocsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1082, 529</value>
+    <value>1082, 505</value>
   </data>
   <data name="addDocsPage.Text" xml:space="preserve">
     <value> ثبت اسناد</value>
@@ -602,10 +602,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="gvSearchDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 3</value>
+    <value>3, 3</value>
   </data>
   <data name="gvSearchDocs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>706, 504</value>
+    <value>710, 499</value>
   </data>
   <data name="gvSearchDocs.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -621,6 +621,99 @@
   </data>
   <data name="&gt;&gt;gvSearchDocs.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="cbIsSearchByDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="cbIsSearchByDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 241</value>
+  </data>
+  <data name="cbIsSearchByDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 24</value>
+  </data>
+  <data name="cbIsSearchByDate.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="cbIsSearchByDate.Text" xml:space="preserve">
+    <value>دخیل کردن تاریخ در جست و جو</value>
+  </data>
+  <data name="&gt;&gt;cbIsSearchByDate.Name" xml:space="preserve">
+    <value>cbIsSearchByDate</value>
+  </data>
+  <data name="&gt;&gt;cbIsSearchByDate.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;cbIsSearchByDate.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbIsSearchByDate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtSearchSubmitToDate.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtSearchSubmitToDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="txtSearchSubmitToDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 192</value>
+  </data>
+  <data name="txtSearchSubmitToDate.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="txtSearchSubmitToDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 29</value>
+  </data>
+  <data name="txtSearchSubmitToDate.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="txtSearchSubmitToDate.Text" xml:space="preserve">
+    <value>10/16/2018</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitToDate.Name" xml:space="preserve">
+    <value>txtSearchSubmitToDate</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitToDate.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitToDate.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitToDate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtSearchSubmitFromDate.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtSearchSubmitFromDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="txtSearchSubmitFromDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 192</value>
+  </data>
+  <data name="txtSearchSubmitFromDate.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="txtSearchSubmitFromDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 29</value>
+  </data>
+  <data name="txtSearchSubmitFromDate.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="txtSearchSubmitFromDate.Text" xml:space="preserve">
+    <value>10/16/2018</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitFromDate.Name" xml:space="preserve">
+    <value>txtSearchSubmitFromDate</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitFromDate.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitFromDate.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtSearchSubmitFromDate.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="radLabel2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -650,7 +743,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="radLabel3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -680,34 +773,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtSearchSubmitToDate.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtSearchSubmitToDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>IRANSans, 9.75pt</value>
-  </data>
-  <data name="txtSearchSubmitToDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 192</value>
-  </data>
-  <data name="txtSearchSubmitToDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 29</value>
-  </data>
-  <data name="txtSearchSubmitToDate.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;txtSearchSubmitToDate.Name" xml:space="preserve">
-    <value>txtSearchSubmitToDate</value>
-  </data>
-  <data name="&gt;&gt;txtSearchSubmitToDate.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;txtSearchSubmitToDate.Parent" xml:space="preserve">
-    <value>radGroupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtSearchSubmitToDate.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btnShowAllDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -716,7 +782,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnShowAllDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 279</value>
+    <value>118, 285</value>
   </data>
   <data name="btnShowAllDocs.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 30</value>
@@ -737,7 +803,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;btnShowAllDocs.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="btnSearchDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -746,7 +812,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnSearchDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 279</value>
+    <value>18, 285</value>
   </data>
   <data name="btnSearchDocs.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 30</value>
@@ -767,7 +833,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;btnSearchDocs.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="radLabel1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -797,34 +863,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="txtSearchSubmitFromDate.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtSearchSubmitFromDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>IRANSans, 9.75pt</value>
-  </data>
-  <data name="txtSearchSubmitFromDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 192</value>
-  </data>
-  <data name="txtSearchSubmitFromDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 29</value>
-  </data>
-  <data name="txtSearchSubmitFromDate.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;txtSearchSubmitFromDate.Name" xml:space="preserve">
-    <value>txtSearchSubmitFromDate</value>
-  </data>
-  <data name="&gt;&gt;txtSearchSubmitFromDate.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;txtSearchSubmitFromDate.Parent" xml:space="preserve">
-    <value>radGroupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtSearchSubmitFromDate.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblSearchItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -854,7 +893,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;lblSearchItem2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lblSearchItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -884,7 +923,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;lblSearchItem3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lblSearchItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -914,7 +953,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;lblSearchItem1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txtSearchItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -938,7 +977,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchItem2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="txtSearchItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -962,7 +1001,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchItem3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="txtSearchItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -986,7 +1025,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchItem1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="radGroupBox2.HeaderText" xml:space="preserve">
     <value>جست و جوی اسناد</value>
@@ -995,7 +1034,7 @@
     <value>719, 3</value>
   </data>
   <data name="radGroupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>356, 324</value>
+    <value>356, 330</value>
   </data>
   <data name="radGroupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1025,7 +1064,7 @@
     <value>5, 46</value>
   </data>
   <data name="searchDocsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1082, 529</value>
+    <value>1082, 505</value>
   </data>
   <data name="searchDocsPage.Text" xml:space="preserve">
     <value> نمایش اسناد</value>
@@ -1052,7 +1091,7 @@
     <value>Yes</value>
   </data>
   <data name="radPageView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1092, 580</value>
+    <value>1092, 556</value>
   </data>
   <data name="radPageView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

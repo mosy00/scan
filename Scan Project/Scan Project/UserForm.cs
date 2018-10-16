@@ -28,7 +28,7 @@ namespace Scan_Project
             dbConnections db = new dbConnections();
             try
             {
-                db.InsertNewUser(txtUserName.Text, txtPassword.Text, rbIsAdmin.IsChecked);
+                db.InsertNewUser(txtUserName.Text, txtPassword.Text, cbIsAdmin.Checked);
 
                 RadMessageBox.ThemeName = "TelerikMetro";
                 RadMessageBox.Show(null, "کاربر جدید با موفقیت ثبت شد.", "ثبت موفق", MessageBoxButtons.OK,
