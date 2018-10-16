@@ -69,8 +69,9 @@ namespace Scan_Project
             if (string.IsNullOrWhiteSpace(txtNewProject.Text))
             {
                 RadMessageBox.ThemeName = "TelerikMetro";
-                RadMessageBox.Show(null, "پروژه جدید با موفقیت اضافه شد.", "خطا", MessageBoxButtons.OK,
+                RadMessageBox.Show(null, "لطفا نام پروژه را بنویسید.", "خطا", MessageBoxButtons.OK,
                     RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                return;
             }
             try
             {
