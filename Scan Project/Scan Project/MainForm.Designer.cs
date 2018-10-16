@@ -53,6 +53,7 @@
             this.searchDocsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.gvSearchDocs = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.cbIsSearchByDate = new Telerik.WinControls.UI.RadCheckBox();
             this.txtSearchSubmitToDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.txtSearchSubmitFromDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -73,7 +74,6 @@
             this.btnOpenItemForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenUserForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.cbIsSearchByDate = new Telerik.WinControls.UI.RadCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.addDocsPage.SuspendLayout();
@@ -99,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbIsSearchByDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitToDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitFromDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
@@ -114,7 +115,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbIsSearchByDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -300,10 +300,12 @@
             this.gvSearchDocs.Name = "gvSearchDocs";
             this.gvSearchDocs.ReadOnly = true;
             this.gvSearchDocs.ThemeName = "TelerikMetro";
+            this.gvSearchDocs.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.gvSearchDocs_CellDoubleClick);
             // 
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            resources.ApplyResources(this.radGroupBox2, "radGroupBox2");
             this.radGroupBox2.Controls.Add(this.cbIsSearchByDate);
             this.radGroupBox2.Controls.Add(this.txtSearchSubmitToDate);
             this.radGroupBox2.Controls.Add(this.txtSearchSubmitFromDate);
@@ -318,13 +320,19 @@
             this.radGroupBox2.Controls.Add(this.txtSearchItem2);
             this.radGroupBox2.Controls.Add(this.txtSearchItem3);
             this.radGroupBox2.Controls.Add(this.txtSearchItem1);
-            resources.ApplyResources(this.radGroupBox2, "radGroupBox2");
             this.radGroupBox2.Name = "radGroupBox2";
             this.radGroupBox2.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Text = resources.GetString("resource.Text2");
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment1")));
+            // 
+            // cbIsSearchByDate
+            // 
+            resources.ApplyResources(this.cbIsSearchByDate, "cbIsSearchByDate");
+            this.cbIsSearchByDate.Name = "cbIsSearchByDate";
+            this.cbIsSearchByDate.ThemeName = "TelerikMetro";
+            this.cbIsSearchByDate.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.cbIsSearchByDate_ToggleStateChanged);
             // 
             // txtSearchSubmitToDate
             // 
@@ -551,13 +559,6 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
-            // cbIsSearchByDate
-            // 
-            resources.ApplyResources(this.cbIsSearchByDate, "cbIsSearchByDate");
-            this.cbIsSearchByDate.Name = "cbIsSearchByDate";
-            this.cbIsSearchByDate.ThemeName = "TelerikMetro";
-            this.cbIsSearchByDate.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.cbIsSearchByDate_ToggleStateChanged);
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -599,6 +600,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbIsSearchByDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitToDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitFromDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
@@ -614,7 +616,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbIsSearchByDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

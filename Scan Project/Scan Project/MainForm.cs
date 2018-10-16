@@ -342,5 +342,12 @@ namespace Scan_Project
             else
                 txtSearchSubmitToDate.Enabled = txtSearchSubmitFromDate.Enabled = false;
         }
+
+        private void gvSearchDocs_CellDoubleClick(object sender, GridViewCellEventArgs e)
+        {
+            string file = e.Row.Cells[5].Value.ToString();
+
+            System.Diagnostics.Process.Start(file);
+        }
     }
 }

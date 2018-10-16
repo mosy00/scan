@@ -156,7 +156,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnEditDoc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 461</value>
+    <value>113, 458</value>
   </data>
   <data name="btnEditDoc.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 30</value>
@@ -190,7 +190,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnSubmitDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 461</value>
+    <value>18, 458</value>
   </data>
   <data name="btnSubmitDocs.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 30</value>
@@ -220,7 +220,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnAddNewDoc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 461</value>
+    <value>208, 458</value>
   </data>
   <data name="btnAddNewDoc.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 30</value>
@@ -527,7 +527,7 @@
     <value>719, 3</value>
   </data>
   <data name="radGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 502</value>
+    <value>360, 499</value>
   </data>
   <data name="radGroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -560,7 +560,7 @@
     <value>0, 3</value>
   </data>
   <data name="gvAddDocs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>713, 502</value>
+    <value>713, 499</value>
   </data>
   <data name="gvAddDocs.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -621,6 +621,9 @@
   </data>
   <data name="&gt;&gt;gvSearchDocs.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="radGroupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="cbIsSearchByDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -776,7 +779,7 @@
     <value>4</value>
   </data>
   <data name="btnShowAllDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom</value>
+    <value>None</value>
   </data>
   <data name="btnShowAllDocs.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 11.249999pt</value>
@@ -806,7 +809,7 @@
     <value>5</value>
   </data>
   <data name="btnSearchDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom</value>
+    <value>None</value>
   </data>
   <data name="btnSearchDocs.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 11.249999pt</value>
