@@ -91,6 +91,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="dbConnections.cs" />
     <Compile Include="InvokeHelper.cs" />
     <Compile Include="ItemsForm.cs">
@@ -125,6 +131,9 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItemsForm.resx">
       <DependentUpon>ItemsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +222,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="office_material_oTu_icon.ico" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\Tis.png" />
     <None Include="Resources\lock.png" />
     <None Include="Resources\man-user.png" />
     <None Include="Resources\file.png" />

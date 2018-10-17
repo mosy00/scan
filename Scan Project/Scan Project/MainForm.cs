@@ -349,5 +349,11 @@ namespace Scan_Project
 
             System.Diagnostics.Process.Start(file);
         }
+
+        private void btnOpenAboutBox_Click(object sender, EventArgs e)
+        {
+            AboutForm af = new AboutForm();
+            af.Show();
+        }
     }
 }
