@@ -78,13 +78,13 @@ namespace Scan_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LoginForm lf = new LoginForm();
-            if (lf.ShowDialog() != DialogResult.OK)
-                Application.ExitThread();
+            //LoginForm lf = new LoginForm();
+            //if (lf.ShowDialog() != DialogResult.OK)
+            //    Application.ExitThread();
 
-            ProjectForm pf = new ProjectForm();
-            if (pf.ShowDialog() != DialogResult.OK)
-                Application.ExitThread();
+            //ProjectForm pf = new ProjectForm();
+            //if (pf.ShowDialog() != DialogResult.OK)
+            //    Application.ExitThread();
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
 
@@ -100,9 +100,9 @@ namespace Scan_Project
 
             if (itemNames.Rows.Count == 0)
             {
-                ItemsForm itemForm = new ItemsForm();
-                if (itemForm.ShowDialog() != DialogResult.OK)
-                    Application.ExitThread();
+                //ItemsForm itemForm = new ItemsForm();
+                //if (itemForm.ShowDialog() != DialogResult.OK)
+                //    Application.ExitThread();
             }
 
             itemNames = db.GetItems();
@@ -354,6 +354,17 @@ namespace Scan_Project
         {
             AboutForm af = new AboutForm();
             af.Show();
+        }
+
+        private void btnSignout_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+
+            LoginForm lf = new LoginForm();
+            if (lf.ShowDialog() != DialogResult.OK)
+                Application.ExitThread();
+
+            this.Visible = true;
         }
     }
 }

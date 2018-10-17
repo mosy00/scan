@@ -75,6 +75,7 @@
             this.btnOpenItemForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenUserForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenAboutBox = new Telerik.WinControls.UI.RadMenuButtonItem();
+            this.btnSignout = new Telerik.WinControls.UI.RadMenuButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.addDocsPage.SuspendLayout();
@@ -442,7 +443,8 @@
             this.btnOpenProjectForm,
             this.btnOpenItemForm,
             this.btnOpenUserForm,
-            this.btnOpenAboutBox});
+            this.btnOpenAboutBox,
+            this.btnSignout});
             resources.ApplyResources(this.radMenu1, "radMenu1");
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.ThemeName = "TelerikMetro";
@@ -538,6 +540,7 @@
             this.btnOpenUserForm.ButtonElement.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenUserForm.ButtonElement.Padding")));
             this.btnOpenUserForm.ButtonElement.RightToLeft = ((bool)(resources.GetObject("btnOpenUserForm.ButtonElement.RightToLeft")));
             this.btnOpenUserForm.ButtonElement.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenUserForm.ButtonElement.TextOrientation")));
+            this.btnOpenUserForm.ButtonElement.ToolTipText = resources.GetString("btnOpenUserForm.ButtonElement.ToolTipText");
             this.btnOpenUserForm.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
             this.btnOpenUserForm.Image = global::Scan_Project.Properties.Resources.user;
             this.btnOpenUserForm.Name = "btnOpenUserForm";
@@ -547,6 +550,7 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenUserForm.ButtonElement.ImageKey1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenUserForm.ButtonElement.TextOrientation1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenUserForm.ButtonElement.FlipText1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenUserForm.ButtonElement.ToolTipText1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenUserForm.ButtonElement.Padding1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenUserForm.ButtonElement.Margin1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenUserForm.ButtonElement.Alignment1")));
@@ -574,6 +578,7 @@
             this.btnOpenAboutBox.ButtonElement.Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenAboutBox.ButtonElement.Padding")));
             this.btnOpenAboutBox.ButtonElement.RightToLeft = ((bool)(resources.GetObject("btnOpenAboutBox.ButtonElement.RightToLeft")));
             this.btnOpenAboutBox.ButtonElement.TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenAboutBox.ButtonElement.TextOrientation")));
+            this.btnOpenAboutBox.ButtonElement.ToolTipText = resources.GetString("btnOpenAboutBox.ButtonElement.ToolTipText");
             this.btnOpenAboutBox.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
             this.btnOpenAboutBox.Image = global::Scan_Project.Properties.Resources.info;
             this.btnOpenAboutBox.Name = "btnOpenAboutBox";
@@ -583,6 +588,7 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).ImageKey = resources.GetString("btnOpenAboutBox.ButtonElement.ImageKey1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenAboutBox.ButtonElement.TextOrientation1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenAboutBox.ButtonElement.FlipText1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenAboutBox.ButtonElement.ToolTipText1");
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenAboutBox.ButtonElement.Padding1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenAboutBox.ButtonElement.Margin1")));
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenAboutBox.ButtonElement.Alignment1")));
@@ -594,6 +600,23 @@
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenAboutBox.GetChildAt(2).GetChildAt(2))).RightWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenAboutBox.GetChildAt(2).GetChildAt(2))).BottomWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnOpenAboutBox.GetChildAt(2).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
+            // 
+            // btnSignout
+            // 
+            // 
+            // 
+            // 
+            this.btnSignout.ButtonElement.ToolTipText = resources.GetString("radMenuButtonItem1.ButtonElement.ToolTipText");
+            this.btnSignout.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.btnSignout.Image = global::Scan_Project.Properties.Resources.sign_out_option;
+            resources.ApplyResources(this.btnSignout, "btnSignout");
+            this.btnSignout.Name = "btnSignout";
+            this.btnSignout.Click += new System.EventHandler(this.btnSignout_Click);
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).LeftWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).TopWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).RightWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).BottomWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
             // MainForm
             // 
@@ -704,5 +727,6 @@
         private Telerik.WinControls.UI.RadDateTimePicker txtSearchSubmitFromDate;
         private Telerik.WinControls.UI.RadCheckBox cbIsSearchByDate;
         private Telerik.WinControls.UI.RadMenuButtonItem btnOpenAboutBox;
+        private Telerik.WinControls.UI.RadMenuButtonItem btnSignout;
     }
 }

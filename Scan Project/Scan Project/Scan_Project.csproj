@@ -222,6 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="office_material_oTu_icon.ico" />
+    <None Include="Resources\sign-out-option.png" />
     <None Include="Resources\info.png" />
     <None Include="Resources\Tis.png" />
     <None Include="Resources\lock.png" />

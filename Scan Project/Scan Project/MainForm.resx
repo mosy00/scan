@@ -1420,6 +1420,9 @@
   <data name="btnOpenUserForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="btnOpenUserForm.ButtonElement.ToolTipText" xml:space="preserve">
+    <value>کاربر جدید</value>
+  </data>
   <data name="btnOpenUserForm.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1447,6 +1450,9 @@
   <data name="btnOpenUserForm.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="btnOpenUserForm.ToolTipText" xml:space="preserve">
+    <value>کاربر جدید</value>
+  </data>
   <data name="btnOpenUserForm.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1461,6 +1467,9 @@
   </data>
   <data name="btnOpenUserForm.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="btnOpenUserForm.ButtonElement.ToolTipText1" xml:space="preserve">
+    <value>کاربر جدید</value>
   </data>
   <data name="btnOpenUserForm.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1513,6 +1522,9 @@
   <data name="btnOpenAboutBox.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="btnOpenAboutBox.ButtonElement.ToolTipText" xml:space="preserve">
+    <value>درباره نرم افزار</value>
+  </data>
   <data name="btnOpenAboutBox.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1523,7 +1535,7 @@
     <value />
   </data>
   <data name="btnOpenAboutBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+    <value>0, 0, 10, 0</value>
   </data>
   <data name="btnOpenAboutBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1540,6 +1552,9 @@
   <data name="btnOpenAboutBox.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="btnOpenAboutBox.ToolTipText" xml:space="preserve">
+    <value>درباره نرم افزار</value>
+  </data>
   <data name="btnOpenAboutBox.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1555,6 +1570,9 @@
   <data name="btnOpenAboutBox.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="btnOpenAboutBox.ButtonElement.ToolTipText1" xml:space="preserve">
+    <value>درباره نرم افزار</value>
+  </data>
   <data name="btnOpenAboutBox.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
@@ -1569,6 +1587,18 @@
   </data>
   <data name="btnOpenAboutBox.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
     <value>0</value>
+  </data>
+  <data name="radMenuButtonItem1.ButtonElement.ToolTipText" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="btnSignout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 10, 0</value>
+  </data>
+  <data name="btnSignout.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSignout.ToolTipText" xml:space="preserve">
+    <value>خروج</value>
   </data>
   <data name="radMenu1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -3085,6 +3115,12 @@
     <value>btnOpenAboutBox</value>
   </data>
   <data name="&gt;&gt;btnOpenAboutBox.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnSignout.Name" xml:space="preserve">
+    <value>btnSignout</value>
+  </data>
+  <data name="&gt;&gt;btnSignout.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
