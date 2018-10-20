@@ -78,17 +78,17 @@ namespace Scan_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //LoginForm lf = new LoginForm();
-            //if (lf.ShowDialog() != DialogResult.OK)
-            //    Application.ExitThread();
+            LoginForm lf = new LoginForm();
+            if (lf.ShowDialog() != DialogResult.OK)
+                Application.ExitThread();
 
-            //ProjectForm pf = new ProjectForm();
-            //if (pf.ShowDialog() != DialogResult.OK)
-            //    Application.ExitThread();
+            ProjectForm pf = new ProjectForm();
+            if (pf.ShowDialog() != DialogResult.OK)
+                Application.ExitThread();
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
 
-            if (!Properties.Settings.Default.userIsAdmin)
+            if (Properties.Settings.Default.userRole != 1)
             {
                 btnOpenUserForm.Enabled = false;
             }
@@ -100,9 +100,9 @@ namespace Scan_Project
 
             if (itemNames.Rows.Count == 0)
             {
-                //ItemsForm itemForm = new ItemsForm();
-                //if (itemForm.ShowDialog() != DialogResult.OK)
-                //    Application.ExitThread();
+                ItemsForm itemForm = new ItemsForm();
+                if (itemForm.ShowDialog() != DialogResult.OK)
+                    Application.ExitThread();
             }
 
             itemNames = db.GetItems();
@@ -121,6 +121,9 @@ namespace Scan_Project
             {
                 MessageBox.Show(ex.Message);
             }
+
+            //Point p = new Point(0, 0);
+            //radContextMenu1.Show(gvSearchDocs, p);
         }
 
         private void btnOpenProjectForm_Click(object sender, EventArgs e)
@@ -128,6 +131,16 @@ namespace Scan_Project
             ProjectForm pf = new ProjectForm();
             pf.ShowDialog();
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
+
+            dbConnections db = new dbConnections();
+            DataTable itemNames;
+            itemNames = db.GetItems();
+            if (itemNames.Rows.Count == 0)
+            {
+                ItemsForm itemForm = new ItemsForm();
+                if (itemForm.ShowDialog() != DialogResult.OK)
+                    Application.ExitThread();
+            }
         }
 
         private void btnOpenItemForm_Click(object sender, EventArgs e)
@@ -346,8 +359,14 @@ namespace Scan_Project
         private void gvSearchDocs_CellDoubleClick(object sender, GridViewCellEventArgs e)
         {
             string file = e.Row.Cells[5].Value.ToString();
-
-            System.Diagnostics.Process.Start(file);
+            try
+            {
+                System.Diagnostics.Process.Start(file);
+            }
+            catch (Exception)
+            {
+                
+            }
         }
 
         private void btnOpenAboutBox_Click(object sender, EventArgs e)

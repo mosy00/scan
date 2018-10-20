@@ -19,11 +19,12 @@ namespace Scan_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool isLogin = false, isUserAdmin = false;
+            bool isLogin = false;
+            byte userRole = 3;
             dbConnections db = new dbConnections();
             try
             {
-                isLogin = db.CheckUser(txtUserName.Text, txtPassword.Text, out isUserAdmin);
+                isLogin = db.CheckUser(txtUserName.Text, txtPassword.Text, out userRole);
             }
             catch (Exception ex)
             {
@@ -38,7 +39,7 @@ namespace Scan_Project
             }
             else
             {
-                Properties.Settings.Default.userIsAdmin = isUserAdmin;
+                Properties.Settings.Default.userRole = userRole;
                 DialogResult = DialogResult.OK;
             }
         }

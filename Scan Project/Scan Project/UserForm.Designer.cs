@@ -34,7 +34,8 @@
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.btnAddUser = new Telerik.WinControls.UI.RadButton();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.cbIsAdmin = new Telerik.WinControls.UI.RadCheckBox();
+            this.ddUserRole = new Telerik.WinControls.UI.RadDropDownList();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
@@ -42,7 +43,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAddUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbIsAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddUserRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             this.txtUserName.Location = new System.Drawing.Point(17, 41);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtUserName.Size = new System.Drawing.Size(200, 32);
+            this.txtUserName.Size = new System.Drawing.Size(229, 32);
             this.txtUserName.TabIndex = 0;
             this.txtUserName.ThemeName = "TelerikMetro";
             // 
@@ -62,13 +64,13 @@
             this.txtPassword.Location = new System.Drawing.Point(17, 90);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtPassword.Size = new System.Drawing.Size(200, 32);
+            this.txtPassword.Size = new System.Drawing.Size(229, 32);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.ThemeName = "TelerikMetro";
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(223, 41);
+            this.radLabel1.Location = new System.Drawing.Point(252, 41);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radLabel1.Size = new System.Drawing.Size(77, 27);
@@ -79,7 +81,7 @@
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(223, 95);
+            this.radLabel2.Location = new System.Drawing.Point(252, 90);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radLabel2.Size = new System.Drawing.Size(63, 27);
@@ -94,7 +96,7 @@
             this.btnAddUser.Location = new System.Drawing.Point(17, 152);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnAddUser.Size = new System.Drawing.Size(103, 34);
+            this.btnAddUser.Size = new System.Drawing.Size(93, 34);
             this.btnAddUser.TabIndex = 5;
             this.btnAddUser.Text = "ثبت کاربر";
             this.btnAddUser.ThemeName = "TelerikMetro";
@@ -103,7 +105,8 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.cbIsAdmin);
+            this.radGroupBox1.Controls.Add(this.radLabel3);
+            this.radGroupBox1.Controls.Add(this.ddUserRole);
             this.radGroupBox1.Controls.Add(this.txtUserName);
             this.radGroupBox1.Controls.Add(this.radLabel1);
             this.radGroupBox1.Controls.Add(this.txtPassword);
@@ -113,7 +116,7 @@
             this.radGroupBox1.Location = new System.Drawing.Point(12, 12);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGroupBox1.Size = new System.Drawing.Size(310, 202);
+            this.radGroupBox1.Size = new System.Drawing.Size(338, 202);
             this.radGroupBox1.TabIndex = 6;
             this.radGroupBox1.Text = "فرم ثبت کاربر جدید";
             this.radGroupBox1.ThemeName = "TelerikMetro";
@@ -122,21 +125,38 @@
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbIsAdmin
+            // ddUserRole
             // 
-            this.cbIsAdmin.Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.cbIsAdmin.Location = new System.Drawing.Point(135, 157);
-            this.cbIsAdmin.Name = "cbIsAdmin";
-            this.cbIsAdmin.Size = new System.Drawing.Size(82, 24);
-            this.cbIsAdmin.TabIndex = 6;
-            this.cbIsAdmin.Text = "کاربر ادمین";
-            this.cbIsAdmin.ThemeName = "TelerikMetro";
+            this.ddUserRole.Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.ddUserRole.Location = new System.Drawing.Point(116, 152);
+            this.ddUserRole.Name = "ddUserRole";
+            this.ddUserRole.Size = new System.Drawing.Size(130, 32);
+            this.ddUserRole.TabIndex = 6;
+            this.ddUserRole.ThemeName = "TelerikMetro";
+            ((Telerik.WinControls.UI.RadDropDownListElement)(this.ddUserRole.GetChildAt(0))).RightToLeft = true;
+            ((Telerik.WinControls.UI.RadDropDownListElement)(this.ddUserRole.GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.ddUserRole.GetChildAt(0).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.UI.StackLayoutElement)(this.ddUserRole.GetChildAt(0).GetChildAt(2))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.UI.RadDropDownListEditableAreaElement)(this.ddUserRole.GetChildAt(0).GetChildAt(2).GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.ddUserRole.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.UI.RadDropDownListArrowButtonElement)(this.ddUserRole.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            // 
+            // radLabel3
+            // 
+            this.radLabel3.Location = new System.Drawing.Point(252, 152);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radLabel3.Size = new System.Drawing.Size(78, 27);
+            this.radLabel3.TabIndex = 7;
+            this.radLabel3.Text = "نقش کاربر: ";
+            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel3.ThemeName = "TelerikMetro";
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 225);
+            this.ClientSize = new System.Drawing.Size(364, 226);
             this.Controls.Add(this.radGroupBox1);
             this.Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -151,6 +171,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "فرم کاربران";
             this.ThemeName = "TelerikMetro";
+            this.Load += new System.EventHandler(this.UserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
@@ -159,7 +180,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbIsAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddUserRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -173,6 +195,7 @@
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadButton btnAddUser;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadCheckBox cbIsAdmin;
+        private Telerik.WinControls.UI.RadDropDownList ddUserRole;
+        private Telerik.WinControls.UI.RadLabel radLabel3;
     }
 }

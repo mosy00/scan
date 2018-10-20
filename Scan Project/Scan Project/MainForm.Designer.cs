@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
@@ -76,6 +77,8 @@
             this.btnOpenUserForm = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnOpenAboutBox = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.btnSignout = new Telerik.WinControls.UI.RadMenuButtonItem();
+            this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
+            this.btnEditRowItem = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.addDocsPage.SuspendLayout();
@@ -128,7 +131,7 @@
             this.radPageView1.Controls.Add(this.searchDocsPage);
             this.radPageView1.DefaultPage = this.homePage;
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.homePage;
+            this.radPageView1.SelectedPage = this.searchDocsPage;
             this.radPageView1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near;
@@ -272,8 +275,10 @@
             // 
             // 
             this.gvAddDocs.MasterTemplate.AllowAddNewRow = false;
+            this.gvAddDocs.MasterTemplate.AllowColumnHeaderContextMenu = false;
             this.gvAddDocs.MasterTemplate.AllowDeleteRow = false;
             this.gvAddDocs.MasterTemplate.AllowEditRow = false;
+            this.gvAddDocs.MasterTemplate.AllowRowHeaderContextMenu = false;
             this.gvAddDocs.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.gvAddDocs.Name = "gvAddDocs";
             this.gvAddDocs.ReadOnly = true;
@@ -296,8 +301,10 @@
             // 
             // 
             this.gvSearchDocs.MasterTemplate.AllowAddNewRow = false;
+            this.gvSearchDocs.MasterTemplate.AllowColumnHeaderContextMenu = false;
             this.gvSearchDocs.MasterTemplate.AllowDeleteRow = false;
             this.gvSearchDocs.MasterTemplate.AllowEditRow = false;
+            this.gvSearchDocs.MasterTemplate.AllowRowHeaderContextMenu = false;
             this.gvSearchDocs.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.gvSearchDocs.Name = "gvSearchDocs";
             this.gvSearchDocs.ReadOnly = true;
@@ -618,6 +625,19 @@
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).BottomWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
+            // radContextMenu1
+            // 
+            this.radContextMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.btnEditRowItem});
+            this.radContextMenu1.ThemeName = "TelerikMetro";
+            // 
+            // btnEditRowItem
+            // 
+            resources.ApplyResources(this.btnEditRowItem, "btnEditRowItem");
+            this.btnEditRowItem.Font = new System.Drawing.Font("IRANSans", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnEditRowItem.Name = "btnEditRowItem";
+            this.btnEditRowItem.UseCompatibleTextRendering = false;
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -728,5 +748,7 @@
         private Telerik.WinControls.UI.RadCheckBox cbIsSearchByDate;
         private Telerik.WinControls.UI.RadMenuButtonItem btnOpenAboutBox;
         private Telerik.WinControls.UI.RadMenuButtonItem btnSignout;
+        private Telerik.WinControls.UI.RadContextMenu radContextMenu1;
+        private Telerik.WinControls.UI.RadMenuItem btnEditRowItem;
     }
 }

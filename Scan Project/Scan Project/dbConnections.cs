@@ -98,12 +98,12 @@ namespace Scan_Project
         /// <param name="userName">نام کاربری</param>
         /// <param name="password">رمز عبور</param>
         /// <returns></returns>
-        public bool CheckUser(string userName, string password, out bool isUserAdmin)
+        public bool CheckUser(string userName, string password, out byte isUserAdmin)
         {            
             DataTable dt = new DataTable();
 
             OleDbCommand cmd = new OleDbCommand();
-            cmd.CommandText = $"SELECT userName, userIsAdmin from Users where userName='{userName}' and userPassword='{MD5(password)}' and userIsActive=true";
+            cmd.CommandText = $"SELECT userName, userRole from Users where userName='{userName}' and userPassword='{MD5(password)}' and userIsActive=true";
             cmd.Connection = cn;
             
             try
@@ -117,7 +117,7 @@ namespace Scan_Project
             {
                 throw ex;
             }
-            isUserAdmin = dt.Rows[0][1].ToString().ToLower() == "true" ? true : false;
+            isUserAdmin = System.Convert.ToByte(dt.Rows[0][1].ToString());
             return dt.Rows.Count > 0 ? true : false;
         }
 
@@ -174,11 +174,11 @@ namespace Scan_Project
             return dt;
         }
 
-        public void InsertNewUser(string userName, string password, bool isAdmin)
+        public void InsertNewUser(string userName, string password, byte role)
         {
             OleDbCommand cmd = new OleDbCommand();
-            cmd.CommandText = string.Format("insert into Users (userName, userPassword, userIsAdmin, userIsActive) values ('{0}', '{1}', {2}, true)",
-                                                                userName, MD5(password), isAdmin);
+            cmd.CommandText = string.Format("insert into Users (userName, userPassword, userRole, userIsActive) values ('{0}', '{1}', {2}, true)",
+                                                                userName, MD5(password), role);
             cmd.Connection = cn;
             try
             {

@@ -49,13 +49,13 @@ namespace Scan_Project.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool userIsAdmin {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public byte userRole {
             get {
-                return ((bool)(this["userIsAdmin"]));
+                return ((byte)(this["userRole"]));
             }
             set {
-                this["userIsAdmin"] = value;
+                this["userRole"] = value;
             }
         }
     }

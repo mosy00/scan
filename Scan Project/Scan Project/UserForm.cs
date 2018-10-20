@@ -27,8 +27,8 @@ namespace Scan_Project
             }
             dbConnections db = new dbConnections();
             try
-            {
-                db.InsertNewUser(txtUserName.Text, txtPassword.Text, cbIsAdmin.Checked);
+            {                
+                db.InsertNewUser(txtUserName.Text, txtPassword.Text, System.Convert.ToByte(ddUserRole.SelectedValue));
 
                 RadMessageBox.ThemeName = "TelerikMetro";
                 RadMessageBox.Show(null, "کاربر جدید با موفقیت ثبت شد.", "ثبت موفق", MessageBoxButtons.OK,
@@ -39,6 +39,26 @@ namespace Scan_Project
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void UserForm_Load(object sender, EventArgs e)
+        {
+            Telerik.WinControls.UI.RadListDataItem radListDataItem = new Telerik.WinControls.UI.RadListDataItem();
+            radListDataItem.Value = 1;
+            radListDataItem.Text = "ادمین";
+            ddUserRole.Items.Add(radListDataItem);
+
+            radListDataItem = new Telerik.WinControls.UI.RadListDataItem();
+            radListDataItem.Value = 2;
+            radListDataItem.Text = "امکان ثبت";
+            ddUserRole.Items.Add(radListDataItem);
+
+            radListDataItem = new Telerik.WinControls.UI.RadListDataItem();
+            radListDataItem.Value = 3;
+            radListDataItem.Text = "فقط بازدید";
+            ddUserRole.Items.Add(radListDataItem);
+
+            ddUserRole.SelectedValue = 3;
         }
     }
 }
