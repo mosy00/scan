@@ -98,6 +98,12 @@
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="dbConnections.cs" />
+    <Compile Include="EditDocsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDocsForm.Designer.cs">
+      <DependentUpon>EditDocsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InvokeHelper.cs" />
     <Compile Include="ItemsForm.cs">
       <SubType>Form</SubType>
@@ -133,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDocsForm.resx">
+      <DependentUpon>EditDocsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemsForm.resx">
       <DependentUpon>ItemsForm.cs</DependentUpon>

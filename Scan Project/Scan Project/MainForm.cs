@@ -262,13 +262,17 @@ namespace Scan_Project
                 }                
             }
 
+            //آدرس فولدر به صورت نسبی
             string relativePath = "\\Files\\" + Properties.Settings.Default.projectID.ToString() + "\\";
+            //آدرس فولدر به صورت کامل
             string docsPath = Application.StartupPath + relativePath;
+            //ساخت فولدر در صورت عدم وجود
             if (!System.IO.Directory.Exists(docsPath))
             {
                 System.IO.Directory.CreateDirectory(docsPath);
             }
 
+            //ثبت مدرک هر سطر در دیتابیس
             for (int i = 0; i < gvAddDocs.Rows.Count; i++)
             {
                 string item1 = gvAddDocs.Rows[i].Cells[1].Value.ToString();
@@ -276,11 +280,13 @@ namespace Scan_Project
                 string item3 = gvAddDocs.Rows[i].Cells[3].Value.ToString();
                 string docSrcFile = gvAddDocs.Rows[i].Cells[4].Value.ToString();
 
+                //ساخت اسم و مسیر فایل
                 string newPath = MD5(item1 + "-" + item2 + "-" + item3 + "-" + DateTime.Now.ToFileTime()) + System.IO.Path.GetExtension(docSrcFile);
                 string newFile = System.IO.Path.Combine(docsPath, newPath);
 
                 try
                 {
+                    //کپی فایل به فولدر
                     System.IO.File.Copy(docSrcFile, newFile);
                 }
                 catch (Exception ex)
@@ -291,12 +297,14 @@ namespace Scan_Project
 
                 try
                 {
+                    //ذخیره در دیتابیس
                     dbConnections db = new dbConnections();
                     db.InsertDocs(item1, item2, item3, relativePath + newPath);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    //در صورت عدم توانایی در ذخیره مشخصات در دیتابیس، فایل کپی شده را نیز حذف میکند تا بعدا تداخل ایجاد نشود.
                     System.IO.File.Delete(newFile);
                 }
             }
@@ -412,35 +420,22 @@ namespace Scan_Project
 
             this.Visible = true;
         }
-
-        private void txtAddItem1_KeyPress(object sender, KeyPressEventArgs e)
+        
+        private void gvSearchDocs_MouseClick(object sender, MouseEventArgs e)
         {
-            // Check for a naughty character in the KeyDown event.
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[^|^\\^/^\"^<^>^*^:^?^-]") || e.KeyChar == '\\')
+            if (e.Button == MouseButtons.Right)
             {
-                // Stop the character from being entered into the control since it is illegal.
-                e.Handled = true;
+                Point p = new Point();
+                p.X = e.X;
+                p.Y = e.Y;
+                radContextMenu1.Show(gvSearchDocs, p);
             }
         }
 
-        private void txtAddItem2_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnEditRowItem_Click(object sender, EventArgs e)
         {
-            // Check for a naughty character in the KeyDown event.
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[^|^\\^/^\"^<^>^*^:^?^-]") || e.KeyChar == '\\')
-            {
-                // Stop the character from being entered into the control since it is illegal.
-                e.Handled = true;
-            }
-        }
-
-        private void txtAddItem3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Check for a naughty character in the KeyDown event.
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[^|^\\^/^\"^<^>^*^:^?^-]") || e.KeyChar == '\\')
-            {
-                // Stop the character from being entered into the control since it is illegal.
-                e.Handled = true;
-            }
+            EditDocsForm ef = new EditDocsForm();
+            ef.ShowDialog();
         }
     }
 }
