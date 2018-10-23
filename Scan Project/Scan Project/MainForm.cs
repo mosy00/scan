@@ -385,5 +385,35 @@ namespace Scan_Project
 
             this.Visible = true;
         }
+
+        private void txtAddItem1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check for a naughty character in the KeyDown event.
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[^|^\\^/^\"^<^>^*^:^?^-]") || e.KeyChar == '\\')
+            {
+                // Stop the character from being entered into the control since it is illegal.
+                e.Handled = true;
+            }
+        }
+
+        private void txtAddItem2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check for a naughty character in the KeyDown event.
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[^|^\\^/^\"^<^>^*^:^?^-]") || e.KeyChar == '\\')
+            {
+                // Stop the character from being entered into the control since it is illegal.
+                e.Handled = true;
+            }
+        }
+
+        private void txtAddItem3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check for a naughty character in the KeyDown event.
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[^|^\\^/^\"^<^>^*^:^?^-]") || e.KeyChar == '\\')
+            {
+                // Stop the character from being entered into the control since it is illegal.
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -1588,7 +1588,7 @@
   <data name="btnOpenAboutBox.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="radMenuButtonItem1.ButtonElement.ToolTipText" xml:space="preserve">
+  <data name="btnSignout.ButtonElement.ToolTipText" xml:space="preserve">
     <value>خروج</value>
   </data>
   <data name="btnSignout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -1598,6 +1598,9 @@
     <value />
   </data>
   <data name="btnSignout.ToolTipText" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="btnSignout.ButtonElement.ToolTipText1" xml:space="preserve">
     <value>خروج</value>
   </data>
   <data name="radMenu1.Location" type="System.Drawing.Point, System.Drawing">

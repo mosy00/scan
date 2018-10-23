@@ -36,10 +36,10 @@
     <ROW Property="ARPPRODUCTICON" Value="office_material_oTu_icon.exe" Type="8"/>
     <ROW Property="ARPURLINFOABOUT" Value="http://tis-co.ir"/>
     <ROW Property="Manufacturer" Value="Tis"/>
-    <ROW Property="ProductCode" Value="1033:{39DED372-AD4F-4BF7-86B5-FA5A31D8812E} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{F031CDBF-9B28-4770-9794-8A463FB030C8} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Tis Archive"/>
-    <ROW Property="ProductVersion" Value="0.1.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.2.1" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{623CA937-36E8-4559-A33F-79E61E7255B9}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>

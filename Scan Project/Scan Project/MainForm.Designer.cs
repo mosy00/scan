@@ -131,7 +131,7 @@
             this.radPageView1.Controls.Add(this.searchDocsPage);
             this.radPageView1.DefaultPage = this.homePage;
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.searchDocsPage;
+            this.radPageView1.SelectedPage = this.addDocsPage;
             this.radPageView1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near;
@@ -255,18 +255,21 @@
             resources.ApplyResources(this.txtAddItem2, "txtAddItem2");
             this.txtAddItem2.Name = "txtAddItem2";
             this.txtAddItem2.ThemeName = "TelerikMetro";
+            this.txtAddItem2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddItem2_KeyPress);
             // 
             // txtAddItem3
             // 
             resources.ApplyResources(this.txtAddItem3, "txtAddItem3");
             this.txtAddItem3.Name = "txtAddItem3";
             this.txtAddItem3.ThemeName = "TelerikMetro";
+            this.txtAddItem3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddItem3_KeyPress);
             // 
             // txtAddItem1
             // 
             resources.ApplyResources(this.txtAddItem1, "txtAddItem1");
             this.txtAddItem1.Name = "txtAddItem1";
             this.txtAddItem1.ThemeName = "TelerikMetro";
+            this.txtAddItem1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddItem1_KeyPress);
             // 
             // gvAddDocs
             // 
@@ -613,12 +616,13 @@
             // 
             // 
             // 
-            this.btnSignout.ButtonElement.ToolTipText = resources.GetString("radMenuButtonItem1.ButtonElement.ToolTipText");
+            this.btnSignout.ButtonElement.ToolTipText = resources.GetString("btnSignout.ButtonElement.ToolTipText");
             this.btnSignout.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
             this.btnSignout.Image = global::Scan_Project.Properties.Resources.sign_out_option;
             resources.ApplyResources(this.btnSignout, "btnSignout");
             this.btnSignout.Name = "btnSignout";
             this.btnSignout.Click += new System.EventHandler(this.btnSignout_Click);
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).ToolTipText = resources.GetString("btnSignout.ButtonElement.ToolTipText1");
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).LeftWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).TopWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnSignout.GetChildAt(2).GetChildAt(2))).RightWidth = 0F;
