@@ -222,6 +222,37 @@ namespace Scan_Project
             return dt;
         }
 
+        /// <summary>
+        /// گرفتن جدول اسناد بر اساس آی دی
+        /// </summary>
+        /// <param name="itemNames">خروجی شاخص ها</param>
+        /// <param name="docID">آی دی  سند</param>
+        /// <returns></returns>
+        public DataTable GetDocs(out DataTable itemNames, string docID)
+        {
+            DataTable dt = new DataTable();
+
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = string.Format("select * from Documents where ID = {0} and projectID = {1}" +
+                "", docID, Properties.Settings.Default.projectID);
+            cmd.Connection = cn;
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            try
+            {
+                cn.Open();
+                da.Fill(dt);
+                cn.Close();
+
+                itemNames = GetItems();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+
+            return dt;
+        }
+
         public DataTable GetDocs(out DataTable itemNames, string item1, string item2, string item3, string fromDate, string toDate)
         {
             DataTable dt = new DataTable();
@@ -286,6 +317,25 @@ namespace Scan_Project
                 string.Format("insert into Documents (item1, item2, item3, projectID, imageSrc, docSubmitDate)" +
                 " values ('{0}', '{1}', '{2}', {3}, '{4}', '{5}')",
                 item1, item2, item3, Properties.Settings.Default.projectID, imageSrc, System.DateTime.Now);
+            cmd.Connection = cn;
+            try
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void UpdateDocs(string item1, string item2, string item3)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText =
+                string.Format("update Documents set item1 = {0}, item2 = {1}, item3 = {2}, docLastChangeDate = {3}, docLastChangeUser = {4}",
+                item1, item2, item3, System.DateTime.Now, null);
             cmd.Connection = cn;
             try
             {

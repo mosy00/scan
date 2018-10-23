@@ -349,6 +349,7 @@ namespace Scan_Project
                 }
                 gvSearchDocs.Rows.Add(docPicture, dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
                                         dt.Rows[i][3].ToString(), dt.Rows[i][6].ToString(), Application.StartupPath + dt.Rows[i][5].ToString());
+                gvSearchDocs.Rows[i].Tag = dt.Rows[i][0].ToString();
                 gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 100;
             }
         }
@@ -374,6 +375,7 @@ namespace Scan_Project
                 }
                 gvSearchDocs.Rows.Add(docPicture, dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
                                         dt.Rows[i][3].ToString(), dt.Rows[i][6].ToString(), Application.StartupPath + dt.Rows[i][5].ToString());
+                gvSearchDocs.Rows[i].Tag = dt.Rows[i][0].ToString();
                 gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 100;
             }
         }
@@ -434,7 +436,7 @@ namespace Scan_Project
 
         private void btnEditRowItem_Click(object sender, EventArgs e)
         {
-            EditDocsForm ef = new EditDocsForm();
+            EditDocsForm ef = new EditDocsForm(gvSearchDocs.SelectedRows[0].Tag.ToString());
             ef.ShowDialog();
         }
     }

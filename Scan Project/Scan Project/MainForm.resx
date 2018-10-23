@@ -1151,13 +1151,13 @@
     <value>Horizontal</value>
   </data>
   <data name="radStatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 614</value>
+    <value>0, 608</value>
   </data>
   <data name="radStatusStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
   <data name="radStatusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1092, 24</value>
+    <value>1092, 30</value>
   </data>
   <data name="radStatusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3195,9 +3195,6 @@
         AAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAA/4AAAAAAgAAAAAEAAAAAAf
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1100, 670</value>
   </data>
@@ -3228,18 +3225,6 @@
   <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radContextMenu1.Name" xml:space="preserve">
-    <value>radContextMenu1</value>
-  </data>
-  <data name="&gt;&gt;radContextMenu1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadContextMenu, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;btnEditRowItem.Name" xml:space="preserve">
-    <value>btnEditRowItem</value>
-  </data>
-  <data name="&gt;&gt;btnEditRowItem.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;btnOpenProjectForm.Name" xml:space="preserve">
     <value>btnOpenProjectForm</value>
   </data>
@@ -3269,6 +3254,18 @@
   </data>
   <data name="&gt;&gt;btnSignout.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuButtonItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radContextMenu1.Name" xml:space="preserve">
+    <value>radContextMenu1</value>
+  </data>
+  <data name="&gt;&gt;radContextMenu1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadContextMenu, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnEditRowItem.Name" xml:space="preserve">
+    <value>btnEditRowItem</value>
+  </data>
+  <data name="&gt;&gt;btnEditRowItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
