@@ -30,12 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Telerik.WinControls.UI.CartesianArea cartesianArea1 = new Telerik.WinControls.UI.CartesianArea();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.CartesianArea cartesianArea1 = new Telerik.WinControls.UI.CartesianArea();
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.homePage = new Telerik.WinControls.UI.RadPageViewPage();
+            this.chartView1 = new Telerik.WinControls.UI.RadChartView();
+            this.radGroupBox4 = new Telerik.WinControls.UI.RadGroupBox();
+            this.txtShowProjectDocsNumber = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
+            this.txtShowProjectName = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
+            this.txtShowUserRole = new Telerik.WinControls.UI.RadTextBox();
+            this.txtShowUsername = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.addDocsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.btnEditDoc = new Telerik.WinControls.UI.RadButton();
@@ -80,20 +91,22 @@
             this.btnSignout = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
             this.btnEditRowItem = new Telerik.WinControls.UI.RadMenuItem();
-            this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGroupBox4 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
-            this.txtShowUsername = new Telerik.WinControls.UI.RadTextBox();
-            this.txtShowUserRole = new Telerik.WinControls.UI.RadTextBox();
-            this.txtShowProjectName = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
-            this.txtShowProjectDocsNumber = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
-            this.chartView1 = new Telerik.WinControls.UI.RadChartView();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.homePage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).BeginInit();
+            this.radGroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShowProjectDocsNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShowProjectName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
+            this.radGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShowUserRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShowUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             this.addDocsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -133,19 +146,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
-            this.radGroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).BeginInit();
-            this.radGroupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShowUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShowUserRole)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShowProjectName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShowProjectDocsNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,7 +157,7 @@
             this.radPageView1.Controls.Add(this.searchDocsPage);
             this.radPageView1.DefaultPage = this.homePage;
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.homePage;
+            this.radPageView1.SelectedPage = this.addDocsPage;
             this.radPageView1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near;
@@ -171,6 +171,90 @@
             this.homePage.ItemSize = new System.Drawing.SizeF(125F, 40F);
             resources.ApplyResources(this.homePage, "homePage");
             this.homePage.Name = "homePage";
+            // 
+            // chartView1
+            // 
+            this.chartView1.AreaDesign = cartesianArea1;
+            resources.ApplyResources(this.chartView1, "chartView1");
+            this.chartView1.Name = "chartView1";
+            this.chartView1.ShowGrid = false;
+            this.chartView1.ThemeName = "TelerikMetro";
+            // 
+            // radGroupBox4
+            // 
+            this.radGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox4.Controls.Add(this.txtShowProjectDocsNumber);
+            this.radGroupBox4.Controls.Add(this.radLabel8);
+            this.radGroupBox4.Controls.Add(this.txtShowProjectName);
+            this.radGroupBox4.Controls.Add(this.radLabel7);
+            resources.ApplyResources(this.radGroupBox4, "radGroupBox4");
+            this.radGroupBox4.Name = "radGroupBox4";
+            this.radGroupBox4.ThemeName = "TelerikMetro";
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Text = resources.GetString("resource.Text");
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).LineLimit = false;
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment")));
+            // 
+            // txtShowProjectDocsNumber
+            // 
+            resources.ApplyResources(this.txtShowProjectDocsNumber, "txtShowProjectDocsNumber");
+            this.txtShowProjectDocsNumber.Name = "txtShowProjectDocsNumber";
+            this.txtShowProjectDocsNumber.ThemeName = "TelerikMetro";
+            // 
+            // radLabel8
+            // 
+            resources.ApplyResources(this.radLabel8, "radLabel8");
+            this.radLabel8.Name = "radLabel8";
+            // 
+            // txtShowProjectName
+            // 
+            resources.ApplyResources(this.txtShowProjectName, "txtShowProjectName");
+            this.txtShowProjectName.Name = "txtShowProjectName";
+            this.txtShowProjectName.ThemeName = "TelerikMetro";
+            // 
+            // radLabel7
+            // 
+            resources.ApplyResources(this.radLabel7, "radLabel7");
+            this.radLabel7.Name = "radLabel7";
+            // 
+            // radGroupBox3
+            // 
+            this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox3.Controls.Add(this.txtShowUserRole);
+            this.radGroupBox3.Controls.Add(this.txtShowUsername);
+            this.radGroupBox3.Controls.Add(this.radLabel6);
+            this.radGroupBox3.Controls.Add(this.radLabel4);
+            resources.ApplyResources(this.radGroupBox3, "radGroupBox3");
+            this.radGroupBox3.Name = "radGroupBox3";
+            this.radGroupBox3.ThemeName = "TelerikMetro";
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Text = resources.GetString("resource.Text1");
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).LineLimit = false;
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment1")));
+            // 
+            // txtShowUserRole
+            // 
+            resources.ApplyResources(this.txtShowUserRole, "txtShowUserRole");
+            this.txtShowUserRole.Name = "txtShowUserRole";
+            this.txtShowUserRole.ThemeName = "TelerikMetro";
+            // 
+            // txtShowUsername
+            // 
+            resources.ApplyResources(this.txtShowUsername, "txtShowUsername");
+            this.txtShowUsername.Name = "txtShowUsername";
+            this.txtShowUsername.ThemeName = "TelerikMetro";
+            // 
+            // radLabel6
+            // 
+            resources.ApplyResources(this.radLabel6, "radLabel6");
+            this.radLabel6.Name = "radLabel6";
+            // 
+            // radLabel4
+            // 
+            resources.ApplyResources(this.radLabel4, "radLabel4");
+            this.radLabel4.Name = "radLabel4";
             // 
             // addDocsPage
             // 
@@ -665,90 +749,6 @@
             this.btnEditRowItem.UseCompatibleTextRendering = false;
             this.btnEditRowItem.Click += new System.EventHandler(this.btnEditRowItem_Click);
             // 
-            // radGroupBox3
-            // 
-            this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox3.Controls.Add(this.txtShowUserRole);
-            this.radGroupBox3.Controls.Add(this.txtShowUsername);
-            this.radGroupBox3.Controls.Add(this.radLabel6);
-            this.radGroupBox3.Controls.Add(this.radLabel4);
-            resources.ApplyResources(this.radGroupBox3, "radGroupBox3");
-            this.radGroupBox3.Name = "radGroupBox3";
-            this.radGroupBox3.ThemeName = "TelerikMetro";
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Text = resources.GetString("resource.Text1");
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).LineLimit = false;
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment1")));
-            // 
-            // radGroupBox4
-            // 
-            this.radGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox4.Controls.Add(this.txtShowProjectDocsNumber);
-            this.radGroupBox4.Controls.Add(this.radLabel8);
-            this.radGroupBox4.Controls.Add(this.txtShowProjectName);
-            this.radGroupBox4.Controls.Add(this.radLabel7);
-            resources.ApplyResources(this.radGroupBox4, "radGroupBox4");
-            this.radGroupBox4.Name = "radGroupBox4";
-            this.radGroupBox4.ThemeName = "TelerikMetro";
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(0))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Text = resources.GetString("resource.Text");
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).LineLimit = false;
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment")));
-            // 
-            // radLabel4
-            // 
-            resources.ApplyResources(this.radLabel4, "radLabel4");
-            this.radLabel4.Name = "radLabel4";
-            // 
-            // radLabel6
-            // 
-            resources.ApplyResources(this.radLabel6, "radLabel6");
-            this.radLabel6.Name = "radLabel6";
-            // 
-            // txtShowUsername
-            // 
-            resources.ApplyResources(this.txtShowUsername, "txtShowUsername");
-            this.txtShowUsername.Name = "txtShowUsername";
-            this.txtShowUsername.ThemeName = "TelerikMetro";
-            // 
-            // txtShowUserRole
-            // 
-            resources.ApplyResources(this.txtShowUserRole, "txtShowUserRole");
-            this.txtShowUserRole.Name = "txtShowUserRole";
-            this.txtShowUserRole.ThemeName = "TelerikMetro";
-            // 
-            // txtShowProjectName
-            // 
-            resources.ApplyResources(this.txtShowProjectName, "txtShowProjectName");
-            this.txtShowProjectName.Name = "txtShowProjectName";
-            this.txtShowProjectName.ThemeName = "TelerikMetro";
-            // 
-            // radLabel7
-            // 
-            resources.ApplyResources(this.radLabel7, "radLabel7");
-            this.radLabel7.Name = "radLabel7";
-            // 
-            // txtShowProjectDocsNumber
-            // 
-            resources.ApplyResources(this.txtShowProjectDocsNumber, "txtShowProjectDocsNumber");
-            this.txtShowProjectDocsNumber.Name = "txtShowProjectDocsNumber";
-            this.txtShowProjectDocsNumber.ThemeName = "TelerikMetro";
-            // 
-            // radLabel8
-            // 
-            resources.ApplyResources(this.radLabel8, "radLabel8");
-            this.radLabel8.Name = "radLabel8";
-            // 
-            // chartView1
-            // 
-            this.chartView1.AreaDesign = cartesianArea1;
-            resources.ApplyResources(this.chartView1, "chartView1");
-            this.chartView1.Name = "chartView1";
-            this.chartView1.ShowGrid = false;
-            this.chartView1.ThemeName = "TelerikMetro";
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -766,6 +766,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).EndInit();
             this.radPageView1.ResumeLayout(false);
             this.homePage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).EndInit();
+            this.radGroupBox4.ResumeLayout(false);
+            this.radGroupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShowProjectDocsNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShowProjectName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
+            this.radGroupBox3.ResumeLayout(false);
+            this.radGroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShowUserRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShowUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             this.addDocsPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
@@ -807,21 +822,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
-            this.radGroupBox3.ResumeLayout(false);
-            this.radGroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).EndInit();
-            this.radGroupBox4.ResumeLayout(false);
-            this.radGroupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShowUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShowUserRole)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShowProjectName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShowProjectDocsNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

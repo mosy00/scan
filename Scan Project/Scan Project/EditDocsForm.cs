@@ -22,7 +22,7 @@ namespace Scan_Project
         {
             dbConnections db = new dbConnections();
             DataTable dt, itemNames;
-            
+
             dt = db.GetDocs(out itemNames, docID);
 
             lblItem1.Text = itemNames.Rows[0][2].ToString();
@@ -36,7 +36,21 @@ namespace Scan_Project
 
         private void btnEditDoc_Click(object sender, EventArgs e)
         {
+            try
+            {
+                dbConnections db = new dbConnections();
+                db.UpdateDocs(txtItem1.Text, txtItem2.Text, txtItem3.Text, docID);
 
+                RadMessageBox.ThemeName = "TelerikMetro";
+                RadMessageBox.Show(null, "تغییرات با موفقیت ثبت شد.", "ثبت موفق", MessageBoxButtons.OK,
+                    RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+
+                DialogResult = DialogResult.OK;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

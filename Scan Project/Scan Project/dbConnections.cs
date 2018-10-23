@@ -374,12 +374,13 @@ namespace Scan_Project
             return dt;
         }
 
-        public void UpdateDocs(string item1, string item2, string item3)
+        public void UpdateDocs(string item1, string item2, string item3, string docID)
         {
             OleDbCommand cmd = new OleDbCommand();
             cmd.CommandText =
-                string.Format("update Documents set item1 = {0}, item2 = {1}, item3 = {2}, docLastChangeDate = {3}, docLastChangeUser = {4}",
-                item1, item2, item3, System.DateTime.Now, null);
+                string.Format("update Documents set item1 = '{0}', item2 = '{1}', item3 = '{2}', docLastChangeDate = '{3}', docLastChangeUser = '{4}' " +
+                "where ID = {5}",
+                item1, item2, item3, System.DateTime.Now, Properties.Settings.Default.userName, docID);
             cmd.Connection = cn;
             try
             {
