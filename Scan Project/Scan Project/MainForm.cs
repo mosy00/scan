@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using Telerik.WinControls.UI;
 using Telerik.WinControls;
+using System.Security.Cryptography;
 
 namespace Scan_Project
 {
@@ -74,6 +75,32 @@ namespace Scan_Project
             txtAddDocSrc.Text = txtAddItem1.Text = txtAddItem2.Text = txtAddItem3.Text = string.Empty;
             openFileDialog1.Reset();
             docPicture.Image = null;
+        }
+
+        private string GenerateHashString(HashAlgorithm algo, string text)
+        {
+            // Compute hash from text parameter
+            algo.ComputeHash(Encoding.UTF8.GetBytes(text));
+
+            // Get has value in array of bytes
+            var result = algo.Hash;
+
+            // Return as hexadecimal string
+            return string.Join(
+                string.Empty,
+                result.Select(x => x.ToString("x2")));
+        }
+
+        private string MD5(string text)
+        {
+            var result = default(string);
+
+            using (var algo = new MD5CryptoServiceProvider())
+            {
+                result = GenerateHashString(algo, text);
+            }
+
+            return result;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -249,7 +276,7 @@ namespace Scan_Project
                 string item3 = gvAddDocs.Rows[i].Cells[3].Value.ToString();
                 string docSrcFile = gvAddDocs.Rows[i].Cells[4].Value.ToString();
 
-                string newPath = item1 + "-" + item2 + "-" + item3 + "-" + DateTime.Now.ToFileTime() + System.IO.Path.GetExtension(docSrcFile);
+                string newPath = MD5(item1 + "-" + item2 + "-" + item3 + "-" + DateTime.Now.ToFileTime()) + System.IO.Path.GetExtension(docSrcFile);
                 string newFile = System.IO.Path.Combine(docsPath, newPath);
 
                 try
