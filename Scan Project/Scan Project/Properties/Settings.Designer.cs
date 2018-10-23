@@ -58,5 +58,17 @@ namespace Scan_Project.Properties {
                 this["userRole"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string userName {
+            get {
+                return ((string)(this["userName"]));
+            }
+            set {
+                this["userName"] = value;
+            }
+        }
     }
 }

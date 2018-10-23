@@ -98,7 +98,7 @@ namespace Scan_Project
         /// <param name="userName">نام کاربری</param>
         /// <param name="password">رمز عبور</param>
         /// <returns></returns>
-        public bool CheckUser(string userName, string password, out byte isUserAdmin)
+        public bool CheckUser(string userName, string password, out byte userRole)
         {            
             DataTable dt = new DataTable();
 
@@ -117,7 +117,7 @@ namespace Scan_Project
             {
                 throw ex;
             }
-            isUserAdmin = System.Convert.ToByte(dt.Rows[0][1].ToString());
+            userRole = System.Convert.ToByte(dt.Rows[0][1].ToString());
             return dt.Rows.Count > 0 ? true : false;
         }
 
@@ -328,6 +328,50 @@ namespace Scan_Project
             {
                 throw ex;
             }
+        }
+
+        public DataTable GetUsers()
+        {
+            DataTable dt = new DataTable();
+
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = $"SELECT userName, userRole from Users where userIsActive=true";
+            cmd.Connection = cn;
+
+            try
+            {
+                cn.Open();
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                da.Fill(dt);
+                cn.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
+        }
+
+        public DataTable GetUsers(string username)
+        {
+            DataTable dt = new DataTable();
+
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = $"SELECT userName, userRole from Users where userName = '{username}' and userIsActive=true";
+            cmd.Connection = cn;
+
+            try
+            {
+                cn.Open();
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                da.Fill(dt);
+                cn.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
         }
 
         public void UpdateDocs(string item1, string item2, string item3)

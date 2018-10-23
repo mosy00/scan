@@ -10,6 +10,7 @@ using System.Data.OleDb;
 using Telerik.WinControls.UI;
 using Telerik.WinControls;
 using System.Security.Cryptography;
+using Telerik.Charting;
 
 namespace Scan_Project
 {
@@ -47,6 +48,9 @@ namespace Scan_Project
             gvAddDocs.Columns[1].Width = gvAddDocs.Columns[2].Width = gvAddDocs.Columns[3].Width = gvAddDocs.Columns[4].Width = 120;
         }
 
+        /// <summary>
+        /// درست کردن ستون های جدول سرچ مدارک
+        /// </summary>
         void InitializeSearchDocsGrid()
         {
             dbConnections db = new dbConnections();
@@ -68,6 +72,45 @@ namespace Scan_Project
             gvSearchDocs.Columns.Add("docSrc", "آدرس فایل سند");
 
             gvSearchDocs.Columns[1].Width = gvSearchDocs.Columns[2].Width = gvSearchDocs.Columns[3].Width = gvSearchDocs.Columns[4].Width = 120;
+        }
+
+        /// <summary>
+        /// آماده کردن صفحه اصلی
+        /// </summary>
+        void InitializeHomePage()
+        {
+            DataTable dt, itemNames;
+
+            dbConnections db = new dbConnections();
+            dt = db.GetDocs(out itemNames);
+
+
+            BarSeries series = new BarSeries();
+
+            series.DataPoints.Add(new CategoricalDataPoint(6, DateTime.Today));
+
+
+            DateTimeCategoricalAxis categoricalAxis = new DateTimeCategoricalAxis();
+            categoricalAxis.DateTimeComponent = DateTimeComponent.Day;
+            categoricalAxis.PlotMode = AxisPlotMode.BetweenTicks;
+            categoricalAxis.LabelFormat = "{0:m}";
+            //First assign the axis to the VerticalAxis property and then add the series to the chart
+            series.HorizontalAxis = categoricalAxis;
+            chartView1.Series.Add(series);
+
+            
+
+            txtShowProjectDocsNumber.Text = dt.Rows.Count.ToString();
+            txtShowUsername.Text = Properties.Settings.Default.userName;
+
+            if (Properties.Settings.Default.userRole == 1)
+                txtShowUserRole.Text = "کاربر ادمین";
+            else if (Properties.Settings.Default.userRole == 2)
+                txtShowUserRole.Text = "کاربر با امکان ثبت";
+            else if (Properties.Settings.Default.userRole == 3)
+                txtShowUserRole.Text = "فقط بازدید";
+
+
         }
 
         void CleanNewDocPage()
@@ -114,6 +157,7 @@ namespace Scan_Project
                 Application.ExitThread();
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
+            txtShowProjectName.Text = Properties.Settings.Default.projectName;
 
             if (Properties.Settings.Default.userRole != 1)
             {
@@ -149,8 +193,7 @@ namespace Scan_Project
                 MessageBox.Show(ex.Message);
             }
 
-            //Point p = new Point(0, 0);
-            //radContextMenu1.Show(gvSearchDocs, p);
+            InitializeHomePage();
         }
 
         private void btnOpenProjectForm_Click(object sender, EventArgs e)
@@ -158,6 +201,7 @@ namespace Scan_Project
             ProjectForm pf = new ProjectForm();
             pf.ShowDialog();
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
+            txtShowProjectName.Text = Properties.Settings.Default.projectName;
 
             dbConnections db = new dbConnections();
             DataTable itemNames;

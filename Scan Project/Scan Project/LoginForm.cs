@@ -28,7 +28,7 @@ namespace Scan_Project
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
 
             if (!isLogin)
@@ -40,6 +40,7 @@ namespace Scan_Project
             else
             {
                 Properties.Settings.Default.userRole = userRole;
+                Properties.Settings.Default.userName = txtUserName.Text;
                 DialogResult = DialogResult.OK;
             }
         }
