@@ -13,6 +13,7 @@
     <ROW Property="AI_ImagesColor" Value="powderblue" MultiBuildValue="DefaultBuild:flatblue" MsiKey="AI_ImagesColor"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Scan_Project.exe" Value="..\Scan Project\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Scan_Project.exe.config" Value="..\Scan Project\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Telerik.WinControls.ChartView.dll" Value="C:\Program Files (x86)\Progress\Telerik UI for WinForms R2 2018\Bin40"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Telerik.WinControls.GridView.dll" Value="C:\Program Files (x86)\Progress\Telerik UI for WinForms R2 2018\Bin40"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Telerik.WinControls.Themes.TelerikMetro.dll" Value="C:\Program Files (x86)\Progress\Telerik UI for WinForms R2 2018\Bin40"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Telerik.WinControls.Themes.TelerikMetroTouch.dll" Value="C:\Program Files (x86)\Progress\Telerik UI for WinForms R2 2018\Bin40"/>
@@ -21,6 +22,7 @@
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_TelerikCommon.dll" Value="..\lib\RCWF\2018.2.515.40"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Scan_Project.exe" Value="Scan_Project.exe"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Scan_Project.exe.config" Value="Scan_Project.exe.config"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.ChartView.dll" Value="Telerik.WinControls.ChartView.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.GridView.dll" Value="Telerik.WinControls.GridView.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.Themes.TelerikMetro.dll" Value="Telerik.WinControls.Themes.TelerikMetro.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.Themes.TelerikMetroTouch.dll" Value="Telerik.WinControls.Themes.TelerikMetroTouch.dll"/>
@@ -69,7 +71,7 @@
     <ROW Component="ProductInformation" ComponentId="{03521A8C-5CAE-4520-8D32-50F0FD7E4258}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
     <ROW Component="SHORTCUTDIR" ComponentId="{C823FB2A-B59B-4369-9125-9EB5EEC2F281}" Directory_="SHORTCUTDIR" Attributes="0"/>
     <ROW Component="Scan_Project_PrimaryOutput" ComponentId="{93EC1993-428C-440D-8586-858D0020FE80}" Directory_="Scan_Project_Dir" Attributes="0" KeyPath="Scan_Project.exe"/>
-    <ROW Component="Scan_Project_References" ComponentId="{7AD7F1E6-3EC3-4F7C-BC63-8F19ACBA1A9C}" Directory_="Scan_Project_Dir" Attributes="0" KeyPath="TelerikCommon.dll"/>
+    <ROW Component="Scan_Project_References" ComponentId="{7AD7F1E6-3EC3-4F7C-BC63-8F19ACBA1A9C}" Directory_="Scan_Project_Dir" Attributes="0" KeyPath="Telerik.WinControls.ChartView.dll"/>
     <ROW Component="scanDB.accdb" ComponentId="{BA7D841B-EFC5-4C9F-9281-580857CAF23B}" Directory_="Scan_Project_Dir" Attributes="0" KeyPath="scanDB.accdb" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
@@ -77,9 +79,10 @@
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
-    <ROW File="IRANSans.ttf" Component_="IRANSans.ttf" FileName="IRANSans.ttf" Attributes="0" SourcePath="..\..\..\..\D\font\IRANSans\IRANSans.ttf" SelfReg="false"/>
+    <ROW File="IRANSans.ttf" Component_="IRANSans.ttf" FileName="IRANSans.ttf" Attributes="0" SourcePath="..\..\..\..\D\font\IRANSans\IRANSans.ttf" SelfReg="false" NextFile="Telerik.WinControls.ChartView.dll"/>
     <ROW File="Scan_Project.exe" Component_="Scan_Project_PrimaryOutput" FileName="SCAN_P~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_Scan_Project.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Scan_Project.exe&gt;" SelfReg="false" NextFile="Scan_Project.exe.config" DigSign="true"/>
     <ROW File="Scan_Project.exe.config" Component_="Scan_Project_PrimaryOutput" FileName="SCAN_P~2.CON|[|AI_PROPPATH_FILENAME_PERBUILD_Scan_Project.exe.config]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Scan_Project.exe.config&gt;" SelfReg="false" NextFile="Telerik.WinControls.dll"/>
+    <ROW File="Telerik.WinControls.ChartView.dll" Component_="Scan_Project_References" FileName="TELERI~8.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.ChartView.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Telerik.WinControls.ChartView.dll&gt;" SelfReg="false"/>
     <ROW File="Telerik.WinControls.GridView.dll" Component_="Scan_Project_References" FileName="TELERI~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.GridView.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Telerik.WinControls.GridView.dll&gt;" SelfReg="false" NextFile="Telerik.WinControls.Themes.TelerikMetro.dll"/>
     <ROW File="Telerik.WinControls.Themes.TelerikMetro.dll" Component_="Scan_Project_References" FileName="TELERI~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.Themes.TelerikMetro.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Telerik.WinControls.Themes.TelerikMetro.dll&gt;" SelfReg="false" NextFile="Telerik.WinControls.Themes.TelerikMetroTouch.dll"/>
     <ROW File="Telerik.WinControls.Themes.TelerikMetroTouch.dll" Component_="Scan_Project_References" FileName="TELERI~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.Themes.TelerikMetroTouch.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Telerik.WinControls.Themes.TelerikMetroTouch.dll&gt;" SelfReg="false" NextFile="Telerik.WinControls.UI.dll"/>
@@ -91,6 +94,7 @@
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_Scan_Project.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_Scan_Project.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_Scan_Project.exe]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Scan_Project.exe.config" Path="[|AI_PROPPATH_DIR_PERBUILD_Scan_Project.exe.config]\[|AI_PROPPATH_FILENAME_PERBUILD_Scan_Project.exe.config]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Telerik.WinControls.ChartView.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Telerik.WinControls.ChartView.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.ChartView.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Telerik.WinControls.GridView.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Telerik.WinControls.GridView.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.GridView.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Telerik.WinControls.Themes.TelerikMetro.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Telerik.WinControls.Themes.TelerikMetro.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.Themes.TelerikMetro.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Telerik.WinControls.Themes.TelerikMetroTouch.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Telerik.WinControls.Themes.TelerikMetroTouch.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Telerik.WinControls.Themes.TelerikMetroTouch.dll]" Type="2" Content="0"/>
@@ -297,5 +301,6 @@
     <ROW ProjectId="{4fe8de0b-a62e-4c00-b455-3702cb06120f}" ProjectName="Scan_Project" OutputGroup="References" OutputFile="Telerik.WinControls.Themes.TelerikMetroTouch.dll"/>
     <ROW ProjectId="{4fe8de0b-a62e-4c00-b455-3702cb06120f}" ProjectName="Scan_Project" OutputGroup="References" OutputFile="Telerik.WinControls.UI.dll"/>
     <ROW ProjectId="{4fe8de0b-a62e-4c00-b455-3702cb06120f}" ProjectName="Scan_Project" OutputGroup="References" OutputFile="TelerikCommon.dll"/>
+    <ROW ProjectId="{4fe8de0b-a62e-4c00-b455-3702cb06120f}" ProjectName="Scan_Project" OutputGroup="References" OutputFile="Telerik.WinControls.ChartView.dll"/>
   </COMPONENT>
 </DOCUMENT>
