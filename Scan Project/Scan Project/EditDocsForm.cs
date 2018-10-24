@@ -39,7 +39,7 @@ namespace Scan_Project
             try
             {
                 dbConnections db = new dbConnections();
-                db.UpdateDocs(txtItem1.Text, txtItem2.Text, txtItem3.Text, docID);
+                db.UpdateDoc(txtItem1.Text, txtItem2.Text, txtItem3.Text, docID);
 
                 RadMessageBox.ThemeName = "TelerikMetro";
                 RadMessageBox.Show(null, "تغییرات با موفقیت ثبت شد.", "ثبت موفق", MessageBoxButtons.OK,

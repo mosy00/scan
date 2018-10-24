@@ -483,5 +483,22 @@ namespace Scan_Project
             EditDocsForm ef = new EditDocsForm(gvSearchDocs.SelectedRows[0].Tag.ToString());
             ef.ShowDialog();
         }
+
+        private void btnDeleteRowItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dbConnections db = new dbConnections();
+                db.deleteDoc(gvSearchDocs.SelectedRows[0].Tag.ToString());
+
+                RadMessageBox.ThemeName = "TelerikMetro";
+                RadMessageBox.Show(null, "مدرک انتخابی به درستی حذف گردید.", "حذف", MessageBoxButtons.OK,
+                    RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }            
+        }
     }
 }

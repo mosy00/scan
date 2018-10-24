@@ -923,10 +923,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="gvSearchDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>0, 3</value>
   </data>
   <data name="gvSearchDocs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>710, 496</value>
+    <value>713, 496</value>
   </data>
   <data name="gvSearchDocs.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2076,6 +2076,9 @@
   </data>
   <data name="btnEditRowItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
+  </data>
+  <data name="btnDeleteRowItem.Text" xml:space="preserve">
+    <value>حذف</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3586,6 +3589,12 @@
     <value>btnEditRowItem</value>
   </data>
   <data name="&gt;&gt;btnEditRowItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteRowItem.Name" xml:space="preserve">
+    <value>btnDeleteRowItem</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteRowItem.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -91,6 +91,7 @@
             this.btnSignout = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
             this.btnEditRowItem = new Telerik.WinControls.UI.RadMenuItem();
+            this.btnDeleteRowItem = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.homePage.SuspendLayout();
@@ -157,7 +158,7 @@
             this.radPageView1.Controls.Add(this.searchDocsPage);
             this.radPageView1.DefaultPage = this.homePage;
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.addDocsPage;
+            this.radPageView1.SelectedPage = this.searchDocsPage;
             this.radPageView1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near;
@@ -738,7 +739,8 @@
             // radContextMenu1
             // 
             this.radContextMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.btnEditRowItem});
+            this.btnEditRowItem,
+            this.btnDeleteRowItem});
             this.radContextMenu1.ThemeName = "TelerikMetro";
             // 
             // btnEditRowItem
@@ -748,6 +750,13 @@
             this.btnEditRowItem.Name = "btnEditRowItem";
             this.btnEditRowItem.UseCompatibleTextRendering = false;
             this.btnEditRowItem.Click += new System.EventHandler(this.btnEditRowItem_Click);
+            // 
+            // btnDeleteRowItem
+            // 
+            this.btnDeleteRowItem.Font = new System.Drawing.Font("IRANSans", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnDeleteRowItem.Name = "btnDeleteRowItem";
+            resources.ApplyResources(this.btnDeleteRowItem, "btnDeleteRowItem");
+            this.btnDeleteRowItem.Click += new System.EventHandler(this.btnDeleteRowItem_Click);
             // 
             // MainForm
             // 
@@ -888,5 +897,6 @@
         private Telerik.WinControls.UI.RadTextBox txtShowProjectName;
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadChartView chartView1;
+        private Telerik.WinControls.UI.RadMenuItem btnDeleteRowItem;
     }
 }

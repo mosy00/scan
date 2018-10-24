@@ -202,7 +202,7 @@ namespace Scan_Project
             DataTable dt = new DataTable();
 
             OleDbCommand cmd = new OleDbCommand();
-            cmd.CommandText = string.Format("select * from Documents where projectID = {0}" +
+            cmd.CommandText = string.Format("select * from Documents where projectID = {0} and docIsVisible = true" +
                 "", Properties.Settings.Default.projectID);
             cmd.Connection = cn;
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
@@ -233,7 +233,7 @@ namespace Scan_Project
             DataTable dt = new DataTable();
 
             OleDbCommand cmd = new OleDbCommand();
-            cmd.CommandText = string.Format("select * from Documents where ID = {0} and projectID = {1}" +
+            cmd.CommandText = string.Format("select * from Documents where ID = {0} and projectID = {1} and docIsVisible = true" +
                 "", docID, Properties.Settings.Default.projectID);
             cmd.Connection = cn;
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
@@ -277,7 +277,7 @@ namespace Scan_Project
                     q4 = "";
             }
 
-            string commandText = string.Format("select * from Documents where projectID = {0} and ({1} {2} {3} {4})",
+            string commandText = string.Format("select * from Documents where projectID = {0} and docIsVisible = true and ({1} {2} {3} {4})",
                 Properties.Settings.Default.projectID, q1, q2, q3, q4);
 
             commandText = commandText.Remove(commandText.LastIndexOf("or"));
@@ -314,8 +314,8 @@ namespace Scan_Project
         {
             OleDbCommand cmd = new OleDbCommand();
             cmd.CommandText = 
-                string.Format("insert into Documents (item1, item2, item3, projectID, imageSrc, docSubmitDate)" +
-                " values ('{0}', '{1}', '{2}', {3}, '{4}', '{5}')",
+                string.Format("insert into Documents (item1, item2, item3, projectID, imageSrc, docSubmitDate, docIsVisible)" +
+                " values ('{0}', '{1}', '{2}', {3}, '{4}', '{5}', true)",
                 item1, item2, item3, Properties.Settings.Default.projectID, imageSrc, System.DateTime.Now);
             cmd.Connection = cn;
             try
@@ -374,13 +374,33 @@ namespace Scan_Project
             return dt;
         }
 
-        public void UpdateDocs(string item1, string item2, string item3, string docID)
+        public void UpdateDoc(string item1, string item2, string item3, string docID)
         {
             OleDbCommand cmd = new OleDbCommand();
             cmd.CommandText =
                 string.Format("update Documents set item1 = '{0}', item2 = '{1}', item3 = '{2}', docLastChangeDate = '{3}', docLastChangeUser = '{4}' " +
                 "where ID = {5}",
                 item1, item2, item3, System.DateTime.Now, Properties.Settings.Default.userName, docID);
+            cmd.Connection = cn;
+            try
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void deleteDoc(string docID)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText =
+                string.Format("update Documents set docLastChangeDate = '{0}', docLastChangeUser = '{1}', docIsVisible = {2} " +
+                "where ID = {3}",
+                System.DateTime.Now, Properties.Settings.Default.userName, false, docID);
             cmd.Connection = cn;
             try
             {
