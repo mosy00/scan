@@ -11,6 +11,7 @@ using Telerik.WinControls.UI;
 using Telerik.WinControls;
 using System.Security.Cryptography;
 using Telerik.Charting;
+using System.IO;
 
 namespace Scan_Project
 {
@@ -98,7 +99,7 @@ namespace Scan_Project
             series.HorizontalAxis = categoricalAxis;
             chartView1.Series.Add(series);
 
-            
+
 
             txtShowProjectDocsNumber.Text = dt.Rows.Count.ToString();
             txtShowUsername.Text = Properties.Settings.Default.userName;
@@ -244,7 +245,7 @@ namespace Scan_Project
 
         private void btnEditDoc_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtAddItem1.Text) || string.IsNullOrWhiteSpace(txtAddItem2.Text) || 
+            if (string.IsNullOrWhiteSpace(txtAddItem1.Text) || string.IsNullOrWhiteSpace(txtAddItem2.Text) ||
                 string.IsNullOrWhiteSpace(txtAddItem3.Text) || string.IsNullOrWhiteSpace(txtAddDocSrc.Text))
             {
                 RadMessageBox.ThemeName = "TelerikMetro";
@@ -253,6 +254,8 @@ namespace Scan_Project
                 return;
             }
 
+            //در صورتی که یکی از سطر های جدول انتخاب شده باشد.
+            //در این حالت انتخاب این دکمه حکم به روز رسانی داده های سطر را دارد.
             if (gvAddDocs.CurrentRow != null)
             {
                 gvAddDocs.CurrentRow.Cells[0].Value = Image.FromFile(openFileDialog1.FileName);
@@ -263,7 +266,8 @@ namespace Scan_Project
             }
             else
             {
-                if (gvAddDocs.Rows.Count == 0)
+                //در صورتی که اولین بار است که ذخیره انجام میشود و هنوز ستون ها ساخته نشده است.
+                if (gvAddDocs.Columns.Count == 0)
                     InitializeAddDocsGrid();
 
                 gvAddDocs.Rows.Add(Image.FromFile(openFileDialog1.FileName),
@@ -303,7 +307,7 @@ namespace Scan_Project
                     RadMessageBox.Show(null, "مدرک سطر " + i + ": فایل انتخابی وجود ندارد. لطفا فایل این مدرک را دوباره انتخاب کنید.", "خطا", MessageBoxButtons.OK,
                         RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                     return;
-                }                
+                }
             }
 
             //آدرس فولدر به صورت نسبی
@@ -372,7 +376,7 @@ namespace Scan_Project
                 return;
             }
             gvSearchDocs.Rows.Clear();
-            
+
             dbConnections db = new dbConnections();
 
             DataTable dt, itemNames;
@@ -446,7 +450,7 @@ namespace Scan_Project
             }
             catch (Exception)
             {
-                
+
             }
         }
 
@@ -466,7 +470,7 @@ namespace Scan_Project
 
             this.Visible = true;
         }
-        
+
         private void gvSearchDocs_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -498,7 +502,57 @@ namespace Scan_Project
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }            
+            }
         }
+
+        private void btnImportFromExcel_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                //اسم جدول در اکسل که باید 
+                //Sheet1
+                //باشد.
+                String name = "Sheet1";
+                String constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
+                                openFileDialog2.FileName +
+                                ";Extended Properties='Excel 12.0 XML;HDR=YES;';";
+
+                OleDbConnection con = new OleDbConnection(constr);
+                OleDbCommand oconn = new OleDbCommand("Select * From [" + name + "$]", con);
+                con.Open();
+
+                OleDbDataAdapter sda = new OleDbDataAdapter(oconn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                con.Close();
+
+                //در صورتی که اولین بار است که ذخیره انجام میشود و هنوز ستون ها ساخته نشده است.
+                if (gvAddDocs.Columns.Count == 0)
+                    InitializeAddDocsGrid();
+
+                string folderPath = Directory.GetParent(openFileDialog2.FileName).FullName;
+                
+                string file = "";
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    file = folderPath + "\\" + dt.Rows[i][3].ToString();
+                    try
+                    {
+                        gvAddDocs.Rows.Add(Image.FromFile(file), dt.Rows[i][0].ToString(), dt.Rows[i][1].ToString(),
+                                                                dt.Rows[i][2].ToString(), file);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    
+                    gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
+                }
+
+                btnSubmitDocs.Enabled = true;
+            }
+        }
+
     }
 }

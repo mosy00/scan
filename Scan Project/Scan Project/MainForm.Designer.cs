@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Telerik.WinControls.UI.CartesianArea cartesianArea1 = new Telerik.WinControls.UI.CartesianArea();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.CartesianArea cartesianArea2 = new Telerik.WinControls.UI.CartesianArea();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.homePage = new Telerik.WinControls.UI.RadPageViewPage();
@@ -49,6 +49,7 @@
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.addDocsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.btnImportFromExcel = new Telerik.WinControls.UI.RadButton();
             this.btnEditDoc = new Telerik.WinControls.UI.RadButton();
             this.btnSubmitDocs = new Telerik.WinControls.UI.RadButton();
             this.btnAddNewDoc = new Telerik.WinControls.UI.RadButton();
@@ -92,6 +93,7 @@
             this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
             this.btnEditRowItem = new Telerik.WinControls.UI.RadMenuItem();
             this.btnDeleteRowItem = new Telerik.WinControls.UI.RadMenuItem();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.homePage.SuspendLayout();
@@ -111,6 +113,7 @@
             this.addDocsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImportFromExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSubmitDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddNewDoc)).BeginInit();
@@ -158,7 +161,7 @@
             this.radPageView1.Controls.Add(this.searchDocsPage);
             this.radPageView1.DefaultPage = this.homePage;
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.searchDocsPage;
+            this.radPageView1.SelectedPage = this.addDocsPage;
             this.radPageView1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near;
@@ -175,7 +178,7 @@
             // 
             // chartView1
             // 
-            this.chartView1.AreaDesign = cartesianArea1;
+            this.chartView1.AreaDesign = cartesianArea2;
             resources.ApplyResources(this.chartView1, "chartView1");
             this.chartView1.Name = "chartView1";
             this.chartView1.ShowGrid = false;
@@ -270,6 +273,7 @@
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             resources.ApplyResources(this.radGroupBox1, "radGroupBox1");
+            this.radGroupBox1.Controls.Add(this.btnImportFromExcel);
             this.radGroupBox1.Controls.Add(this.btnEditDoc);
             this.radGroupBox1.Controls.Add(this.btnSubmitDocs);
             this.radGroupBox1.Controls.Add(this.btnAddNewDoc);
@@ -289,6 +293,23 @@
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment2")));
+            // 
+            // btnImportFromExcel
+            // 
+            resources.ApplyResources(this.btnImportFromExcel, "btnImportFromExcel");
+            this.btnImportFromExcel.Image = global::Scan_Project.Properties.Resources.excel;
+            this.btnImportFromExcel.Name = "btnImportFromExcel";
+            this.btnImportFromExcel.ThemeName = "TelerikMetro";
+            this.btnImportFromExcel.Click += new System.EventHandler(this.btnImportFromExcel_Click);
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnImportFromExcel.GetChildAt(0))).Image = global::Scan_Project.Properties.Resources.excel;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnImportFromExcel.GetChildAt(0))).DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnImportFromExcel.GetChildAt(0))).ToolTipText = resources.GetString("resource.ToolTipText");
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnImportFromExcel.GetChildAt(0).GetChildAt(2))).Width = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnImportFromExcel.GetChildAt(0).GetChildAt(2))).LeftWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnImportFromExcel.GetChildAt(0).GetChildAt(2))).TopWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnImportFromExcel.GetChildAt(0).GetChildAt(2))).RightWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnImportFromExcel.GetChildAt(0).GetChildAt(2))).BottomWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnImportFromExcel.GetChildAt(0).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
             // btnEditDoc
             // 
@@ -393,7 +414,7 @@
             this.gvAddDocs.MasterTemplate.AllowDeleteRow = false;
             this.gvAddDocs.MasterTemplate.AllowEditRow = false;
             this.gvAddDocs.MasterTemplate.AllowRowHeaderContextMenu = false;
-            this.gvAddDocs.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.gvAddDocs.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.gvAddDocs.Name = "gvAddDocs";
             this.gvAddDocs.ReadOnly = true;
             this.gvAddDocs.ThemeName = "TelerikMetro";
@@ -420,7 +441,7 @@
             this.gvSearchDocs.MasterTemplate.AllowDeleteRow = false;
             this.gvSearchDocs.MasterTemplate.AllowEditRow = false;
             this.gvSearchDocs.MasterTemplate.AllowRowHeaderContextMenu = false;
-            this.gvSearchDocs.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.gvSearchDocs.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.gvSearchDocs.Name = "gvSearchDocs";
             this.gvSearchDocs.ReadOnly = true;
             this.gvSearchDocs.ThemeName = "TelerikMetro";
@@ -592,17 +613,17 @@
             this.btnOpenProjectForm.Image = global::Scan_Project.Properties.Resources.tabs;
             this.btnOpenProjectForm.Name = "btnOpenProjectForm";
             this.btnOpenProjectForm.Click += new System.EventHandler(this.btnOpenProjectForm_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnOpenProjectForm.ButtonElement.Image1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnOpenProjectForm.ButtonElement.ImageIndex1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenProjectForm.ButtonElement.ImageKey1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenProjectForm.ButtonElement.TextOrientation1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenProjectForm.ButtonElement.FlipText1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenProjectForm.ButtonElement.ToolTipText1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenProjectForm.ButtonElement.Padding1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenProjectForm.ButtonElement.Margin1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenProjectForm.ButtonElement.Alignment1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenProjectForm.ButtonElement.RightToLeft1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenProjectForm.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnOpenProjectForm.ButtonElement.Image")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnOpenProjectForm.ButtonElement.ImageIndex")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenProjectForm.ButtonElement.ImageKey");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenProjectForm.ButtonElement.TextOrientation")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenProjectForm.ButtonElement.FlipText")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenProjectForm.ButtonElement.ToolTipText");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenProjectForm.ButtonElement.Padding")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenProjectForm.ButtonElement.Margin")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenProjectForm.ButtonElement.Alignment")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenProjectForm.ButtonElement.RightToLeft")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenProjectForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenProjectForm.ButtonElement.AngleTransform")));
             // 
             // btnOpenItemForm
             // 
@@ -625,17 +646,17 @@
             this.btnOpenItemForm.Image = global::Scan_Project.Properties.Resources.list_interface_symbol;
             this.btnOpenItemForm.Name = "btnOpenItemForm";
             this.btnOpenItemForm.Click += new System.EventHandler(this.btnOpenItemForm_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnOpenItemForm.ButtonElement.Image1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnOpenItemForm.ButtonElement.ImageIndex1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenItemForm.ButtonElement.ImageKey1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenItemForm.ButtonElement.TextOrientation1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenItemForm.ButtonElement.FlipText1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenItemForm.ButtonElement.ToolTipText1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenItemForm.ButtonElement.Padding1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenItemForm.ButtonElement.Margin1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenItemForm.ButtonElement.Alignment1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenItemForm.ButtonElement.RightToLeft1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenItemForm.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnOpenItemForm.ButtonElement.Image")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnOpenItemForm.ButtonElement.ImageIndex")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenItemForm.ButtonElement.ImageKey");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenItemForm.ButtonElement.TextOrientation")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenItemForm.ButtonElement.FlipText")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenItemForm.ButtonElement.ToolTipText");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenItemForm.ButtonElement.Padding")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenItemForm.ButtonElement.Margin")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenItemForm.ButtonElement.Alignment")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenItemForm.ButtonElement.RightToLeft")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenItemForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenItemForm.ButtonElement.AngleTransform")));
             // 
             // btnOpenUserForm
             // 
@@ -658,17 +679,17 @@
             this.btnOpenUserForm.Image = global::Scan_Project.Properties.Resources.user;
             this.btnOpenUserForm.Name = "btnOpenUserForm";
             this.btnOpenUserForm.Click += new System.EventHandler(this.btnOpenUserForm_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnOpenUserForm.ButtonElement.Image1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnOpenUserForm.ButtonElement.ImageIndex1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenUserForm.ButtonElement.ImageKey1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenUserForm.ButtonElement.TextOrientation1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenUserForm.ButtonElement.FlipText1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenUserForm.ButtonElement.ToolTipText1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenUserForm.ButtonElement.Padding1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenUserForm.ButtonElement.Margin1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenUserForm.ButtonElement.Alignment1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenUserForm.ButtonElement.RightToLeft1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenUserForm.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnOpenUserForm.ButtonElement.Image")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnOpenUserForm.ButtonElement.ImageIndex")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).ImageKey = resources.GetString("btnOpenUserForm.ButtonElement.ImageKey");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenUserForm.ButtonElement.TextOrientation")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenUserForm.ButtonElement.FlipText")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenUserForm.ButtonElement.ToolTipText");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenUserForm.ButtonElement.Padding")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenUserForm.ButtonElement.Margin")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenUserForm.ButtonElement.Alignment")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenUserForm.ButtonElement.RightToLeft")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenUserForm.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenUserForm.ButtonElement.AngleTransform")));
             // 
             // btnOpenAboutBox
             // 
@@ -691,17 +712,17 @@
             this.btnOpenAboutBox.Image = global::Scan_Project.Properties.Resources.info;
             this.btnOpenAboutBox.Name = "btnOpenAboutBox";
             this.btnOpenAboutBox.Click += new System.EventHandler(this.btnOpenAboutBox_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnOpenAboutBox.ButtonElement.Image1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnOpenAboutBox.ButtonElement.ImageIndex1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).ImageKey = resources.GetString("btnOpenAboutBox.ButtonElement.ImageKey1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenAboutBox.ButtonElement.TextOrientation1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenAboutBox.ButtonElement.FlipText1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenAboutBox.ButtonElement.ToolTipText1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenAboutBox.ButtonElement.Padding1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenAboutBox.ButtonElement.Margin1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenAboutBox.ButtonElement.Alignment1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenAboutBox.ButtonElement.RightToLeft1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenAboutBox.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnOpenAboutBox.ButtonElement.Image")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnOpenAboutBox.ButtonElement.ImageIndex")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).ImageKey = resources.GetString("btnOpenAboutBox.ButtonElement.ImageKey");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnOpenAboutBox.ButtonElement.TextOrientation")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnOpenAboutBox.ButtonElement.FlipText")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).ToolTipText = resources.GetString("btnOpenAboutBox.ButtonElement.ToolTipText");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenAboutBox.ButtonElement.Padding")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnOpenAboutBox.ButtonElement.Margin")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnOpenAboutBox.ButtonElement.Alignment")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnOpenAboutBox.ButtonElement.RightToLeft")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnOpenAboutBox.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnOpenAboutBox.ButtonElement.AngleTransform")));
             // 
             // btnSignout
             // 
@@ -724,17 +745,17 @@
             this.btnSignout.Image = global::Scan_Project.Properties.Resources.sign_out_option;
             this.btnSignout.Name = "btnSignout";
             this.btnSignout.Click += new System.EventHandler(this.btnSignout_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnSignout.ButtonElement.Image1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnSignout.ButtonElement.ImageIndex1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).ImageKey = resources.GetString("btnSignout.ButtonElement.ImageKey1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnSignout.ButtonElement.TextOrientation1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnSignout.ButtonElement.FlipText1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).ToolTipText = resources.GetString("btnSignout.ButtonElement.ToolTipText1");
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnSignout.ButtonElement.Padding1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnSignout.ButtonElement.Margin1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnSignout.ButtonElement.Alignment1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnSignout.ButtonElement.RightToLeft1")));
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnSignout.ButtonElement.AngleTransform1")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).Image = ((System.Drawing.Image)(resources.GetObject("btnSignout.ButtonElement.Image")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).ImageIndex = ((int)(resources.GetObject("btnSignout.ButtonElement.ImageIndex")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).ImageKey = resources.GetString("btnSignout.ButtonElement.ImageKey");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).TextOrientation = ((System.Windows.Forms.Orientation)(resources.GetObject("btnSignout.ButtonElement.TextOrientation")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).FlipText = ((bool)(resources.GetObject("btnSignout.ButtonElement.FlipText")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).ToolTipText = resources.GetString("btnSignout.ButtonElement.ToolTipText");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).Padding = ((System.Windows.Forms.Padding)(resources.GetObject("btnSignout.ButtonElement.Padding")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).Margin = ((System.Windows.Forms.Padding)(resources.GetObject("btnSignout.ButtonElement.Margin")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("btnSignout.ButtonElement.Alignment")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).RightToLeft = ((bool)(resources.GetObject("btnSignout.ButtonElement.RightToLeft")));
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSignout.GetChildAt(2))).AngleTransform = ((float)(resources.GetObject("btnSignout.ButtonElement.AngleTransform")));
             // 
             // radContextMenu1
             // 
@@ -753,10 +774,15 @@
             // 
             // btnDeleteRowItem
             // 
+            resources.ApplyResources(this.btnDeleteRowItem, "btnDeleteRowItem");
             this.btnDeleteRowItem.Font = new System.Drawing.Font("IRANSans", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnDeleteRowItem.Name = "btnDeleteRowItem";
-            resources.ApplyResources(this.btnDeleteRowItem, "btnDeleteRowItem");
             this.btnDeleteRowItem.Click += new System.EventHandler(this.btnDeleteRowItem_Click);
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            resources.ApplyResources(this.openFileDialog2, "openFileDialog2");
             // 
             // MainForm
             // 
@@ -794,6 +820,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImportFromExcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSubmitDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddNewDoc)).EndInit();
@@ -898,5 +925,7 @@
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadChartView chartView1;
         private Telerik.WinControls.UI.RadMenuItem btnDeleteRowItem;
+        private Telerik.WinControls.UI.RadButton btnImportFromExcel;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }

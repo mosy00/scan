@@ -124,7 +124,206 @@
   <data name="radPageView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="&gt;&gt;chartView1.Name" xml:space="preserve">
+    <value>chartView1</value>
+  </data>
+  <data name="&gt;&gt;chartView1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadChartView, Telerik.WinControls.ChartView, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;chartView1.Parent" xml:space="preserve">
+    <value>homePage</value>
+  </data>
+  <data name="&gt;&gt;chartView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox4.Name" xml:space="preserve">
+    <value>radGroupBox4</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox4.Parent" xml:space="preserve">
+    <value>homePage</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="resource.Text" xml:space="preserve">
+    <value>اطلاعات پروژه</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="resource.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox3.Name" xml:space="preserve">
+    <value>radGroupBox3</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox3.Parent" xml:space="preserve">
+    <value>homePage</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="resource.Text1" xml:space="preserve">
+    <value>اطلاعات کاربر</value>
+  </data>
+  <data name="resource.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="homePage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 46</value>
+  </data>
+  <data name="homePage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1082, 502</value>
+  </data>
+  <data name="homePage.Text" xml:space="preserve">
+    <value> صفحه اصلی</value>
+  </data>
+  <data name="&gt;&gt;homePage.Name" xml:space="preserve">
+    <value>homePage</value>
+  </data>
+  <data name="&gt;&gt;homePage.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;homePage.Parent" xml:space="preserve">
+    <value>radPageView1</value>
+  </data>
+  <data name="&gt;&gt;homePage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox1.Name" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox1.Parent" xml:space="preserve">
+    <value>addDocsPage</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.Text3" xml:space="preserve">
+    <value>مشخصات سند</value>
+  </data>
+  <data name="resource.Alignment2" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;gvAddDocs.Name" xml:space="preserve">
+    <value>gvAddDocs</value>
+  </data>
+  <data name="&gt;&gt;gvAddDocs.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;gvAddDocs.Parent" xml:space="preserve">
+    <value>addDocsPage</value>
+  </data>
+  <data name="&gt;&gt;gvAddDocs.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="addDocsPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 46</value>
+  </data>
+  <data name="addDocsPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1082, 502</value>
+  </data>
+  <data name="addDocsPage.Text" xml:space="preserve">
+    <value> ثبت اسناد</value>
+  </data>
+  <data name="&gt;&gt;addDocsPage.Name" xml:space="preserve">
+    <value>addDocsPage</value>
+  </data>
+  <data name="&gt;&gt;addDocsPage.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;addDocsPage.Parent" xml:space="preserve">
+    <value>radPageView1</value>
+  </data>
+  <data name="&gt;&gt;addDocsPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gvSearchDocs.Name" xml:space="preserve">
+    <value>gvSearchDocs</value>
+  </data>
+  <data name="&gt;&gt;gvSearchDocs.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;gvSearchDocs.Parent" xml:space="preserve">
+    <value>searchDocsPage</value>
+  </data>
+  <data name="&gt;&gt;gvSearchDocs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox2.Name" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox2.Parent" xml:space="preserve">
+    <value>searchDocsPage</value>
+  </data>
+  <data name="&gt;&gt;radGroupBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="resource.Text4" xml:space="preserve">
+    <value>جست و جوی اسناد</value>
+  </data>
+  <data name="resource.Alignment3" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="searchDocsPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 46</value>
+  </data>
+  <data name="searchDocsPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1082, 502</value>
+  </data>
+  <data name="searchDocsPage.Text" xml:space="preserve">
+    <value> نمایش اسناد</value>
+  </data>
+  <data name="&gt;&gt;searchDocsPage.Name" xml:space="preserve">
+    <value>searchDocsPage</value>
+  </data>
+  <data name="&gt;&gt;searchDocsPage.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;searchDocsPage.Parent" xml:space="preserve">
+    <value>radPageView1</value>
+  </data>
+  <data name="&gt;&gt;searchDocsPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radPageView1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 11.25pt</value>
+  </data>
+  <data name="radPageView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 46</value>
+  </data>
+  <data name="radPageView1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="radPageView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1092, 553</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radPageView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radPageView1.Name" xml:space="preserve">
+    <value>radPageView1</value>
+  </data>
+  <data name="&gt;&gt;radPageView1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPageView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radPageView1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="chartView1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt, style=Bold</value>
   </data>
@@ -134,7 +333,6 @@
   <data name="chartView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>521, 372</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="chartView1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -447,29 +645,42 @@
   <data name="resource.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="homePage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 46</value>
-  </data>
-  <data name="homePage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1082, 502</value>
-  </data>
-  <data name="homePage.Text" xml:space="preserve">
-    <value> صفحه اصلی</value>
-  </data>
-  <data name="&gt;&gt;homePage.Name" xml:space="preserve">
-    <value>homePage</value>
-  </data>
-  <data name="&gt;&gt;homePage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;homePage.Parent" xml:space="preserve">
-    <value>radPageView1</value>
-  </data>
-  <data name="&gt;&gt;homePage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="radGroupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
+  </data>
+  <data name="btnImportFromExcel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <assembly alias="Telerik.WinControls" name="Telerik.WinControls, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  <data name="btnImportFromExcel.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="btnImportFromExcel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 11.249999pt</value>
+  </data>
+  <data name="btnImportFromExcel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 455</value>
+  </data>
+  <data name="btnImportFromExcel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="btnImportFromExcel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnImportFromExcel.Name" xml:space="preserve">
+    <value>btnImportFromExcel</value>
+  </data>
+  <data name="&gt;&gt;btnImportFromExcel.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnImportFromExcel.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnImportFromExcel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.ToolTipText" xml:space="preserve">
+    <value>واردکردن از اکسل</value>
   </data>
   <data name="btnEditDoc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -499,7 +710,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;btnEditDoc.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnSubmitDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -532,7 +743,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;btnSubmitDocs.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnAddNewDoc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -562,7 +773,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;btnAddNewDoc.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="docPicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -589,7 +800,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;docPicture.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="radLabel5.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -619,7 +830,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;radLabel5.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txtAddDocSrc.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -643,9 +854,8 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;txtAddDocSrc.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
-  <assembly alias="Telerik.WinControls" name="Telerik.WinControls, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   <data name="btnBrowseFile.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
   </data>
@@ -674,7 +884,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;btnBrowseFile.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="resource.Text2" xml:space="preserve">
     <value />
@@ -707,7 +917,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;lblItem2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lblItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -737,7 +947,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;lblItem3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lblItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -767,7 +977,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;lblItem1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txtAddItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -791,7 +1001,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;txtAddItem2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="txtAddItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -815,7 +1025,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;txtAddItem3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="txtAddItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -839,7 +1049,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;txtAddItem1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="radGroupBox1.HeaderText" xml:space="preserve">
     <value>مشخصات سند</value>
@@ -896,27 +1106,6 @@
     <value>addDocsPage</value>
   </data>
   <data name="&gt;&gt;gvAddDocs.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="addDocsPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 46</value>
-  </data>
-  <data name="addDocsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1082, 502</value>
-  </data>
-  <data name="addDocsPage.Text" xml:space="preserve">
-    <value> ثبت اسناد</value>
-  </data>
-  <data name="&gt;&gt;addDocsPage.Name" xml:space="preserve">
-    <value>addDocsPage</value>
-  </data>
-  <data name="&gt;&gt;addDocsPage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;addDocsPage.Parent" xml:space="preserve">
-    <value>radPageView1</value>
-  </data>
-  <data name="&gt;&gt;addDocsPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="gvSearchDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -1384,54 +1573,6 @@
   <data name="resource.Alignment3" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="searchDocsPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 46</value>
-  </data>
-  <data name="searchDocsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1082, 502</value>
-  </data>
-  <data name="searchDocsPage.Text" xml:space="preserve">
-    <value> نمایش اسناد</value>
-  </data>
-  <data name="&gt;&gt;searchDocsPage.Name" xml:space="preserve">
-    <value>searchDocsPage</value>
-  </data>
-  <data name="&gt;&gt;searchDocsPage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;searchDocsPage.Parent" xml:space="preserve">
-    <value>radPageView1</value>
-  </data>
-  <data name="&gt;&gt;searchDocsPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="radPageView1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>IRANSans, 11.25pt</value>
-  </data>
-  <data name="radPageView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 46</value>
-  </data>
-  <data name="radPageView1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="radPageView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1092, 553</value>
-  </data>
-  <data name="radPageView1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radPageView1.Name" xml:space="preserve">
-    <value>radPageView1</value>
-  </data>
-  <data name="&gt;&gt;radPageView1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radPageView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;radPageView1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="radStatusStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
   </data>
@@ -1570,37 +1711,37 @@
   <data name="btnOpenProjectForm.ToolTipText" xml:space="preserve">
     <value>فرم پروژه‌ها</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="btnOpenProjectForm.ButtonElement.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
+  <data name="btnOpenProjectForm.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.ImageKey1" xml:space="preserve">
+  <data name="btnOpenProjectForm.ButtonElement.ImageKey" xml:space="preserve">
     <value />
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="btnOpenProjectForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
+  <data name="btnOpenProjectForm.ButtonElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.ToolTipText1" xml:space="preserve">
+  <data name="btnOpenProjectForm.ButtonElement.ToolTipText" xml:space="preserve">
     <value>فرم پروژه‌ها</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnOpenProjectForm.ButtonElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnOpenProjectForm.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnOpenProjectForm.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
+  <data name="btnOpenProjectForm.ButtonElement.RightToLeft" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenProjectForm.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
+  <data name="btnOpenProjectForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="btnOpenItemForm.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -1672,37 +1813,37 @@
   <data name="btnOpenItemForm.ToolTipText" xml:space="preserve">
     <value>فرم شاخص‌ها</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="btnOpenItemForm.ButtonElement.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="btnOpenItemForm.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
+  <data name="btnOpenItemForm.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.ImageKey1" xml:space="preserve">
+  <data name="btnOpenItemForm.ButtonElement.ImageKey" xml:space="preserve">
     <value />
   </data>
-  <data name="btnOpenItemForm.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="btnOpenItemForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
+  <data name="btnOpenItemForm.ButtonElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.ToolTipText1" xml:space="preserve">
+  <data name="btnOpenItemForm.ButtonElement.ToolTipText" xml:space="preserve">
     <value>فرم شاخص‌ها</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnOpenItemForm.ButtonElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnOpenItemForm.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnOpenItemForm.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
+  <data name="btnOpenItemForm.ButtonElement.RightToLeft" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenItemForm.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
+  <data name="btnOpenItemForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="btnOpenUserForm.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -1774,37 +1915,37 @@
   <data name="btnOpenUserForm.ToolTipText" xml:space="preserve">
     <value>کاربر جدید</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="btnOpenUserForm.ButtonElement.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="btnOpenUserForm.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
+  <data name="btnOpenUserForm.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.ImageKey1" xml:space="preserve">
+  <data name="btnOpenUserForm.ButtonElement.ImageKey" xml:space="preserve">
     <value />
   </data>
-  <data name="btnOpenUserForm.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="btnOpenUserForm.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
+  <data name="btnOpenUserForm.ButtonElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.ToolTipText1" xml:space="preserve">
+  <data name="btnOpenUserForm.ButtonElement.ToolTipText" xml:space="preserve">
     <value>کاربر جدید</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnOpenUserForm.ButtonElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnOpenUserForm.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnOpenUserForm.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
+  <data name="btnOpenUserForm.ButtonElement.RightToLeft" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenUserForm.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
+  <data name="btnOpenUserForm.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="btnOpenAboutBox.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -1876,37 +2017,37 @@
   <data name="btnOpenAboutBox.ToolTipText" xml:space="preserve">
     <value>درباره نرم افزار</value>
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="btnOpenAboutBox.ButtonElement.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
+  <data name="btnOpenAboutBox.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.ImageKey1" xml:space="preserve">
+  <data name="btnOpenAboutBox.ButtonElement.ImageKey" xml:space="preserve">
     <value />
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="btnOpenAboutBox.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
+  <data name="btnOpenAboutBox.ButtonElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.ToolTipText1" xml:space="preserve">
+  <data name="btnOpenAboutBox.ButtonElement.ToolTipText" xml:space="preserve">
     <value>درباره نرم افزار</value>
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnOpenAboutBox.ButtonElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnOpenAboutBox.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnOpenAboutBox.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
+  <data name="btnOpenAboutBox.ButtonElement.RightToLeft" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnOpenAboutBox.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
+  <data name="btnOpenAboutBox.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="btnSignout.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -1978,37 +2119,37 @@
   <data name="btnSignout.ToolTipText" xml:space="preserve">
     <value>خروج</value>
   </data>
-  <data name="btnSignout.ButtonElement.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="btnSignout.ButtonElement.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="btnSignout.ButtonElement.ImageIndex1" type="System.Int32, mscorlib">
+  <data name="btnSignout.ButtonElement.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
   </data>
-  <data name="btnSignout.ButtonElement.ImageKey1" xml:space="preserve">
+  <data name="btnSignout.ButtonElement.ImageKey" xml:space="preserve">
     <value />
   </data>
-  <data name="btnSignout.ButtonElement.TextOrientation1" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="btnSignout.ButtonElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="btnSignout.ButtonElement.FlipText1" type="System.Boolean, mscorlib">
+  <data name="btnSignout.ButtonElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnSignout.ButtonElement.ToolTipText1" xml:space="preserve">
+  <data name="btnSignout.ButtonElement.ToolTipText" xml:space="preserve">
     <value>خروج</value>
   </data>
-  <data name="btnSignout.ButtonElement.Padding1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnSignout.ButtonElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnSignout.ButtonElement.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnSignout.ButtonElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="btnSignout.ButtonElement.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnSignout.ButtonElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="btnSignout.ButtonElement.RightToLeft1" type="System.Boolean, mscorlib">
+  <data name="btnSignout.ButtonElement.RightToLeft" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="btnSignout.ButtonElement.AngleTransform1" type="System.Single, mscorlib">
+  <data name="btnSignout.ButtonElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="radMenu1.Location" type="System.Drawing.Point, System.Drawing">
@@ -2077,8 +2218,50 @@
   <data name="btnEditRowItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="btnDeleteRowItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="btnDeleteRowItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDeleteRowItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnDeleteRowItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDeleteRowItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnDeleteRowItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="btnDeleteRowItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDeleteRowItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnDeleteRowItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnDeleteRowItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="btnDeleteRowItem.Text" xml:space="preserve">
     <value>حذف</value>
+  </data>
+  <data name="btnDeleteRowItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnDeleteRowItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <metadata name="openFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>459, 9</value>
+  </metadata>
+  <data name="openFileDialog2.Filter" xml:space="preserve">
+    <value>Excel |*.xlsx</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3596,6 +3779,12 @@
   </data>
   <data name="&gt;&gt;btnDeleteRowItem.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog2.Name" xml:space="preserve">
+    <value>openFileDialog2</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

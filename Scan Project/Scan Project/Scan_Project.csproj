@@ -232,6 +232,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="office_material_oTu_icon.ico" />
+    <None Include="Resources\excel.png" />
     <None Include="Resources\sign-out-option.png" />
     <None Include="Resources\info.png" />
     <None Include="Resources\Tis.png" />
