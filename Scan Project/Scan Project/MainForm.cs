@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -335,7 +333,7 @@ namespace Scan_Project
                 try
                 {
                     //کپی فایل به فولدر
-                    System.IO.File.Copy(docSrcFile, newFile);
+                    File.Copy(docSrcFile, newFile);
                 }
                 catch (Exception ex)
                 {
@@ -362,7 +360,7 @@ namespace Scan_Project
                 RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
 
             gvAddDocs.Rows.Clear();
-            CleanNewDocPage();
+            btnAddNewDoc_Click(null, null);
             btnSubmitDocs.Enabled = false;
         }
 
