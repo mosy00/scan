@@ -21,7 +21,7 @@ namespace Scan_Project
             dbConnections db = new dbConnections();
             try
             {
-                db.InsertItems(txtItem1.Text, txtItem2.Text, txtItem3.Text);
+                db.InsertItems(txtItem1.Text.Trim(), txtItem2.Text.Trim(), txtItem3.Text.Trim());
 
                 RadMessageBox.ThemeName = "TelerikMetro";
                 RadMessageBox.Show(null, "شاخص‌های جدید با موفقیت اضافه شدند.", "ثبت موفق", MessageBoxButtons.OK,

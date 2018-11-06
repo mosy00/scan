@@ -257,9 +257,9 @@ namespace Scan_Project
             if (gvAddDocs.CurrentRow != null)
             {
                 gvAddDocs.CurrentRow.Cells[0].Value = Image.FromFile(openFileDialog1.FileName);
-                gvAddDocs.CurrentRow.Cells[1].Value = txtAddItem1.Text;
-                gvAddDocs.CurrentRow.Cells[2].Value = txtAddItem2.Text;
-                gvAddDocs.CurrentRow.Cells[3].Value = txtAddItem3.Text;
+                gvAddDocs.CurrentRow.Cells[1].Value = txtAddItem1.Text.Trim();
+                gvAddDocs.CurrentRow.Cells[2].Value = txtAddItem2.Text.Trim();
+                gvAddDocs.CurrentRow.Cells[3].Value = txtAddItem3.Text.Trim();
                 gvAddDocs.CurrentRow.Cells[4].Value = openFileDialog1.FileName;
             }
             else
@@ -269,7 +269,7 @@ namespace Scan_Project
                     InitializeAddDocsGrid();
 
                 gvAddDocs.Rows.Add(Image.FromFile(openFileDialog1.FileName),
-                                    txtAddItem1.Text, txtAddItem2.Text, txtAddItem3.Text, openFileDialog1.FileName);
+                                    txtAddItem1.Text.Trim(), txtAddItem2.Text.Trim(), txtAddItem3.Text.Trim(), openFileDialog1.FileName);
 
                 gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
 

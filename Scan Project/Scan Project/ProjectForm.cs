@@ -77,7 +77,7 @@ namespace Scan_Project
             {
                 //ثبت یک پروژه جدید در دیتابیس
                 dbConnections db = new dbConnections();
-                db.InsertProjects(txtNewProject.Text);
+                db.InsertProjects(txtNewProject.Text.Trim());
 
                 RadMessageBox.ThemeName = "TelerikMetro";
                 RadMessageBox.Show(null, "پروژه جدید با موفقیت اضافه شد.", "ثبت موفق", MessageBoxButtons.OK,
