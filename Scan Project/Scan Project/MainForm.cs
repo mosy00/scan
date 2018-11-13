@@ -27,6 +27,12 @@ namespace Scan_Project
         /// </summary>
         void InitializeAddDocsGrid()
         {
+            if (gvAddDocs.Columns.Count > 0)
+            {
+                gvAddDocs.Rows.Clear();
+                return;
+            }
+
             dbConnections db = new dbConnections();
             DataTable itemNames;
             itemNames = db.GetItems();
@@ -52,6 +58,12 @@ namespace Scan_Project
         /// </summary>
         void InitializeSearchDocsGrid()
         {
+            if (gvSearchDocs.Columns.Count > 0)
+            {
+                gvSearchDocs.Rows.Clear();
+                return;
+            }
+
             dbConnections db = new dbConnections();
             DataTable itemNames;
             itemNames = db.GetItems();
@@ -105,11 +117,16 @@ namespace Scan_Project
             if (Properties.Settings.Default.userRole == 1)
                 txtShowUserRole.Text = "کاربر ادمین";
             else if (Properties.Settings.Default.userRole == 2)
+            {
                 txtShowUserRole.Text = "کاربر با امکان ثبت";
+                btnOpenUserForm.Enabled = false;
+            }
             else if (Properties.Settings.Default.userRole == 3)
+            {
                 txtShowUserRole.Text = "فقط بازدید";
-
-
+                addDocsPage.Enabled = false;
+            }
+                        
         }
 
         void CleanNewDocPage()
@@ -157,13 +174,7 @@ namespace Scan_Project
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
             txtShowProjectName.Text = Properties.Settings.Default.projectName;
-
-            if (Properties.Settings.Default.userRole != 1)
-            {
-                btnOpenUserForm.Enabled = false;
-            }
-
-
+            
             dbConnections db = new dbConnections();
             DataTable itemNames;
             itemNames = db.GetItems();
@@ -193,24 +204,33 @@ namespace Scan_Project
             }
 
             InitializeHomePage();
+            radPageView1.SelectedPage = homePage;
         }
 
         private void btnOpenProjectForm_Click(object sender, EventArgs e)
         {
             ProjectForm pf = new ProjectForm();
-            pf.ShowDialog();
-            lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
-            txtShowProjectName.Text = Properties.Settings.Default.projectName;
 
-            dbConnections db = new dbConnections();
-            DataTable itemNames;
-            itemNames = db.GetItems();
-            if (itemNames.Rows.Count == 0)
+            if (pf.ShowDialog() == DialogResult.OK)
             {
-                ItemsForm itemForm = new ItemsForm();
-                if (itemForm.ShowDialog() != DialogResult.OK)
-                    Application.ExitThread();
+                lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
+                txtShowProjectName.Text = Properties.Settings.Default.projectName;
+
+                dbConnections db = new dbConnections();
+                DataTable itemNames;
+                itemNames = db.GetItems();
+                if (itemNames.Rows.Count == 0)
+                {
+                    ItemsForm itemForm = new ItemsForm();
+                    if (itemForm.ShowDialog() != DialogResult.OK)
+                        Application.ExitThread();
+                }
+                InitializeAddDocsGrid();
+                InitializeSearchDocsGrid();
+                CleanNewDocPage();
             }
+
+
         }
 
         private void btnOpenItemForm_Click(object sender, EventArgs e)
@@ -461,11 +481,7 @@ namespace Scan_Project
         private void btnSignout_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-
-            LoginForm lf = new LoginForm();
-            if (lf.ShowDialog() != DialogResult.OK)
-                Application.ExitThread();
-
+            MainForm_Load(null, null);
             this.Visible = true;
         }
 

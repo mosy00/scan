@@ -2051,7 +2051,7 @@
     <value>2, 2, 0, 0</value>
   </data>
   <data name="radMenu1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1092, 44</value>
+    <value>1092, 40</value>
   </data>
   <data name="radMenu1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

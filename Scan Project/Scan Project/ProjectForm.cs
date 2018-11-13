@@ -43,6 +43,11 @@ namespace Scan_Project
                 projectList.SelectedValue = Properties.Settings.Default.projectID;
             else
                 btnOK.Enabled = false;
+
+            if (Properties.Settings.Default.userRole == 3)
+            {
+                txtNewProject.Enabled = btnCreate.Enabled = false;
+            }
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -56,7 +61,7 @@ namespace Scan_Project
                 return;
             }
 
-            //متغییر آی دی پروژه را با توجه به پروژه جدید عوض میکند
+            //متغیر آی دی پروژه را با توجه به پروژه جدید عوض میکند
             //از این 
             //projectID
             //در ادامه برنامه برای فهمیدن پروژه فعلی استفاده می‌شود.
