@@ -10,6 +10,7 @@ using Telerik.WinControls;
 using System.Security.Cryptography;
 using Telerik.Charting;
 using System.IO;
+using System.Threading;
 
 namespace Scan_Project
 {
@@ -37,20 +38,21 @@ namespace Scan_Project
             DataTable itemNames;
             itemNames = db.GetItems();
 
-            GridViewImageColumn imageColumn = new GridViewImageColumn();
-            imageColumn.Name = "imageSrc";
-            imageColumn.Width = 100;
-            imageColumn.HeaderText = "تصویر سند";
-            imageColumn.ImageLayout = ImageLayout.Zoom;
+            //GridViewImageColumn imageColumn = new GridViewImageColumn();
+            //imageColumn.Name = "imageSrc";
+            //imageColumn.Width = 100;
+            //imageColumn.HeaderText = "تصویر سند";
+            //imageColumn.ImageLayout = ImageLayout.Zoom;
 
-            gvAddDocs.Columns.Insert(0, imageColumn);
+            //gvAddDocs.Columns.Insert(0, imageColumn);
 
             gvAddDocs.Columns.Add("item1", itemNames.Rows[0][2].ToString());
             gvAddDocs.Columns.Add("item2", itemNames.Rows[1][2].ToString());
             gvAddDocs.Columns.Add("item3", itemNames.Rows[2][2].ToString());
             gvAddDocs.Columns.Add("docSrc", "آدرس فایل سند");
 
-            gvAddDocs.Columns[1].Width = gvAddDocs.Columns[2].Width = gvAddDocs.Columns[3].Width = gvAddDocs.Columns[4].Width = 120;
+            gvAddDocs.Columns[0].Width = gvAddDocs.Columns[1].Width = gvAddDocs.Columns[2].Width = gvAddDocs.Columns[3].Width = 120;
+            gvAddDocs.TableElement.RowHeaderColumnWidth = 50;
         }
 
         /// <summary>
@@ -68,13 +70,13 @@ namespace Scan_Project
             DataTable itemNames;
             itemNames = db.GetItems();
 
-            GridViewImageColumn imageColumn = new GridViewImageColumn();
-            imageColumn.Name = "imageSrc";
-            imageColumn.Width = 100;
-            imageColumn.HeaderText = "تصویر سند";
-            imageColumn.ImageLayout = ImageLayout.Zoom;
+            //GridViewImageColumn imageColumn = new GridViewImageColumn();
+            //imageColumn.Name = "imageSrc";
+            //imageColumn.Width = 100;
+            //imageColumn.HeaderText = "تصویر سند";
+            //imageColumn.ImageLayout = ImageLayout.Zoom;
 
-            gvSearchDocs.Columns.Insert(0, imageColumn);
+            //gvSearchDocs.Columns.Insert(0, imageColumn);
 
             gvSearchDocs.Columns.Add("item1", itemNames.Rows[0][2].ToString());
             gvSearchDocs.Columns.Add("item2", itemNames.Rows[1][2].ToString());
@@ -134,6 +136,75 @@ namespace Scan_Project
             txtAddDocSrc.Text = txtAddItem1.Text = txtAddItem2.Text = txtAddItem3.Text = string.Empty;
             openFileDialog1.Reset();
             docPicture.Image = null;
+        }
+
+        void ImportFromExcel()
+        {
+            //اسم جدول در اکسل که باید 
+            //Sheet1
+            //باشد.
+            String name = "Sheet1";
+            String constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
+                            openFileDialog2.FileName +
+                            ";Extended Properties='Excel 12.0 XML;HDR=YES;';";
+
+            OleDbConnection con = new OleDbConnection(constr);
+            OleDbCommand oconn = new OleDbCommand("Select * From [" + name + "$]", con);
+            con.Open();
+
+            OleDbDataAdapter sda = new OleDbDataAdapter(oconn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            con.Close();
+
+            //در صورتی که اولین بار است که ذخیره انجام میشود و هنوز ستون ها ساخته نشده است.
+            if (gvAddDocs.Columns.Count == 0)
+                InitializeAddDocsGrid();
+
+            string folderPath = Directory.GetParent(openFileDialog2.FileName).FullName;
+
+            string file = "";
+            
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                file = folderPath + "\\" + dt.Rows[i][3].ToString();
+                try
+                {                    
+                    gvAddDocs.Rows.Add(/*Image.FromFile(file),*/ dt.Rows[i][0].ToString(), dt.Rows[i][1].ToString(),
+                                                            dt.Rows[i][2].ToString(), file);                                       
+
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                }
+
+                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
+            }
+
+            //btnSubmitDocs.Enabled = true;
+            //lblAddDocsCount.Text = gvAddDocs.Rows.Count.ToString();
+        }
+
+        void ImageOnly()
+        {
+            string folderPath = Directory.GetParent(openFileDialog2.FileName).FullName;
+
+            string file = "";
+            for (int i = 0; i < gvAddDocs.Rows.Count; i++)
+            {
+                file = gvAddDocs.Rows[i].Cells[4].Value.ToString();
+                try
+                {
+                    gvAddDocs.Rows[i].Cells[0].Value = Image.FromFile(file);
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                }
+
+                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
+            }
         }
 
         private string GenerateHashString(HashAlgorithm algo, string text)
@@ -276,11 +347,11 @@ namespace Scan_Project
             //در این حالت انتخاب این دکمه حکم به روز رسانی داده های سطر را دارد.
             if (gvAddDocs.CurrentRow != null)
             {
-                gvAddDocs.CurrentRow.Cells[0].Value = Image.FromFile(openFileDialog1.FileName);
-                gvAddDocs.CurrentRow.Cells[1].Value = txtAddItem1.Text.Trim();
-                gvAddDocs.CurrentRow.Cells[2].Value = txtAddItem2.Text.Trim();
-                gvAddDocs.CurrentRow.Cells[3].Value = txtAddItem3.Text.Trim();
-                gvAddDocs.CurrentRow.Cells[4].Value = openFileDialog1.FileName;
+                //gvAddDocs.CurrentRow.Cells[0].Value = Image.FromFile(openFileDialog1.FileName);
+                gvAddDocs.CurrentRow.Cells[0].Value = txtAddItem1.Text.Trim();
+                gvAddDocs.CurrentRow.Cells[1].Value = txtAddItem2.Text.Trim();
+                gvAddDocs.CurrentRow.Cells[2].Value = txtAddItem3.Text.Trim();
+                gvAddDocs.CurrentRow.Cells[3].Value = openFileDialog1.FileName;
             }
             else
             {
@@ -288,24 +359,25 @@ namespace Scan_Project
                 if (gvAddDocs.Columns.Count == 0)
                     InitializeAddDocsGrid();
 
-                gvAddDocs.Rows.Add(Image.FromFile(openFileDialog1.FileName),
+                gvAddDocs.Rows.Add(/*Image.FromFile(openFileDialog1.FileName),*/
                                     txtAddItem1.Text.Trim(), txtAddItem2.Text.Trim(), txtAddItem3.Text.Trim(), openFileDialog1.FileName);
 
-                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
+                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 60;
 
                 btnAddNewDoc.Enabled = true;
                 btnSubmitDocs.Enabled = true;
             }
+            lblAddDocsCount.Text = gvAddDocs.Rows.Count.ToString();
         }
 
         private void gvAddDocs_CurrentRowChanged(object sender, CurrentRowChangedEventArgs e)
         {
             if (e.CurrentRow != null)
             {
-                txtAddItem1.Text = e.CurrentRow.Cells[1].Value.ToString();
-                txtAddItem2.Text = e.CurrentRow.Cells[2].Value.ToString();
-                txtAddItem3.Text = e.CurrentRow.Cells[3].Value.ToString();
-                txtAddDocSrc.Text = openFileDialog1.FileName = e.CurrentRow.Cells[4].Value.ToString();
+                txtAddItem1.Text = e.CurrentRow.Cells[0].Value.ToString();
+                txtAddItem2.Text = e.CurrentRow.Cells[1].Value.ToString();
+                txtAddItem3.Text = e.CurrentRow.Cells[2].Value.ToString();
+                txtAddDocSrc.Text = openFileDialog1.FileName = e.CurrentRow.Cells[3].Value.ToString();
 
                 docPicture.ImageLocation = openFileDialog1.FileName;
             }
@@ -317,16 +389,18 @@ namespace Scan_Project
                 return;
 
             //چک کردن این که آدرس فایل ها در مدارک انتخابی درست باشند.
-            for (int i = 0; i < gvAddDocs.Rows.Count; i++)
-            {
-                if (!System.IO.File.Exists(gvAddDocs.Rows[i].Cells[4].Value.ToString()))
-                {
-                    RadMessageBox.ThemeName = "TelerikMetro";
-                    RadMessageBox.Show(null, "مدرک سطر " + i + ": فایل انتخابی وجود ندارد. لطفا فایل این مدرک را دوباره انتخاب کنید.", "خطا", MessageBoxButtons.OK,
-                        RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
-                    return;
-                }
-            }
+            //for (int i = 0; i < gvAddDocs.Rows.Count; i++)
+            //{
+            //    if (!System.IO.File.Exists(gvAddDocs.Rows[i].Cells[3].Value.ToString()))
+            //    {
+            //        RadMessageBox.ThemeName = "TelerikMetro";
+            //        if (RadMessageBox.Show(null, "مدرک سطر " + i + 1 + ": فایل انتخابی وجود ندارد. اگر میخواهید ادامه دهید بله را انتخاب کنید، در غیر این صورت خیر را انتخاب کنید و در ادامه فایل این مدرک را دوباره انتخاب کنید.", "خطا", MessageBoxButtons.YesNo,
+            //            RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes) == DialogResult.No)
+            //            return;
+            //        else
+            //            continue;
+            //    }
+            //}
 
             //آدرس فولدر به صورت نسبی
             string relativePath = "\\Files\\" + Properties.Settings.Default.projectID.ToString() + "\\";
@@ -338,18 +412,20 @@ namespace Scan_Project
                 System.IO.Directory.CreateDirectory(docsPath);
             }
 
+            System.Collections.Generic.List<int> rowsWithError = new System.Collections.Generic.List<int>();
+
             //ثبت مدرک هر سطر در دیتابیس
             for (int i = 0; i < gvAddDocs.Rows.Count; i++)
             {
-                string item1 = gvAddDocs.Rows[i].Cells[1].Value.ToString();
-                string item2 = gvAddDocs.Rows[i].Cells[2].Value.ToString();
-                string item3 = gvAddDocs.Rows[i].Cells[3].Value.ToString();
-                string docSrcFile = gvAddDocs.Rows[i].Cells[4].Value.ToString();
+                string item1 = gvAddDocs.Rows[i].Cells[0].Value.ToString();
+                string item2 = gvAddDocs.Rows[i].Cells[1].Value.ToString();
+                string item3 = gvAddDocs.Rows[i].Cells[2].Value.ToString();
+                string docSrcFile = gvAddDocs.Rows[i].Cells[3].Value.ToString();
 
                 //ساخت اسم و مسیر فایل
                 string newPath = MD5(item1 + "-" + item2 + "-" + item3 + "-" + DateTime.Now.ToFileTime()) + System.IO.Path.GetExtension(docSrcFile);
                 string newFile = System.IO.Path.Combine(docsPath, newPath);
-
+                                
                 try
                 {
                     //کپی فایل به فولدر
@@ -357,7 +433,8 @@ namespace Scan_Project
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show(ex.Message);
+                    rowsWithError.Add(i);
                     continue;
                 }
 
@@ -375,8 +452,14 @@ namespace Scan_Project
                 }
             }
 
+            string nameOfRowsWithError = "";
+            foreach (int item in rowsWithError)
+            {
+                nameOfRowsWithError += gvAddDocs.Rows[item].Cells[3].Value.ToString() + "\n";
+            }
+
             RadMessageBox.ThemeName = "TelerikMetro";
-            RadMessageBox.Show(null, "مدارک با موفقیت ثبت شدند.", "ثبت موفق", MessageBoxButtons.OK,
+            RadMessageBox.Show(null, gvAddDocs.Rows.Count - rowsWithError.Count + " مدرک با موفقیت ثبت شدند. \n" + "مدارک زیر ناقص بودند: \n" + nameOfRowsWithError, "ثبت موفق", MessageBoxButtons.OK,
                 RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
 
             gvAddDocs.Rows.Clear();
@@ -430,16 +513,16 @@ namespace Scan_Project
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                Image docPicture = null;
-                try
-                {
-                    docPicture = Image.FromFile(Application.StartupPath + dt.Rows[i][5].ToString());
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                gvSearchDocs.Rows.Add(docPicture, dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
+                //Image docPicture = null;
+                //try
+                //{
+                //    docPicture = Image.FromFile(Application.StartupPath + dt.Rows[i][5].ToString());
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
+                gvSearchDocs.Rows.Add(/*docPicture,*/ dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
                                         dt.Rows[i][3].ToString(), dt.Rows[i][6].ToString(), Application.StartupPath + dt.Rows[i][5].ToString());
                 gvSearchDocs.Rows[i].Tag = dt.Rows[i][0].ToString();
                 gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 100;
@@ -461,7 +544,7 @@ namespace Scan_Project
 
         private void gvSearchDocs_CellDoubleClick(object sender, GridViewCellEventArgs e)
         {
-            string file = e.Row.Cells[5].Value.ToString();
+            string file = e.Row.Cells[4].Value.ToString();
             try
             {
                 System.Diagnostics.Process.Start(file);
@@ -523,50 +606,90 @@ namespace Scan_Project
         {
             if (openFileDialog2.ShowDialog() == DialogResult.OK)
             {
-                //اسم جدول در اکسل که باید 
-                //Sheet1
-                //باشد.
-                String name = "Sheet1";
-                String constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
-                                openFileDialog2.FileName +
-                                ";Extended Properties='Excel 12.0 XML;HDR=YES;';";
+                //ThreadStart childref = new ThreadStart(ImageOnly);
+                //In Main: Creating the Child thread
+                //Thread childThread = new Thread(ImageOnly);
+                //childThread.Name = "test1";
 
-                OleDbConnection con = new OleDbConnection(constr);
-                OleDbCommand oconn = new OleDbCommand("Select * From [" + name + "$]", con);
-                con.Open();
+                ImportFromExcel();
+                GC.Collect();
 
-                OleDbDataAdapter sda = new OleDbDataAdapter(oconn);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                con.Close();
-
-                //در صورتی که اولین بار است که ذخیره انجام میشود و هنوز ستون ها ساخته نشده است.
-                if (gvAddDocs.Columns.Count == 0)
-                    InitializeAddDocsGrid();
-
-                string folderPath = Directory.GetParent(openFileDialog2.FileName).FullName;
+                //childThread.Start();
+                //childThread.Join();
+                //GC.Collect();
                 
-                string file = "";
-
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    file = folderPath + "\\" + dt.Rows[i][3].ToString();
-                    try
-                    {
-                        gvAddDocs.Rows.Add(Image.FromFile(file), dt.Rows[i][0].ToString(), dt.Rows[i][1].ToString(),
-                                                                dt.Rows[i][2].ToString(), file);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    
-                    gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
-                }
 
                 btnSubmitDocs.Enabled = true;
+                lblAddDocsCount.Text = gvAddDocs.Rows.Count.ToString();
             }
         }
 
+        private void btnExportToExcel_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // creating Excel Application  
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+                // creating new WorkBook within Excel application  
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+                // creating new Excelsheet in workbook  
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                // see the excel sheet behind the program  
+                app.Visible = true;
+                // get the reference of first sheet. By default its name is Sheet1.  
+                // store its reference to worksheet  
+                worksheet = workbook.Sheets["Sheet1"];
+                worksheet = workbook.ActiveSheet;
+                // changing the name of active sheet  
+                //worksheet.Name = "Exported from gridview";
+                // storing header part in Excel  
+                for (int i = 1; i <= 3; i++)
+                {
+                    worksheet.Cells[1, i] = gvSearchDocs.Columns[i].HeaderText;
+                }
+                worksheet.Cells[1, 4] = "آدرس نسبی فایل";
+                // storing Each row and column value to excel sheet  
+                for (int i = 0; i < gvSearchDocs.Rows.Count; i++)
+                {
+                    for (int j = 1; j < gvSearchDocs.Columns.Count; j++)
+                    {
+                        if (j == 4)
+                            continue;
+                        else if (j == 5)
+                        {
+                            worksheet.Cells[i + 2, j - 1] = gvSearchDocs.Rows[i].Cells[j].Value.ToString().Substring(gvSearchDocs.Rows[i].Cells[j].Value.ToString().LastIndexOf('\\') + 1);
+                            continue;
+                        }
+                        worksheet.Cells[i + 2, j] = gvSearchDocs.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                // save the application
+                string s = saveFileDialog1.FileName;
+                workbook.SaveAs(s, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                // Exit from the application
+                app.Quit();
+            }
+        }
+        
+        private void gvAddDocs_ViewCellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            if (e.CellElement is GridRowHeaderCellElement && e.Row is GridViewDataRowInfo)
+            {
+                e.CellElement.Text = (e.CellElement.RowIndex + 1).ToString();
+                e.CellElement.TextImageRelation = TextImageRelation.ImageBeforeText;
+            }
+            else
+            {
+                e.CellElement.ResetValue(LightVisualElement.TextImageRelationProperty, ValueResetFlags.Local);
+            }
+        }
+
+        private void gvSearchDocs_CurrentRowChanged(object sender, CurrentRowChangedEventArgs e)
+        {
+            if (e.CurrentRow != null)
+            {
+                docPictureInSearchTab.ImageLocation = e.CurrentRow.Cells[4].Value.ToString();
+            }
+        }
     }
 }

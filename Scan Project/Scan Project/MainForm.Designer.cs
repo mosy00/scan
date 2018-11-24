@@ -50,6 +50,8 @@
             this.addDocsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.btnImportFromExcel = new Telerik.WinControls.UI.RadButton();
+            this.lblAddDocsCount = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.btnEditDoc = new Telerik.WinControls.UI.RadButton();
             this.btnSubmitDocs = new Telerik.WinControls.UI.RadButton();
             this.btnAddNewDoc = new Telerik.WinControls.UI.RadButton();
@@ -67,6 +69,7 @@
             this.searchDocsPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.gvSearchDocs = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.btnExportToExcel = new Telerik.WinControls.UI.RadButton();
             this.cbIsSearchByDate = new Telerik.WinControls.UI.RadCheckBox();
             this.txtSearchSubmitToDate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.txtSearchSubmitFromDate = new Telerik.WinControls.UI.RadDateTimePicker();
@@ -94,6 +97,8 @@
             this.btnEditRowItem = new Telerik.WinControls.UI.RadMenuItem();
             this.btnDeleteRowItem = new Telerik.WinControls.UI.RadMenuItem();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.docPictureInSearchTab = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.homePage.SuspendLayout();
@@ -114,6 +119,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnImportFromExcel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblAddDocsCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSubmitDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddNewDoc)).BeginInit();
@@ -134,6 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExportToExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbIsSearchByDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitToDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitFromDate)).BeginInit();
@@ -150,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docPictureInSearchTab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,7 +170,7 @@
             this.radPageView1.Controls.Add(this.searchDocsPage);
             this.radPageView1.DefaultPage = this.homePage;
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.addDocsPage;
+            this.radPageView1.SelectedPage = this.searchDocsPage;
             this.radPageView1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near;
@@ -274,6 +283,8 @@
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             resources.ApplyResources(this.radGroupBox1, "radGroupBox1");
             this.radGroupBox1.Controls.Add(this.btnImportFromExcel);
+            this.radGroupBox1.Controls.Add(this.lblAddDocsCount);
+            this.radGroupBox1.Controls.Add(this.radLabel9);
             this.radGroupBox1.Controls.Add(this.btnEditDoc);
             this.radGroupBox1.Controls.Add(this.btnSubmitDocs);
             this.radGroupBox1.Controls.Add(this.btnAddNewDoc);
@@ -310,6 +321,16 @@
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnImportFromExcel.GetChildAt(0).GetChildAt(2))).RightWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnImportFromExcel.GetChildAt(0).GetChildAt(2))).BottomWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnImportFromExcel.GetChildAt(0).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
+            // 
+            // lblAddDocsCount
+            // 
+            resources.ApplyResources(this.lblAddDocsCount, "lblAddDocsCount");
+            this.lblAddDocsCount.Name = "lblAddDocsCount";
+            // 
+            // radLabel9
+            // 
+            resources.ApplyResources(this.radLabel9, "radLabel9");
+            this.radLabel9.Name = "radLabel9";
             // 
             // btnEditDoc
             // 
@@ -418,10 +439,12 @@
             this.gvAddDocs.Name = "gvAddDocs";
             this.gvAddDocs.ReadOnly = true;
             this.gvAddDocs.ThemeName = "TelerikMetro";
+            this.gvAddDocs.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.gvAddDocs_ViewCellFormatting);
             this.gvAddDocs.CurrentRowChanged += new Telerik.WinControls.UI.CurrentRowChangedEventHandler(this.gvAddDocs_CurrentRowChanged);
             // 
             // searchDocsPage
             // 
+            this.searchDocsPage.Controls.Add(this.docPictureInSearchTab);
             this.searchDocsPage.Controls.Add(this.gvSearchDocs);
             this.searchDocsPage.Controls.Add(this.radGroupBox2);
             this.searchDocsPage.Image = global::Scan_Project.Properties.Resources.file;
@@ -445,6 +468,7 @@
             this.gvSearchDocs.Name = "gvSearchDocs";
             this.gvSearchDocs.ReadOnly = true;
             this.gvSearchDocs.ThemeName = "TelerikMetro";
+            this.gvSearchDocs.CurrentRowChanged += new Telerik.WinControls.UI.CurrentRowChangedEventHandler(this.gvSearchDocs_CurrentRowChanged);
             this.gvSearchDocs.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.gvSearchDocs_CellDoubleClick);
             this.gvSearchDocs.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gvSearchDocs_MouseClick);
             // 
@@ -452,6 +476,7 @@
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             resources.ApplyResources(this.radGroupBox2, "radGroupBox2");
+            this.radGroupBox2.Controls.Add(this.btnExportToExcel);
             this.radGroupBox2.Controls.Add(this.cbIsSearchByDate);
             this.radGroupBox2.Controls.Add(this.txtSearchSubmitToDate);
             this.radGroupBox2.Controls.Add(this.txtSearchSubmitFromDate);
@@ -468,10 +493,28 @@
             this.radGroupBox2.Controls.Add(this.txtSearchItem1);
             this.radGroupBox2.Name = "radGroupBox2";
             this.radGroupBox2.ThemeName = "TelerikMetro";
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Text = resources.GetString("resource.Text4");
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Text = resources.GetString("resource.Text5");
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("IRANSans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1))).Alignment = ((System.Drawing.ContentAlignment)(resources.GetObject("resource.Alignment3")));
+            // 
+            // btnExportToExcel
+            // 
+            resources.ApplyResources(this.btnExportToExcel, "btnExportToExcel");
+            this.btnExportToExcel.Image = global::Scan_Project.Properties.Resources.excel;
+            this.btnExportToExcel.Name = "btnExportToExcel";
+            this.btnExportToExcel.ThemeName = "TelerikMetro";
+            this.btnExportToExcel.Click += new System.EventHandler(this.btnExportToExcel_Click);
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnExportToExcel.GetChildAt(0))).Image = global::Scan_Project.Properties.Resources.excel;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnExportToExcel.GetChildAt(0))).DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnExportToExcel.GetChildAt(0))).Text = resources.GetString("resource.Text4");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnExportToExcel.GetChildAt(0))).ToolTipText = resources.GetString("resource.ToolTipText1");
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnExportToExcel.GetChildAt(0).GetChildAt(2))).Width = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnExportToExcel.GetChildAt(0).GetChildAt(2))).LeftWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnExportToExcel.GetChildAt(0).GetChildAt(2))).TopWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnExportToExcel.GetChildAt(0).GetChildAt(2))).RightWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnExportToExcel.GetChildAt(0).GetChildAt(2))).BottomWidth = 0F;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnExportToExcel.GetChildAt(0).GetChildAt(2))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
             // 
             // cbIsSearchByDate
             // 
@@ -814,6 +857,17 @@
             this.openFileDialog2.FileName = "openFileDialog2";
             resources.ApplyResources(this.openFileDialog2, "openFileDialog2");
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "xlsx";
+            resources.ApplyResources(this.saveFileDialog1, "saveFileDialog1");
+            // 
+            // docPictureInSearchTab
+            // 
+            resources.ApplyResources(this.docPictureInSearchTab, "docPictureInSearchTab");
+            this.docPictureInSearchTab.Name = "docPictureInSearchTab";
+            this.docPictureInSearchTab.TabStop = false;
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -851,6 +905,8 @@
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnImportFromExcel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblAddDocsCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSubmitDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddNewDoc)).EndInit();
@@ -872,6 +928,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExportToExcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbIsSearchByDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitToDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchSubmitFromDate)).EndInit();
@@ -888,6 +945,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docPictureInSearchTab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -957,5 +1015,10 @@
         private Telerik.WinControls.UI.RadMenuItem btnDeleteRowItem;
         private Telerik.WinControls.UI.RadButton btnImportFromExcel;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private Telerik.WinControls.UI.RadButton btnExportToExcel;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private Telerik.WinControls.UI.RadLabel lblAddDocsCount;
+        private Telerik.WinControls.UI.RadLabel radLabel9;
+        private System.Windows.Forms.PictureBox docPictureInSearchTab;
     }
 }

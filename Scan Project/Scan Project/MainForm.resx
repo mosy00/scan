@@ -505,6 +505,66 @@
   <data name="resource.ToolTipText" xml:space="preserve">
     <value>واردکردن از اکسل</value>
   </data>
+  <data name="lblAddDocsCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="lblAddDocsCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 241</value>
+  </data>
+  <data name="lblAddDocsCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 24</value>
+  </data>
+  <data name="lblAddDocsCount.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblAddDocsCount.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblAddDocsCount.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblAddDocsCount.Name" xml:space="preserve">
+    <value>lblAddDocsCount</value>
+  </data>
+  <data name="&gt;&gt;lblAddDocsCount.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblAddDocsCount.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblAddDocsCount.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 9.75pt</value>
+  </data>
+  <data name="radLabel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 241</value>
+  </data>
+  <data name="radLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 24</value>
+  </data>
+  <data name="radLabel9.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="radLabel9.Text" xml:space="preserve">
+    <value>تعداد سطر جدول</value>
+  </data>
+  <data name="radLabel9.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;radLabel9.Name" xml:space="preserve">
+    <value>radLabel9</value>
+  </data>
+  <data name="&gt;&gt;radLabel9.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel9.Parent" xml:space="preserve">
+    <value>radGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;radLabel9.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="btnEditDoc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
   </data>
@@ -533,7 +593,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;btnEditDoc.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnSubmitDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -566,7 +626,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;btnSubmitDocs.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btnAddNewDoc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -596,7 +656,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;btnAddNewDoc.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="docPicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -623,7 +683,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;docPicture.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="radLabel5.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -653,7 +713,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;radLabel5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="txtAddDocSrc.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -677,7 +737,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;txtAddDocSrc.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="btnBrowseFile.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
     <value>Image</value>
@@ -707,7 +767,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;btnBrowseFile.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="resource.Text2" xml:space="preserve">
     <value />
@@ -740,7 +800,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;lblItem2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="lblItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -770,7 +830,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;lblItem3.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="lblItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -800,7 +860,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;lblItem1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="txtAddItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -824,7 +884,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;txtAddItem2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="txtAddItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -848,7 +908,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;txtAddItem3.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="txtAddItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -872,7 +932,7 @@
     <value>radGroupBox1</value>
   </data>
   <data name="&gt;&gt;txtAddItem1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="radGroupBox1.HeaderText" xml:space="preserve">
     <value>مشخصات سند</value>
@@ -952,6 +1012,33 @@
   <data name="&gt;&gt;addDocsPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="docPictureInSearchTab.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="docPictureInSearchTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 339</value>
+  </data>
+  <data name="docPictureInSearchTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 160</value>
+  </data>
+  <data name="docPictureInSearchTab.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="docPictureInSearchTab.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;docPictureInSearchTab.Name" xml:space="preserve">
+    <value>docPictureInSearchTab</value>
+  </data>
+  <data name="&gt;&gt;docPictureInSearchTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;docPictureInSearchTab.Parent" xml:space="preserve">
+    <value>searchDocsPage</value>
+  </data>
+  <data name="&gt;&gt;docPictureInSearchTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="gvSearchDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -974,10 +1061,46 @@
     <value>searchDocsPage</value>
   </data>
   <data name="&gt;&gt;gvSearchDocs.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="radGroupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="btnExportToExcel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="btnExportToExcel.DisplayStyle" type="Telerik.WinControls.DisplayStyle, Telerik.WinControls">
+    <value>Image</value>
+  </data>
+  <data name="btnExportToExcel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>IRANSans, 11.249999pt</value>
+  </data>
+  <data name="btnExportToExcel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 283</value>
+  </data>
+  <data name="btnExportToExcel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="btnExportToExcel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;btnExportToExcel.Name" xml:space="preserve">
+    <value>btnExportToExcel</value>
+  </data>
+  <data name="&gt;&gt;btnExportToExcel.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;btnExportToExcel.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;btnExportToExcel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.Text4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="resource.ToolTipText1" xml:space="preserve">
+    <value>خروجی گرفتن در اکسل</value>
   </data>
   <data name="cbIsSearchByDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1004,7 +1127,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;cbIsSearchByDate.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="txtSearchSubmitToDate.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1037,7 +1160,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchSubmitToDate.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="txtSearchSubmitFromDate.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1070,7 +1193,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchSubmitFromDate.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="radLabel2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1100,7 +1223,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="radLabel3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1130,7 +1253,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnShowAllDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1160,7 +1283,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;btnShowAllDocs.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnSearchDocs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1190,7 +1313,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;btnSearchDocs.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="radLabel1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1220,7 +1343,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lblSearchItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1250,7 +1373,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;lblSearchItem2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lblSearchItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1280,7 +1403,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;lblSearchItem3.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="lblSearchItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1310,7 +1433,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;lblSearchItem1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="txtSearchItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1334,7 +1457,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchItem2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="txtSearchItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1358,7 +1481,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchItem3.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="txtSearchItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>
@@ -1382,7 +1505,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;txtSearchItem1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="radGroupBox2.HeaderText" xml:space="preserve">
     <value>جست و جوی اسناد</value>
@@ -1409,9 +1532,9 @@
     <value>searchDocsPage</value>
   </data>
   <data name="&gt;&gt;radGroupBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <data name="resource.Text4" xml:space="preserve">
+  <data name="resource.Text5" xml:space="preserve">
     <value>جست و جوی اسناد</value>
   </data>
   <data name="resource.Alignment3" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -2154,6 +2277,12 @@
   </metadata>
   <data name="openFileDialog2.Filter" xml:space="preserve">
     <value>Excel |*.xlsx</value>
+  </data>
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>599, 9</value>
+  </metadata>
+  <data name="saveFileDialog1.Filter" xml:space="preserve">
+    <value>Excel File|*.xlsx</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3677,6 +3806,12 @@
   </data>
   <data name="&gt;&gt;openFileDialog2.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
+    <value>saveFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
