@@ -67,6 +67,7 @@
             this.txtAddItem1 = new Telerik.WinControls.UI.RadTextBox();
             this.gvAddDocs = new Telerik.WinControls.UI.RadGridView();
             this.searchDocsPage = new Telerik.WinControls.UI.RadPageViewPage();
+            this.docPictureInSearchTab = new System.Windows.Forms.PictureBox();
             this.gvSearchDocs = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.btnExportToExcel = new Telerik.WinControls.UI.RadButton();
@@ -98,7 +99,6 @@
             this.btnDeleteRowItem = new Telerik.WinControls.UI.RadMenuItem();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.docPictureInSearchTab = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.homePage.SuspendLayout();
@@ -137,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs.MasterTemplate)).BeginInit();
             this.searchDocsPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.docPictureInSearchTab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
@@ -158,7 +159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docPictureInSearchTab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,7 +170,7 @@
             this.radPageView1.Controls.Add(this.searchDocsPage);
             this.radPageView1.DefaultPage = this.homePage;
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.searchDocsPage;
+            this.radPageView1.SelectedPage = this.addDocsPage;
             this.radPageView1.ThemeName = "TelerikMetro";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near;
@@ -444,13 +444,18 @@
             // 
             // searchDocsPage
             // 
-            this.searchDocsPage.Controls.Add(this.docPictureInSearchTab);
             this.searchDocsPage.Controls.Add(this.gvSearchDocs);
             this.searchDocsPage.Controls.Add(this.radGroupBox2);
             this.searchDocsPage.Image = global::Scan_Project.Properties.Resources.file;
             this.searchDocsPage.ItemSize = new System.Drawing.SizeF(128F, 40F);
             resources.ApplyResources(this.searchDocsPage, "searchDocsPage");
             this.searchDocsPage.Name = "searchDocsPage";
+            // 
+            // docPictureInSearchTab
+            // 
+            resources.ApplyResources(this.docPictureInSearchTab, "docPictureInSearchTab");
+            this.docPictureInSearchTab.Name = "docPictureInSearchTab";
+            this.docPictureInSearchTab.TabStop = false;
             // 
             // gvSearchDocs
             // 
@@ -476,6 +481,7 @@
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             resources.ApplyResources(this.radGroupBox2, "radGroupBox2");
+            this.radGroupBox2.Controls.Add(this.docPictureInSearchTab);
             this.radGroupBox2.Controls.Add(this.btnExportToExcel);
             this.radGroupBox2.Controls.Add(this.cbIsSearchByDate);
             this.radGroupBox2.Controls.Add(this.txtSearchSubmitToDate);
@@ -862,12 +868,6 @@
             this.saveFileDialog1.DefaultExt = "xlsx";
             resources.ApplyResources(this.saveFileDialog1, "saveFileDialog1");
             // 
-            // docPictureInSearchTab
-            // 
-            resources.ApplyResources(this.docPictureInSearchTab, "docPictureInSearchTab");
-            this.docPictureInSearchTab.Name = "docPictureInSearchTab";
-            this.docPictureInSearchTab.TabStop = false;
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -923,6 +923,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAddDocs)).EndInit();
             this.searchDocsPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.docPictureInSearchTab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSearchDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
@@ -945,7 +946,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docPictureInSearchTab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

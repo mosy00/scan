@@ -128,7 +128,7 @@ namespace Scan_Project
                 txtShowUserRole.Text = "فقط بازدید";
                 addDocsPage.Enabled = false;
             }
-                        
+
         }
 
         void CleanNewDocPage()
@@ -136,6 +136,18 @@ namespace Scan_Project
             txtAddDocSrc.Text = txtAddItem1.Text = txtAddItem2.Text = txtAddItem3.Text = string.Empty;
             openFileDialog1.Reset();
             docPicture.Image = null;
+
+            gvAddDocs.Rows.Clear();
+            lblAddDocsCount.Text = gvAddDocs.Rows.Count.ToString();
+        }
+
+        void CleanSearchDocPage()
+        {
+            txtSearchItem1.Text = txtSearchItem2.Text = txtSearchItem3.Text = string.Empty;
+            cbIsSearchByDate.Checked = false;
+            docPictureInSearchTab = null;
+
+            gvSearchDocs.Rows.Clear();
         }
 
         void ImportFromExcel()
@@ -164,14 +176,14 @@ namespace Scan_Project
             string folderPath = Directory.GetParent(openFileDialog2.FileName).FullName;
 
             string file = "";
-            
+
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 file = folderPath + "\\" + dt.Rows[i][3].ToString();
                 try
-                {                    
+                {
                     gvAddDocs.Rows.Add(/*Image.FromFile(file),*/ dt.Rows[i][0].ToString(), dt.Rows[i][1].ToString(),
-                                                            dt.Rows[i][2].ToString(), file);                                       
+                                                            dt.Rows[i][2].ToString(), file);
 
                 }
                 catch (Exception ex)
@@ -179,7 +191,7 @@ namespace Scan_Project
                     //MessageBox.Show(ex.Message);
                 }
 
-                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
+                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 40;
             }
 
             //btnSubmitDocs.Enabled = true;
@@ -245,7 +257,7 @@ namespace Scan_Project
 
             lblProjectName.Text = "نام پروژه: " + Properties.Settings.Default.projectName;
             txtShowProjectName.Text = Properties.Settings.Default.projectName;
-            
+
             dbConnections db = new dbConnections();
             DataTable itemNames;
             itemNames = db.GetItems();
@@ -276,6 +288,8 @@ namespace Scan_Project
 
             InitializeHomePage();
             radPageView1.SelectedPage = homePage;
+            CleanNewDocPage();
+            CleanSearchDocPage();
         }
 
         private void btnOpenProjectForm_Click(object sender, EventArgs e)
@@ -319,7 +333,9 @@ namespace Scan_Project
 
         private void btnAddNewDoc_Click(object sender, EventArgs e)
         {
-            CleanNewDocPage();
+            txtAddDocSrc.Text = txtAddItem1.Text = txtAddItem2.Text = txtAddItem3.Text = string.Empty;
+            openFileDialog1.Reset();
+            docPicture.Image = null;
             gvAddDocs.CurrentRow = null;
         }
 
@@ -345,7 +361,7 @@ namespace Scan_Project
 
             //در صورتی که یکی از سطر های جدول انتخاب شده باشد.
             //در این حالت انتخاب این دکمه حکم به روز رسانی داده های سطر را دارد.
-            if (gvAddDocs.CurrentRow != null)
+            if (gvAddDocs.CurrentRow != null && gvAddDocs.Rows.Count != 0)
             {
                 //gvAddDocs.CurrentRow.Cells[0].Value = Image.FromFile(openFileDialog1.FileName);
                 gvAddDocs.CurrentRow.Cells[0].Value = txtAddItem1.Text.Trim();
@@ -362,7 +378,7 @@ namespace Scan_Project
                 gvAddDocs.Rows.Add(/*Image.FromFile(openFileDialog1.FileName),*/
                                     txtAddItem1.Text.Trim(), txtAddItem2.Text.Trim(), txtAddItem3.Text.Trim(), openFileDialog1.FileName);
 
-                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 60;
+                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 40;
 
                 btnAddNewDoc.Enabled = true;
                 btnSubmitDocs.Enabled = true;
@@ -381,27 +397,14 @@ namespace Scan_Project
 
                 docPicture.ImageLocation = openFileDialog1.FileName;
             }
+            lblAddDocsCount.Text = gvAddDocs.Rows.Count.ToString();
         }
 
         private void btnSubmitDocs_Click(object sender, EventArgs e)
         {
             if (gvAddDocs.Rows.Count == 0)
                 return;
-
-            //چک کردن این که آدرس فایل ها در مدارک انتخابی درست باشند.
-            //for (int i = 0; i < gvAddDocs.Rows.Count; i++)
-            //{
-            //    if (!System.IO.File.Exists(gvAddDocs.Rows[i].Cells[3].Value.ToString()))
-            //    {
-            //        RadMessageBox.ThemeName = "TelerikMetro";
-            //        if (RadMessageBox.Show(null, "مدرک سطر " + i + 1 + ": فایل انتخابی وجود ندارد. اگر میخواهید ادامه دهید بله را انتخاب کنید، در غیر این صورت خیر را انتخاب کنید و در ادامه فایل این مدرک را دوباره انتخاب کنید.", "خطا", MessageBoxButtons.YesNo,
-            //            RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes) == DialogResult.No)
-            //            return;
-            //        else
-            //            continue;
-            //    }
-            //}
-
+            
             //آدرس فولدر به صورت نسبی
             string relativePath = "\\Files\\" + Properties.Settings.Default.projectID.ToString() + "\\";
             //آدرس فولدر به صورت کامل
@@ -412,7 +415,7 @@ namespace Scan_Project
                 System.IO.Directory.CreateDirectory(docsPath);
             }
 
-            System.Collections.Generic.List<int> rowsWithError = new System.Collections.Generic.List<int>();
+            DataTable rowsWithError = new DataTable();
 
             //ثبت مدرک هر سطر در دیتابیس
             for (int i = 0; i < gvAddDocs.Rows.Count; i++)
@@ -425,16 +428,30 @@ namespace Scan_Project
                 //ساخت اسم و مسیر فایل
                 string newPath = MD5(item1 + "-" + item2 + "-" + item3 + "-" + DateTime.Now.ToFileTime()) + System.IO.Path.GetExtension(docSrcFile);
                 string newFile = System.IO.Path.Combine(docsPath, newPath);
-                                
+
                 try
                 {
                     //کپی فایل به فولدر
                     File.Copy(docSrcFile, newFile);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    //MessageBox.Show(ex.Message);
-                    rowsWithError.Add(i);
+                    //سطری که خطا دارد و فایل انتخابی درست نیست را در یک دیتاتیبل نگه میدارد تا در انتها دوباره به جدول اضافه کند
+                    if (rowsWithError.Columns.Count == 0)
+                    {
+                        for (int j = 0; j < gvAddDocs.Columns.Count; j++)
+                        {
+                            rowsWithError.Columns.Add("column" + j.ToString());
+                        }
+                    }
+                    
+                    DataRow dr = rowsWithError.NewRow();
+                    for (int j = 0; j < gvAddDocs.Columns.Count; j++)
+                    {
+                        dr["column" + j.ToString()] = gvAddDocs.Rows[i].Cells[j].Value.ToString();
+                    }
+
+                    rowsWithError.Rows.Add(dr);
                     continue;
                 }
 
@@ -453,18 +470,27 @@ namespace Scan_Project
             }
 
             string nameOfRowsWithError = "";
-            foreach (int item in rowsWithError)
+            for (int i = 0; i < rowsWithError.Rows.Count; i++)
             {
-                nameOfRowsWithError += gvAddDocs.Rows[item].Cells[3].Value.ToString() + "\n";
+                nameOfRowsWithError += rowsWithError.Rows[i][3].ToString() + "\n";
             }
 
             RadMessageBox.ThemeName = "TelerikMetro";
-            RadMessageBox.Show(null, gvAddDocs.Rows.Count - rowsWithError.Count + " مدرک با موفقیت ثبت شدند. \n" + "مدارک زیر ناقص بودند: \n" + nameOfRowsWithError, "ثبت موفق", MessageBoxButtons.OK,
+            RadMessageBox.Show(null, gvAddDocs.Rows.Count - rowsWithError.Rows.Count + " مدرک با موفقیت ثبت شدند. \n" + "مدارک زیر ناقص بودند: \n" + nameOfRowsWithError, "ثبت موفق", MessageBoxButtons.OK,
                 RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
-
+            //خالی کردن جدول
             gvAddDocs.Rows.Clear();
+            //پر کردن جدول با سطر های ارور دار.
+            for (int i = 0; i < rowsWithError.Rows.Count; i++)
+            {
+                gvAddDocs.Rows.Add(rowsWithError.Rows[i][0].ToString(), rowsWithError.Rows[i][1].ToString(), rowsWithError.Rows[i][2].ToString(),
+                                    rowsWithError.Rows[i][3].ToString());
+                gvAddDocs.CurrentRow.Height = 40;
+            }
+
             btnAddNewDoc_Click(null, null);
-            btnSubmitDocs.Enabled = false;
+            if (gvAddDocs.Rows.Count == 0)
+                btnSubmitDocs.Enabled = false;
         }
 
         private void btnSearchDocs_Click(object sender, EventArgs e)
@@ -487,19 +513,19 @@ namespace Scan_Project
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                Image docPicture = null;
-                try
-                {
-                    docPicture = Image.FromFile(Application.StartupPath + dt.Rows[i][5].ToString());
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                gvSearchDocs.Rows.Add(docPicture, dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
+                //Image docPicture = null;
+                //try
+                //{
+                //    docPicture = Image.FromFile(Application.StartupPath + dt.Rows[i][5].ToString());
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
+                gvSearchDocs.Rows.Add(/*docPicture,*/ dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
                                         dt.Rows[i][3].ToString(), dt.Rows[i][6].ToString(), Application.StartupPath + dt.Rows[i][5].ToString());
                 gvSearchDocs.Rows[i].Tag = dt.Rows[i][0].ToString();
-                gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 100;
+                gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 40;
             }
         }
 
@@ -525,7 +551,7 @@ namespace Scan_Project
                 gvSearchDocs.Rows.Add(/*docPicture,*/ dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
                                         dt.Rows[i][3].ToString(), dt.Rows[i][6].ToString(), Application.StartupPath + dt.Rows[i][5].ToString());
                 gvSearchDocs.Rows[i].Tag = dt.Rows[i][0].ToString();
-                gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 100;
+                gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 40;
             }
         }
 
@@ -617,7 +643,7 @@ namespace Scan_Project
                 //childThread.Start();
                 //childThread.Join();
                 //GC.Collect();
-                
+
 
                 btnSubmitDocs.Enabled = true;
                 lblAddDocsCount.Text = gvAddDocs.Rows.Count.ToString();
@@ -670,7 +696,7 @@ namespace Scan_Project
                 app.Quit();
             }
         }
-        
+
         private void gvAddDocs_ViewCellFormatting(object sender, CellFormattingEventArgs e)
         {
             if (e.CellElement is GridRowHeaderCellElement && e.Row is GridViewDataRowInfo)
@@ -688,7 +714,15 @@ namespace Scan_Project
         {
             if (e.CurrentRow != null)
             {
-                docPictureInSearchTab.ImageLocation = e.CurrentRow.Cells[4].Value.ToString();
+                try
+                {
+                    docPictureInSearchTab.ImageLocation = e.CurrentRow.Cells[4].Value.ToString();
+                }
+                catch (Exception)
+                {
+                    
+                }
+                
             }
         }
     }
