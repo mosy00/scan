@@ -1039,31 +1039,31 @@
   <data name="radGroupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="docPictureInSearchTab.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="searchDocsPicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="docPictureInSearchTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 326</value>
+  <data name="searchDocsPicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 312</value>
   </data>
-  <data name="docPictureInSearchTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 165</value>
+  <data name="searchDocsPicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 179</value>
   </data>
-  <data name="docPictureInSearchTab.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="searchDocsPicture.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="docPictureInSearchTab.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="searchDocsPicture.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
   </data>
-  <data name="&gt;&gt;docPictureInSearchTab.Name" xml:space="preserve">
-    <value>docPictureInSearchTab</value>
+  <data name="&gt;&gt;searchDocsPicture.Name" xml:space="preserve">
+    <value>searchDocsPicture</value>
   </data>
-  <data name="&gt;&gt;docPictureInSearchTab.Type" xml:space="preserve">
+  <data name="&gt;&gt;searchDocsPicture.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;docPictureInSearchTab.Parent" xml:space="preserve">
+  <data name="&gt;&gt;searchDocsPicture.Parent" xml:space="preserve">
     <value>radGroupBox2</value>
   </data>
-  <data name="&gt;&gt;docPictureInSearchTab.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;searchDocsPicture.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btnExportToExcel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -1076,7 +1076,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnExportToExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 279</value>
+    <value>268, 274</value>
   </data>
   <data name="btnExportToExcel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
@@ -1262,7 +1262,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnShowAllDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 281</value>
+    <value>117, 276</value>
   </data>
   <data name="btnShowAllDocs.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 30</value>
@@ -1292,7 +1292,7 @@
     <value>IRANSans, 11.249999pt</value>
   </data>
   <data name="btnSearchDocs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 281</value>
+    <value>17, 276</value>
   </data>
   <data name="btnSearchDocs.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 30</value>
@@ -1587,6 +1587,30 @@
   </data>
   <data name="&gt;&gt;radPageView1.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="radProgressBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 5</value>
+  </data>
+  <data name="radProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 18</value>
+  </data>
+  <data name="radProgressBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radProgressBar1.Name" xml:space="preserve">
+    <value>radProgressBar1</value>
+  </data>
+  <data name="&gt;&gt;radProgressBar1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radProgressBar1.Parent" xml:space="preserve">
+    <value>radStatusStrip1</value>
+  </data>
+  <data name="&gt;&gt;radProgressBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.Text6" xml:space="preserve">
+    <value />
   </data>
   <data name="radStatusStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>IRANSans, 9.75pt</value>

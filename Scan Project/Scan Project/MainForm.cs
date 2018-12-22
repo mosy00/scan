@@ -17,6 +17,7 @@ namespace Scan_Project
     public partial class MainForm : Telerik.WinControls.UI.RadForm
     {
         System.Globalization.CultureInfo m_culture;
+        private string srcFileName;
 
         public MainForm()
         {
@@ -117,18 +118,25 @@ namespace Scan_Project
             txtShowUsername.Text = Properties.Settings.Default.userName;
 
             if (Properties.Settings.Default.userRole == 1)
+            {
                 txtShowUserRole.Text = "کاربر ادمین";
+                addDocsPage.Enabled = true;
+            }
             else if (Properties.Settings.Default.userRole == 2)
             {
                 txtShowUserRole.Text = "کاربر با امکان ثبت";
                 btnOpenUserForm.Enabled = false;
+                addDocsPage.Enabled = true;
+                gvSearchDocs.Columns[4].IsVisible = false;
             }
             else if (Properties.Settings.Default.userRole == 3)
             {
                 txtShowUserRole.Text = "فقط بازدید";
                 addDocsPage.Enabled = false;
+                gvSearchDocs.Columns[4].IsVisible = false;
             }
 
+            radProgressBar1.Text = "آماده به کار";
         }
 
         void CleanNewDocPage()
@@ -145,7 +153,7 @@ namespace Scan_Project
         {
             txtSearchItem1.Text = txtSearchItem2.Text = txtSearchItem3.Text = string.Empty;
             cbIsSearchByDate.Checked = false;
-            docPictureInSearchTab = null;
+            searchDocsPicture.Image = null;
 
             gvSearchDocs.Rows.Clear();
         }
@@ -169,9 +177,17 @@ namespace Scan_Project
             sda.Fill(dt);
             con.Close();
 
-            //در صورتی که اولین بار است که ذخیره انجام میشود و هنوز ستون ها ساخته نشده است.
-            if (gvAddDocs.Columns.Count == 0)
-                InitializeAddDocsGrid();
+            gvAddDocs.Invoke((MethodInvoker)delegate
+            {
+                //در صورتی که اولین بار است که ذخیره انجام میشود و هنوز ستون ها ساخته نشده است.
+                if (gvAddDocs.Columns.Count == 0)
+                    InitializeAddDocsGrid();
+            });
+            
+            radProgressBar1.Invoke((MethodInvoker)delegate
+            {
+                radProgressBar1.Maximum = dt.Rows.Count;
+            });
 
             string folderPath = Directory.GetParent(openFileDialog2.FileName).FullName;
 
@@ -179,23 +195,29 @@ namespace Scan_Project
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
+                radProgressBar1.Invoke((MethodInvoker)delegate
+                {
+                    radProgressBar1.Value1 = i;
+                });
+
                 file = folderPath + "\\" + dt.Rows[i][3].ToString();
-                try
+
+                gvAddDocs.Invoke((MethodInvoker)delegate
                 {
+
                     gvAddDocs.Rows.Add(/*Image.FromFile(file),*/ dt.Rows[i][0].ToString(), dt.Rows[i][1].ToString(),
-                                                            dt.Rows[i][2].ToString(), file);
+                                                    dt.Rows[i][2].ToString(), file);
+                    gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 40;
 
-                }
-                catch (Exception ex)
-                {
-                    //MessageBox.Show(ex.Message);
-                }
-
-                gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 40;
+                });
             }
 
-            //btnSubmitDocs.Enabled = true;
-            //lblAddDocsCount.Text = gvAddDocs.Rows.Count.ToString();
+            radProgressBar1.Value1 = radProgressBar1.Maximum;
+            radProgressBar1.Text = "آماده به کار";
+
+            Thread.Sleep(3000);
+
+            radProgressBar1.Value1 = 0;
         }
 
         void ImageOnly()
@@ -217,6 +239,273 @@ namespace Scan_Project
 
                 gvAddDocs.Rows[gvAddDocs.Rows.Count - 1].Height = 100;
             }
+        }
+
+        /// <summary>
+        /// متدی برای لود کردن اسناد به شکل موازی
+        /// </summary>
+        /// <param name="isShowAll">نشان دادن تمامی مدارک</param>
+        void DocumentsLoader(bool isShowAll)
+        {
+            gvSearchDocs.Invoke((MethodInvoker)delegate
+            {
+                gvSearchDocs.Rows.Clear();
+            });
+
+            dbConnections db = new dbConnections();
+
+            DataTable itemNames, dt;
+            if (isShowAll)
+            {
+                dt = db.GetDocs(out itemNames);
+            }
+            else
+            {
+                dt = db.GetDocs(out itemNames, txtSearchItem1.Text, txtSearchItem2.Text, txtSearchItem3.Text,
+                cbIsSearchByDate.Checked ? txtSearchSubmitFromDate.Value.ToString() : "",
+                cbIsSearchByDate.Checked ? txtSearchSubmitToDate.Value.ToString() : "");
+            }
+
+            radProgressBar1.Invoke((MethodInvoker)delegate
+            {
+                radProgressBar1.Maximum = dt.Rows.Count;
+            });
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                radProgressBar1.Invoke((MethodInvoker)delegate
+                {
+                    radProgressBar1.Value1 = i;
+                });
+
+
+                //Image docPicture = null;
+                //try
+                //{
+                //    docPicture = Image.FromFile(Application.StartupPath + dt.Rows[i][5].ToString());
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
+                gvSearchDocs.Invoke((MethodInvoker)delegate
+                {
+                    // Running on the UI thread
+                    gvSearchDocs.Rows.Add(/*docPicture,*/ dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
+                                            dt.Rows[i][3].ToString(), dt.Rows[i][6].ToString(), Application.StartupPath + dt.Rows[i][5].ToString());
+                    gvSearchDocs.Rows[i].Tag = dt.Rows[i][0].ToString();
+                    gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 40;
+                });
+            }
+            radProgressBar1.Value1 = radProgressBar1.Maximum;
+            radProgressBar1.Text = "آماده به کار";
+
+            Thread.Sleep(3000);
+
+            radProgressBar1.Value1 = 0;
+        }
+
+        void ExportDocs()
+        {
+            // creating Excel Application  
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            // creating new WorkBook within Excel application  
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            // creating new Excelsheet in workbook  
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            // see the excel sheet behind the program  
+            app.Visible = true;
+            // get the reference of first sheet. By default its name is Sheet1.  
+            // store its reference to worksheet  
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            // changing the name of active sheet  
+            //worksheet.Name = "Exported from gridview";
+
+            radProgressBar1.Invoke((MethodInvoker)delegate
+            {
+                radProgressBar1.Maximum = gvSearchDocs.Rows.Count * 2;
+            });
+
+
+            for (int i = 1; i <= 3; i++)
+            {
+                // storing header part in Excel 
+                worksheet.Cells[1, i] = gvSearchDocs.Columns[i - 1].HeaderText;
+            }
+            worksheet.Cells[1, 4] = "آدرس نسبی فایل";
+
+            // storing Each row and column value to excel sheet  
+            for (int i = 0; i < gvSearchDocs.Rows.Count; i++)
+            {
+                radProgressBar1.Invoke((MethodInvoker)delegate
+                {
+                    radProgressBar1.Value1 = i;
+                });
+
+                for (int j = 1; j <= gvSearchDocs.Columns.Count; j++)
+                {
+                    if (j == 4)
+                        continue;
+                    else if (j == 5)
+                    {
+                        worksheet.Cells[i + 2, j - 1] = gvSearchDocs.Rows[i].Cells[j - 1].Value.ToString().Substring(gvSearchDocs.Rows[i].Cells[j - 1].Value.ToString().LastIndexOf('\\') + 1);
+                        continue;
+                    }
+                    worksheet.Cells[i + 2, j] = gvSearchDocs.Rows[i].Cells[j - 1].Value.ToString();
+                }
+            }
+
+            // save the application                
+            string s = saveFileDialog1.FileName;
+            workbook.SaveAs(s, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            // Exit from the application
+            app.Quit();
+
+            //کپی مدارک در کنار فایل اکسل
+            string srcFileName, destFileName;
+            for (int i = 0; i < gvSearchDocs.Rows.Count; i++)
+            {
+                radProgressBar1.Invoke((MethodInvoker)delegate
+                {
+                    radProgressBar1.Value1 += 1;
+                });
+
+                srcFileName = gvSearchDocs.Rows[i].Cells[4].Value.ToString();
+                destFileName = Path.GetDirectoryName(saveFileDialog1.FileName) + "\\" +
+                    gvSearchDocs.Rows[i].Cells[4].Value.ToString().Substring(gvSearchDocs.Rows[i].Cells[4].Value.ToString().LastIndexOf('\\') + 1);
+                File.Copy(srcFileName, destFileName);
+            }
+
+            radProgressBar1.Value1 = radProgressBar1.Maximum;
+            radProgressBar1.Text = "آماده به کار";
+
+            Thread.Sleep(3000);
+
+            radProgressBar1.Value1 = 0;
+        }
+
+        void SubmitDocs()
+        {
+            //آدرس فولدر به صورت نسبی
+            string relativePath = "\\Files\\" + Properties.Settings.Default.projectID.ToString() + "\\";
+            //آدرس فولدر به صورت کامل
+            string docsPath = Application.StartupPath + relativePath;
+            //ساخت فولدر در صورت عدم وجود
+            if (!Directory.Exists(docsPath))
+            {
+                Directory.CreateDirectory(docsPath);
+            }
+
+            radProgressBar1.Invoke((MethodInvoker)delegate
+            {
+                radProgressBar1.Maximum = gvAddDocs.Rows.Count;
+            });
+
+            DataTable rowsWithError = new DataTable();
+
+            //ثبت مدرک هر سطر در دیتابیس
+            for (int i = 0; i < gvAddDocs.Rows.Count; i++)
+            {
+                radProgressBar1.Invoke((MethodInvoker)delegate
+                {
+                    radProgressBar1.Value1 = i;
+                });
+
+                string item1 = gvAddDocs.Rows[i].Cells[0].Value.ToString();
+                string item2 = gvAddDocs.Rows[i].Cells[1].Value.ToString();
+                string item3 = gvAddDocs.Rows[i].Cells[2].Value.ToString();
+                string docSrcFile = gvAddDocs.Rows[i].Cells[3].Value.ToString();
+
+                //ساخت اسم و مسیر فایل
+                string newPath = MD5(item1 + "-" + item2 + "-" + item3 + "-" + DateTime.Now.ToFileTime()) + Path.GetExtension(docSrcFile);
+                string newFile = Path.Combine(docsPath, newPath);
+
+                try
+                {
+                    //کپی فایل به فولدر
+                    File.Copy(docSrcFile, newFile);
+                }
+                catch (Exception)
+                {
+                    //سطری که خطا دارد و فایل انتخابی درست نیست را در یک دیتاتیبل نگه میدارد تا در انتها دوباره به جدول اضافه کند
+                    if (rowsWithError.Columns.Count == 0)
+                    {
+                        for (int j = 0; j < gvAddDocs.Columns.Count; j++)
+                        {
+                            rowsWithError.Columns.Add("column" + j.ToString());
+                        }
+                    }
+
+                    DataRow dr = rowsWithError.NewRow();
+                    for (int j = 0; j < gvAddDocs.Columns.Count; j++)
+                    {
+                        dr["column" + j.ToString()] = gvAddDocs.Rows[i].Cells[j].Value.ToString();
+                    }
+
+                    rowsWithError.Rows.Add(dr);
+
+                    radProgressBar1.Invoke((MethodInvoker)delegate
+                    {
+                        radProgressBar1.Maximum += 1;
+                    });
+                    continue;
+                }
+
+                try
+                {
+                    //ذخیره در دیتابیس
+                    dbConnections db = new dbConnections();
+                    db.InsertDocs(item1, item2, item3, relativePath + newPath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    //در صورت عدم توانایی در ذخیره مشخصات در دیتابیس، فایل کپی شده را نیز حذف میکند تا بعدا تداخل ایجاد نشود.
+                    File.Delete(newFile);
+                }
+            }
+
+            string nameOfRowsWithError = "";
+            for (int i = 0; i < rowsWithError.Rows.Count; i++)
+            {
+                nameOfRowsWithError += rowsWithError.Rows[i][3].ToString() + "\n";
+            }
+
+            string msg = gvAddDocs.Rows.Count - rowsWithError.Rows.Count + " مدرک با موفقیت ثبت شدند. \n";
+            msg += (rowsWithError.Rows.Count > 0) ? "مدارک زیر ناقص بودند: \n" + nameOfRowsWithError : "";
+            RadMessageBox.ThemeName = "TelerikMetro";
+            RadMessageBox.Show(null, msg, "ثبت موفق", MessageBoxButtons.OK,
+                RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+
+            gvAddDocs.Invoke((MethodInvoker)delegate
+            {
+                //خالی کردن جدول
+                gvAddDocs.Rows.Clear();
+            });
+            
+            //پر کردن جدول با سطر های ارور دار.
+            for (int i = 0; i < rowsWithError.Rows.Count; i++)
+            {
+                radProgressBar1.Invoke((MethodInvoker)delegate
+                {
+                    radProgressBar1.Value1 += 1;
+                });
+                
+                gvAddDocs.Invoke((MethodInvoker)delegate
+                {
+                    gvAddDocs.Rows.Add(rowsWithError.Rows[i][0].ToString(), rowsWithError.Rows[i][1].ToString(), rowsWithError.Rows[i][2].ToString(),
+                                    rowsWithError.Rows[i][3].ToString());
+                    gvAddDocs.CurrentRow.Height = 40;
+                });                
+            }
+
+            radProgressBar1.Value1 = radProgressBar1.Maximum;
+            radProgressBar1.Text = "آماده به کار";
+
+            Thread.Sleep(3000);
+
+            radProgressBar1.Value1 = 0;
         }
 
         private string GenerateHashString(HashAlgorithm algo, string text)
@@ -404,89 +693,12 @@ namespace Scan_Project
         {
             if (gvAddDocs.Rows.Count == 0)
                 return;
-            
-            //آدرس فولدر به صورت نسبی
-            string relativePath = "\\Files\\" + Properties.Settings.Default.projectID.ToString() + "\\";
-            //آدرس فولدر به صورت کامل
-            string docsPath = Application.StartupPath + relativePath;
-            //ساخت فولدر در صورت عدم وجود
-            if (!System.IO.Directory.Exists(docsPath))
-            {
-                System.IO.Directory.CreateDirectory(docsPath);
-            }
 
-            DataTable rowsWithError = new DataTable();
+            radProgressBar1.Text = "در حال ثبت ...";
+            Thread loaderThread = new Thread(SubmitDocs);
 
-            //ثبت مدرک هر سطر در دیتابیس
-            for (int i = 0; i < gvAddDocs.Rows.Count; i++)
-            {
-                string item1 = gvAddDocs.Rows[i].Cells[0].Value.ToString();
-                string item2 = gvAddDocs.Rows[i].Cells[1].Value.ToString();
-                string item3 = gvAddDocs.Rows[i].Cells[2].Value.ToString();
-                string docSrcFile = gvAddDocs.Rows[i].Cells[3].Value.ToString();
-
-                //ساخت اسم و مسیر فایل
-                string newPath = MD5(item1 + "-" + item2 + "-" + item3 + "-" + DateTime.Now.ToFileTime()) + System.IO.Path.GetExtension(docSrcFile);
-                string newFile = System.IO.Path.Combine(docsPath, newPath);
-
-                try
-                {
-                    //کپی فایل به فولدر
-                    File.Copy(docSrcFile, newFile);
-                }
-                catch (Exception)
-                {
-                    //سطری که خطا دارد و فایل انتخابی درست نیست را در یک دیتاتیبل نگه میدارد تا در انتها دوباره به جدول اضافه کند
-                    if (rowsWithError.Columns.Count == 0)
-                    {
-                        for (int j = 0; j < gvAddDocs.Columns.Count; j++)
-                        {
-                            rowsWithError.Columns.Add("column" + j.ToString());
-                        }
-                    }
-                    
-                    DataRow dr = rowsWithError.NewRow();
-                    for (int j = 0; j < gvAddDocs.Columns.Count; j++)
-                    {
-                        dr["column" + j.ToString()] = gvAddDocs.Rows[i].Cells[j].Value.ToString();
-                    }
-
-                    rowsWithError.Rows.Add(dr);
-                    continue;
-                }
-
-                try
-                {
-                    //ذخیره در دیتابیس
-                    dbConnections db = new dbConnections();
-                    db.InsertDocs(item1, item2, item3, relativePath + newPath);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    //در صورت عدم توانایی در ذخیره مشخصات در دیتابیس، فایل کپی شده را نیز حذف میکند تا بعدا تداخل ایجاد نشود.
-                    System.IO.File.Delete(newFile);
-                }
-            }
-
-            string nameOfRowsWithError = "";
-            for (int i = 0; i < rowsWithError.Rows.Count; i++)
-            {
-                nameOfRowsWithError += rowsWithError.Rows[i][3].ToString() + "\n";
-            }
-
-            RadMessageBox.ThemeName = "TelerikMetro";
-            RadMessageBox.Show(null, gvAddDocs.Rows.Count - rowsWithError.Rows.Count + " مدرک با موفقیت ثبت شدند. \n" + "مدارک زیر ناقص بودند: \n" + nameOfRowsWithError, "ثبت موفق", MessageBoxButtons.OK,
-                RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
-            //خالی کردن جدول
-            gvAddDocs.Rows.Clear();
-            //پر کردن جدول با سطر های ارور دار.
-            for (int i = 0; i < rowsWithError.Rows.Count; i++)
-            {
-                gvAddDocs.Rows.Add(rowsWithError.Rows[i][0].ToString(), rowsWithError.Rows[i][1].ToString(), rowsWithError.Rows[i][2].ToString(),
-                                    rowsWithError.Rows[i][3].ToString());
-                gvAddDocs.CurrentRow.Height = 40;
-            }
+            loaderThread.Name = "Submit Docs";
+            loaderThread.Start();
 
             btnAddNewDoc_Click(null, null);
             if (gvAddDocs.Rows.Count == 0)
@@ -502,57 +714,21 @@ namespace Scan_Project
                     RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                 return;
             }
-            gvSearchDocs.Rows.Clear();
 
-            dbConnections db = new dbConnections();
+            radProgressBar1.Text = "در حال بارگذاری ...";
+            Thread loader_thread = new Thread(() => DocumentsLoader(false));
 
-            DataTable dt, itemNames;
-            dt = db.GetDocs(out itemNames, txtSearchItem1.Text, txtSearchItem2.Text, txtSearchItem3.Text,
-                cbIsSearchByDate.Checked ? txtSearchSubmitFromDate.Value.ToString() : "",
-                cbIsSearchByDate.Checked ? txtSearchSubmitToDate.Value.ToString() : "");
-
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                //Image docPicture = null;
-                //try
-                //{
-                //    docPicture = Image.FromFile(Application.StartupPath + dt.Rows[i][5].ToString());
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message);
-                //}
-                gvSearchDocs.Rows.Add(/*docPicture,*/ dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
-                                        dt.Rows[i][3].ToString(), dt.Rows[i][6].ToString(), Application.StartupPath + dt.Rows[i][5].ToString());
-                gvSearchDocs.Rows[i].Tag = dt.Rows[i][0].ToString();
-                gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 40;
-            }
+            loader_thread.Name = "Docs Loader";
+            loader_thread.Start();
         }
 
         private void btnShowAllDocs_Click(object sender, EventArgs e)
         {
-            gvSearchDocs.Rows.Clear();
-            dbConnections db = new dbConnections();
+            radProgressBar1.Text = "در حال بارگذاری ...";
+            Thread loader_thread = new Thread(() => DocumentsLoader(true));
 
-            DataTable itemNames, dt;
-            dt = db.GetDocs(out itemNames);
-
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                //Image docPicture = null;
-                //try
-                //{
-                //    docPicture = Image.FromFile(Application.StartupPath + dt.Rows[i][5].ToString());
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message);
-                //}
-                gvSearchDocs.Rows.Add(/*docPicture,*/ dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(),
-                                        dt.Rows[i][3].ToString(), dt.Rows[i][6].ToString(), Application.StartupPath + dt.Rows[i][5].ToString());
-                gvSearchDocs.Rows[i].Tag = dt.Rows[i][0].ToString();
-                gvSearchDocs.Rows[gvSearchDocs.Rows.Count - 1].Height = 40;
-            }
+            loader_thread.Name = "Docs Loader";
+            loader_thread.Start();
         }
 
         private void txtAddDocSrc_Click(object sender, EventArgs e)
@@ -632,18 +808,13 @@ namespace Scan_Project
         {
             if (openFileDialog2.ShowDialog() == DialogResult.OK)
             {
-                //ThreadStart childref = new ThreadStart(ImageOnly);
-                //In Main: Creating the Child thread
-                //Thread childThread = new Thread(ImageOnly);
-                //childThread.Name = "test1";
+                radProgressBar1.Text = "در حال انتقال ...";
+                Thread loaderThread = new Thread(ImportFromExcel);
 
-                ImportFromExcel();
+                loaderThread.Name = "Import Docs";
+                loaderThread.Start();
+
                 GC.Collect();
-
-                //childThread.Start();
-                //childThread.Join();
-                //GC.Collect();
-
 
                 btnSubmitDocs.Enabled = true;
                 lblAddDocsCount.Text = gvAddDocs.Rows.Count.ToString();
@@ -652,48 +823,20 @@ namespace Scan_Project
 
         private void btnExportToExcel_Click(object sender, EventArgs e)
         {
+            if (gvSearchDocs.Rows.Count == 0)
+            {
+                RadMessageBox.ThemeName = "TelerikMetro";
+                RadMessageBox.Show(null, "هیچ مدرکی در جدول وجود ندارد. لطفا ابتدا جستجو کنید.", "خطا!", MessageBoxButtons.OK,
+                    RadMessageIcon.None, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                return;
+            }
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                // creating Excel Application  
-                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
-                // creating new WorkBook within Excel application  
-                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-                // creating new Excelsheet in workbook  
-                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-                // see the excel sheet behind the program  
-                app.Visible = true;
-                // get the reference of first sheet. By default its name is Sheet1.  
-                // store its reference to worksheet  
-                worksheet = workbook.Sheets["Sheet1"];
-                worksheet = workbook.ActiveSheet;
-                // changing the name of active sheet  
-                //worksheet.Name = "Exported from gridview";
-                // storing header part in Excel  
-                for (int i = 1; i <= 3; i++)
-                {
-                    worksheet.Cells[1, i] = gvSearchDocs.Columns[i].HeaderText;
-                }
-                worksheet.Cells[1, 4] = "آدرس نسبی فایل";
-                // storing Each row and column value to excel sheet  
-                for (int i = 0; i < gvSearchDocs.Rows.Count; i++)
-                {
-                    for (int j = 1; j < gvSearchDocs.Columns.Count; j++)
-                    {
-                        if (j == 4)
-                            continue;
-                        else if (j == 5)
-                        {
-                            worksheet.Cells[i + 2, j - 1] = gvSearchDocs.Rows[i].Cells[j].Value.ToString().Substring(gvSearchDocs.Rows[i].Cells[j].Value.ToString().LastIndexOf('\\') + 1);
-                            continue;
-                        }
-                        worksheet.Cells[i + 2, j] = gvSearchDocs.Rows[i].Cells[j].Value.ToString();
-                    }
-                }
-                // save the application
-                string s = saveFileDialog1.FileName;
-                workbook.SaveAs(s, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                // Exit from the application
-                app.Quit();
+                radProgressBar1.Text = "در حال انتقال ...";
+                Thread loaderThread = new Thread(ExportDocs);
+
+                loaderThread.Name = "Export Docs";
+                loaderThread.Start();
             }
         }
 
@@ -714,15 +857,19 @@ namespace Scan_Project
         {
             if (e.CurrentRow != null)
             {
-                try
-                {
-                    docPictureInSearchTab.ImageLocation = e.CurrentRow.Cells[4].Value.ToString();
-                }
-                catch (Exception)
-                {
-                    
-                }
-                
+                searchDocsPicture.ImageLocation = e.CurrentRow.Cells[4].Value.ToString();
+            }
+        }
+
+        private void searchDocsPicture_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(searchDocsPicture.ImageLocation);
+            }
+            catch (Exception)
+            {
+
             }
         }
     }
